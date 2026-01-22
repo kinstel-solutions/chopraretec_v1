@@ -29,17 +29,15 @@ export function Capabilities() {
             className="relative"
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-stone-100 shadow-2xl">
-               {/* Placeholder for factory/machine image */}
-               <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-400 font-bold text-xl">
-                 Manufacturing Image
-               </div>
-              {/* <Image
-                src="/capabilities.jpg"
-                alt="Manufacturing Capabilities"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              /> */}
+               <video
+                 autoPlay
+                 muted
+                 loop
+                 playsInline
+                 className="object-cover w-full h-full"
+               >
+                 <source src="/assets/Industrial_Video_of_Rubber_Components.mp4" type="video/mp4" />
+               </video>
             </div>
             {/* Decorative Frame */}
             <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-lg" />

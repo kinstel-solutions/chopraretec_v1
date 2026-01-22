@@ -10,16 +10,17 @@ export function Hero() {
     <section className="relative h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden pt-40 md:pt-0">
 
       
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/Dummy-Hero_BgImg.jpg" // We'll need to update this asset later
-          alt="Chopra Retec - Precision Molded Rubber Components"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="object-cover object-center w-full h-full"
+        >
+          <source src="/assets/Video_Ready_After_Seal_Release.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
