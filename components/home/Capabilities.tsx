@@ -1,0 +1,90 @@
+'use client';
+
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+
+const capabilities = [
+  "Precision Rubber Moulding",
+  "Rubber-to-Metal Bonding",
+  "Tooling Support & Development",
+  "Material & Compound Expertise",
+  "In-house Testing & Quality Assurance",
+  "Export Packaging & Global Logistics Support"
+];
+
+export function Capabilities() {
+  return (
+    <section id="capabilities" className="py-20 md:py-32 bg-secondary/10">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-stone-100 shadow-2xl">
+               {/* Placeholder for factory/machine image */}
+               <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-400 font-bold text-xl">
+                 Manufacturing Image
+               </div>
+              {/* <Image
+                src="/capabilities.jpg"
+                alt="Manufacturing Capabilities"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              /> */}
+            </div>
+            {/* Decorative Frame */}
+            <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-lg" />
+          </motion.div>
+
+          {/* Content Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
+                Manufacturing Capabilities
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-foreground">
+                End-to-End Manufacturing Support
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+              <p>
+                From compound selection to molding, bonding and validation — we offer end-to-end rubber component manufacturing support.
+              </p>
+            </div>
+
+            <ul className="space-y-4">
+              {capabilities.map((item, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary shrink-0" />
+                  <span className="font-medium text-foreground/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="pt-6">
+              <Link href="#contact" className="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors rounded shadow-lg">
+                View Full Capabilities
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
