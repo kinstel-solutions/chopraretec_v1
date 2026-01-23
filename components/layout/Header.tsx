@@ -67,7 +67,10 @@ export function Header() {
                  src="/chopra-OG-logo.png" 
                  alt="Chopra Retec" 
                  fill
-                 className="object-contain object-left"
+                 className={cn(
+                   "object-contain object-left transition-all duration-300",
+                   !isScrolled && "drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]"
+                 )}
                  priority
                />
             </div>
