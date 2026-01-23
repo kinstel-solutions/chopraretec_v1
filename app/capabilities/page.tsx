@@ -31,7 +31,7 @@ const capabilities = [
 
 export default function CapabilitiesPage() {
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 mt-18">
       <div className="container mx-auto px-4 md:px-8">
         
         {/* Header */}

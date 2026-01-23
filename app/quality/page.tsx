@@ -5,7 +5,7 @@ import { Check } from 'lucide-react';
 
 export default function QualityPage() {
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 mt-18">
       <div className="container mx-auto px-4 md:px-8 space-y-20">
         
         {/* Intro */}

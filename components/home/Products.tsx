@@ -36,7 +36,7 @@ const products = [
     id: 'engineered',
     title: 'Customer-Specific Parts',
     description: 'Bespoke solutions developed from drawing to production.',
-    image: '/products-engineered.png',
+    image: '/assets/AI-gen_Rubber-Metal.png',
   },
   {
     id: 'custom',

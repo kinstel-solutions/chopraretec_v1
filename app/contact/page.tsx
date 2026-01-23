@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export default function ContactPage() {
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 mt-18">
       <div className="container mx-auto px-4 md:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -103,7 +103,7 @@ export default function ContactPage() {
                  <textarea id="details" rows={4} className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg resize-none" placeholder="Additional details..."></textarea>
               </div>
 
-              <Button size="lg" className="w-full h-14 text-lg font-bold bg-primary hover:bg-primary/90 mt-4">
+              <Button size="lg" className="w-full h-14 text-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
                  Submit RFQ
               </Button>
             </form>

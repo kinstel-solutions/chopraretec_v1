@@ -77,7 +77,7 @@ export function Header() {
             {/* Desktop Nav */}
             <nav className={cn(
               "hidden lg:flex items-center gap-8 text-sm font-medium tracking-widest transition-colors duration-300",
-               isScrolled ? "text-primary" : "text-white"
+               isScrolled ? "text-secondary-foreground" : "text-white"
             )}>
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="hover:opacity-70 transition-opacity">
