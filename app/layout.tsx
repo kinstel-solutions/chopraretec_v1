@@ -4,6 +4,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
@@ -31,11 +32,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn(nunitoSans.variable)}>
+    <html lang="en" className={cn(nunitoSans.variable)} suppressHydrationWarning>
       <body className="font-sans antialiased text-foreground bg-background selection:bg-primary selection:text-white">
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            disableTransitionOnChange
+          >
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -42,25 +42,23 @@
   --border: #e5e5e5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ffffff;
-    
-    --primary: #bf2026;
-    --primary-foreground: #ffffff;
-    
-    --secondary: #27272a;
-    --secondary-foreground: #ffffff;
-    
-    --muted: #27272a;
-    --muted-foreground: #a1a1aa;
-    
-    --accent: #27272a;
-    --accent-foreground: #ffffff;
-    
-    --border: #27272a;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  
+  --primary: #bf2026;
+  --primary-foreground: #ffffff;
+  
+  --secondary: #27272a;
+  --secondary-foreground: #ffffff;
+  
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  
+  --accent: #27272a;
+  --accent-foreground: #ffffff;
+  
+  --border: #27272a;
 }
 
 

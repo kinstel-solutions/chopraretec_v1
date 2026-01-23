@@ -78,8 +78,8 @@ export function GlobalReach() {
               transition={{ delay: index * 0.1 }}
               className="text-center group"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-900/20 flex items-center justify-center group-hover:bg-red-900/40 transition-colors">
-                <stat.icon className="w-8 h-8 text-red-500" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-red-900/40 transition-colors">
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               <p className="text-base font-bold mt-2">{stat.label}</p>

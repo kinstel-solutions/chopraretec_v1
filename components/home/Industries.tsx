@@ -12,42 +12,43 @@ const industries = [
     slug: 'automotive',
     // icon: <Car className="w-6 h-6" />,
     description: 'High-performance rubber components for passenger and commercial vehicles.',
-    image: '/assets/AI-gen_Rubber-Metal.png'
+    image: '/created-assets/industries-served-basic.png'
   },
-  {
-    title: 'Engineering & Industrial',
-    slug: 'engineering-industrial',
-    // icon: <Factory className="w-6 h-6" />,
-    description: 'Durable solutions for heavy machinery and industrial applications.',
-    image: '/assets/AI-gen_Rubber-Metal.png'
-  },
+  
   {
     title: 'Defence',
     slug: 'defence',
     // icon: <Shield className="w-6 h-6" />,
     description: 'Mission-critical components meeting strict military standards.',
-    image: '/assets/AI-gen_Rubber-Metal.png'
+    image: '/created-assets/rubber-injection-molding-facility-side-view.png'
   },
   {
     title: 'Aerospace',
     slug: 'aerospace',
     // icon: <Plane className="w-6 h-6" />,
     description: 'Precision engineered parts for aircraft and aviation support.',
-    image: '/assets/AI-gen_Rubber-Metal.png'
+    image: '/created-assets/rubber-injection-molding-facility-front-view.png'
+  },
+  {
+    title: 'Engineering & Industrial',
+    slug: 'engineering-industrial',
+    // icon: <Factory className="w-6 h-6" />,
+    description: 'Durable solutions for heavy machinery and industrial applications.',
+    image: '/created-assets/industries-served-advanced.png'
   },
   {
     title: 'Material Handling',
     slug: 'material-handling',
     // icon: <Package className="w-6 h-6" />,
     description: 'Robust components for logistics and material transport equipment.',
-    image: '/assets/AI-gen_Rubber-Metal.png'
+    image: '/created-assets/rubber-injection-molding-facility-side-view.png'
   },
   {
     title: 'Healthcare & Medical',
     slug: 'healthcare-medical',
     // icon: <Activity className="w-6 h-6" />,
     description: 'Hygienic and precision molded parts for medical devices.',
-    image: '/assets/AI-gen_Rubber-Metal.png'
+    image: '/created-assets/rubber-injection-molding-facility-side-view.png'
   }
 ];
 

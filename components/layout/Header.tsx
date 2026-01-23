@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { AnimatePresence, motion } from 'framer-motion';
+import { ModeToggle } from '@/components/mode-toggle';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -44,8 +45,8 @@ export function Header() {
         className={cn(
           'fixed top-0 w-full z-50 transition-all duration-300 border-transparent',
           isScrolled || isMobileMenuOpen
-            ? 'bg-white/95 backdrop-blur-md border-border py-4 shadow-sm text-black'
-            : 'bg-gradient-to-b  from-black/50 to-transparent py-6 text-white'
+            ? 'bg-white/95 dark:bg-black/95 backdrop-blur-md border-border py-4 shadow-sm text-black dark:text-white'
+            : 'bg-gradient-to-b from-black/50 to-transparent py-6 text-white'
         )}
       >
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -101,6 +102,10 @@ export function Header() {
             </Button>
             
 
+            {/* Theme Toggle */}
+             {/* <div className={cn("hidden lg:block", isScrolled ? "text-secondary-foreground dark:text-white" : "text-white")}>
+              <ModeToggle />
+             </div> */}
           </div>
 
 
@@ -144,6 +149,10 @@ export function Header() {
               >
                 Request Quote
               </Link>
+              
+              {/* <div className="mt-4 text-black dark:text-white">
+                 <ModeToggle />
+              </div> */}
             </nav>
           </motion.div>
         )}
