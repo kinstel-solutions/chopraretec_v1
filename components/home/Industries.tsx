@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Car, Factory, Shield, Plane, Package, Activity, ArrowRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRef, useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 const industries = [
@@ -52,7 +53,43 @@ const industries = [
   }
 ];
 
+
 export function Industries() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationFrameId: number;
+    
+    // Auto-scroll loop
+    const scroll = () => {
+      if (!isPaused) {
+        scrollContainer.scrollLeft += 1; // Adjust speed here (1px per frame)
+        
+        // Check for seamless loop reset
+        // We are scrolling a container that has 3 sets of items.
+        // We reset when we reach the end of the first set (1/3 of total width)
+        // However, calculating exact width can be tricky with gaps.
+        // Simplified approach: Scroll until near end, then jump back.
+        // Better approach for seamlessness:
+        // If scrollLeft >= (scrollWidth / 3) * 2, reset to (scrollWidth / 3)
+        // This ensures we are always in the middle "safe" zone.
+        
+        if (scrollContainer.scrollLeft >= (scrollContainer.scrollWidth / 3) * 2) {
+            scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isPaused]);
+
   return (
     <section id="industries" className="py-20 md:py-32 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
@@ -90,32 +127,45 @@ export function Industries() {
           </motion.p>
         </div>
 
-        <div className="flex overflow-x-auto pb-8 gap-6 snap-x hide-scrollbar">
-          {industries.map((item, index) => (
-            <motion.div
-              key={item.slug}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="relative flex-shrink-0 w-[300px] h-[400px] rounded-xl overflow-hidden group cursor-pointer snap-center shadow-md hover:shadow-xl transition-all duration-300"
+        <div className="w-full relative">
+            {/* Gradient Masks */}
+            <div className="absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10 pointer-events-none" />
+
+            <div 
+                ref={scrollRef}
+                className="flex gap-6 overflow-x-auto pb-8 hide-scrollbar cursor-grab active:cursor-grabbing"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                onTouchStart={() => setIsPaused(true)}
+                onTouchEnd={() => setIsPaused(false)}
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              
-              <div className="absolute inset-x-0 bottom-0 p-6 text-white bg-black/65 backdrop-blur-sm">
-                <h3 className="text-xl font-serif font-bold mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="text-white/80 text-sm leading-relaxed mb-4 line-clamp-3">{item.description}</p>
-                 <div className="flex items-center text-xs font-bold uppercase tracking-widest text-primary/80 group-hover:text-primary transition-colors">
-                   Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </motion.div>
-          ))}
+                {/* Tripled list for infinite scroll feeling */}
+                {[...industries, ...industries, ...industries].map((item, index) => (
+                    <motion.div
+                    key={`${item.slug}-${index}`}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="relative flex-shrink-0 w-[300px] h-[400px] rounded-xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-300"
+                    >
+                    <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    
+                    <div className="absolute inset-x-0 bottom-0 p-6 text-white bg-black/65 backdrop-blur-sm">
+                        <h3 className="text-xl font-serif font-bold mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                        <p className="text-white/80 text-sm leading-relaxed mb-4 line-clamp-3">{item.description}</p>
+                        <div className="flex items-center text-xs font-bold uppercase tracking-widest text-primary/80 group-hover:text-primary transition-colors">
+                        Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                    </div>
+                    </motion.div>
+                ))}
+            </div>
         </div>
 
         <div className="mt-16 text-center">

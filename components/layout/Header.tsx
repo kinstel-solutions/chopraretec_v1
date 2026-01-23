@@ -45,7 +45,7 @@ export function Header() {
         className={cn(
           'fixed top-0 w-full z-50 transition-all duration-300 border-transparent',
           isScrolled || isMobileMenuOpen
-            ? 'bg-white/95 dark:bg-black/95 backdrop-blur-md border-border py-4 shadow-sm text-black dark:text-white'
+            ? 'bg-white/95 backdrop-blur-md border-border py-4 shadow-sm text-black'
             : 'bg-gradient-to-b from-black/50 to-transparent py-6 text-white'
         )}
       >
@@ -84,8 +84,14 @@ export function Header() {
                isScrolled ? "text-secondary-foreground" : "text-white"
             )}>
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="hover:opacity-70 transition-opacity">
-                  {link.label}
+                <Link key={link.href} href={link.href} className="group relative py-2">
+                  <span className="relative z-10 transition-opacity duration-300 group-hover:opacity-100">
+                    {link.label}
+                  </span>
+                  <span className={cn(
+                    "absolute left-0 bottom-0 w-full h-0.5 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100",
+                    isScrolled ? "bg-primary" : "bg-white" // Use accent/primary color when scrolled (white background), white when transparent background
+                  )} />
                 </Link>
               ))}
             </nav>
