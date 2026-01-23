@@ -88,7 +88,7 @@ export function GlobalReach() {
         </div>
 
         <div className="text-center">
-            <Link href="#contact" className="inline-block px-8 py-4 bg-red-800 text-white font-bold uppercase tracking-widest text-sm hover:bg-red-700 transition-colors rounded shadow-lg shadow-red-900/20">
+            <Link href="/#contact" className="inline-block px-8 py-4 bg-red-800 text-white font-bold uppercase tracking-widest text-sm hover:bg-red-700 transition-colors rounded shadow-lg shadow-red-900/20">
                 Global Reach
             </Link>
         </div>

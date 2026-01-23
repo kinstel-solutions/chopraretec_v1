@@ -106,7 +106,7 @@ export function Industries() {
         </div>
 
         <div className="mt-16 text-center">
-          <Link href="#contact" className="inline-block px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-colors rounded">
+          <Link href="/industries" className="inline-block px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-colors rounded">
             View All Industries
           </Link>
         </div>

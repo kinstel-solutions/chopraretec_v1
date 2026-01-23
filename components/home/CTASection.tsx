@@ -24,7 +24,7 @@ export function CTASection() {
              </p>
 
              <Link 
-               href="mailto:info@chopraretec.com"
+               href="/contact"
                className="inline-flex items-center gap-2 bg-white text-primary px-10 py-5 text-base font-bold tracking-widest uppercase hover:bg-white/90 transition-all rounded shadow-xl"
              >
                 Send Your RFQ / Drawing <ArrowRight className="w-5 h-5" />

@@ -117,7 +117,7 @@ export function Products() {
         </div>
 
          <div className="mt-16 text-center">
-          <Link href="#contact" className="inline-block px-8 py-4 bg-secondary text-secondary-foreground font-bold uppercase tracking-widest text-sm hover:bg-secondary/80 transition-colors rounded">
+          <Link href="/products" className="inline-block px-8 py-4 bg-secondary text-secondary-foreground font-bold uppercase tracking-widest text-sm hover:bg-secondary/80 transition-colors rounded">
             Explore Products
           </Link>
         </div>

@@ -1,83 +1,89 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Facebook } from 'lucide-react';
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-black text-white pt-20 pb-10">
+    <footer className="bg-black text-white pt-16 pb-8 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
           {/* Brand */}
-          <div className="space-y-6 lg:col-span-1">
-            <h2 className="font-serif text-2xl">Massey Production</h2>
+          <div className="space-y-6">
+            <div>
+              <h2 className="font-serif text-2xl font-bold uppercase tracking-wider">Chopra Retec</h2>
+              <p className="text-xs text-white/50 mt-2 uppercase tracking-widest">Rubber Technology Excellence</p>
+            </div>
             <p className="text-gray-400 text-sm font-light leading-relaxed">
-              Where moments become timeless memories. We're passionate about capturing the emotions, 
-              the laughter, and the love that make your story uniquely beautiful.
+              Manufacturing precision molded rubber and rubber-to-metal bonded components for global industries since 1990.
             </p>
             {/* Social Media */}
-            <div className="flex gap-4 pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+            <div className="flex gap-4">
+              <Link href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                <Linkedin className="w-4 h-4" />
+              </Link>
+              <Link href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                 <Facebook className="w-4 h-4" />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                <Youtube className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h3 className="uppercase tracking-widest text-xs font-semibold mb-6 text-gray-400">Quick Links</h3>
-            <ul className="space-y-4 text-sm font-light">
-              <li><Link href="/#about" className="hover:text-gray-300 transition-colors">About Us</Link></li>
-              <li><Link href="/#portfolio" className="hover:text-gray-300 transition-colors">Portfolio</Link></li>
-              <li><Link href="/#services" className="hover:text-gray-300 transition-colors">Services</Link></li>
-              <li><Link href="/#process" className="hover:text-gray-300 transition-colors">Our Process</Link></li>
-              <li><Link href="/#contact" className="hover:text-gray-300 transition-colors">Contact</Link></li>
+            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Company</h3>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/#capabilities" className="hover:text-white transition-colors">Capabilities</Link></li>
+              <li><Link href="/#quality" className="hover:text-white transition-colors">Quality & Standards</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Solutions */}
           <div>
-            <h3 className="uppercase tracking-widest text-xs font-semibold mb-6 text-gray-400">Services</h3>
-            <ul className="space-y-4 text-sm font-light">
-              <li><Link href="/services/wedding-events" className="hover:text-gray-300 transition-colors">Weddings & Events</Link></li>
-              <li><Link href="/services/commercial-corporate" className="hover:text-gray-300 transition-colors">Commercial & Corporate</Link></li>
-              <li><Link href="/services/fashion-portfolios" className="hover:text-gray-300 transition-colors">Fashion & Portfolios</Link></li>
-              <li><Link href="/#contact" className="hover:text-gray-300 transition-colors">Get a Quote</Link></li>
+            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Solutions</h3>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li><Link href="/#industries" className="hover:text-white transition-colors">Industries Served</Link></li>
+              <li><Link href="/#products" className="hover:text-white transition-colors">Product Range</Link></li>
+              <li><Link href="/#products" className="hover:text-white transition-colors">Custom Molding</Link></li>
+              <li><Link href="/#contact" className="hover:text-white transition-colors">Request Quote</Link></li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact Info */}
           <div>
-            <h3 className="uppercase tracking-widest text-xs font-semibold mb-6 text-gray-400">Contact Us</h3>
-            <ul className="space-y-4 text-sm font-light text-gray-400">
+            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Get In Touch</h3>
+            <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Hazratganj, Lucknow<br />Uttar Pradesh, India</span>
+                <MapPin className="w-5 h-5 text-primary shrink-0" />
+                <span>
+                  Plot No. 123, Industrial Area,<br />
+                  Chennai, Tamil Nadu, India
+                </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 shrink-0" />
+                <Phone className="w-5 h-5 text-primary shrink-0" />
                 <span>+91 98765 43210</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 shrink-0" />
-                <span>hello@masseyproduction.com</span>
+                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <a href="mailto:info@chopraretec.com" className="hover:text-white transition-colors">
+                  info@chopraretec.com
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs font-light">
-            © {new Date().getFullYear()} Massey Production. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+          <p>
+            © {currentYear} Chopra Retec Rubber Products. All rights reserved.
           </p>
-          <div className="flex gap-6 text-gray-500 text-xs font-light">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
           </div>
         </div>
       </div>

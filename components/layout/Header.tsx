@@ -30,25 +30,58 @@ export function Header() {
 
   const navLinks = [
     { href: '/about', label: 'ABOUT US' },
-    { href: '/capabilities', label: 'CAPABILITIES' },
-    { href: '/industries', label: 'INDUSTRIES' },
-    { href: '/products', label: 'PRODUCTS' },
-    { href: '/quality', label: 'QUALITY' },
-    { href: '/contact', label: 'CONTACT' },
+    { href: '/#industries', label: 'INDUSTRIES' },
+    { href: '/#products', label: 'PRODUCTS' },
+    { href: '/#capabilities', label: 'CAPABILITIES' },
+    { href: '/#quality', label: 'QUALITY' },
+    { href: '/#contact', label: 'CONTACT' },
   ];
 
   return (
     <>
       <header
         className={cn(
-          'fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent',
+          'fixed top-0 w-full z-50 transition-all duration-300 border-transparent',
           isScrolled || isMobileMenuOpen
-            ? 'bg-white/95 backdrop-blur-md border-border py-4 shadow-sm text-black'
-            : 'bg-gradient-to-b from-black/50 to-transparent py-6 text-white'
+            ? 'bg-white/95 backdrop-blur-md border-border py-6 shadow-sm text-black'
+            : 'bg-gradient-to-b from-black/50 to-transparent py-8 text-white'
         )}
       >
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+          {/* Logo */}
+          {/* Logo */}
+          <Link 
+            href="/" 
+            className="group relative z-10" 
+            onClick={(e) => {
+              setIsMobileMenuOpen(false);
+              if (window.location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+          >
+            <h1 className={cn(
+              "font-serif font-bold tracking-tight uppercase transition-all duration-300 whitespace-nowrap",
+              isScrolled || isMobileMenuOpen ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"
+            )}>
+              Chopra Retec
+            </h1>
+          </Link>
+
+          <div className="flex items-center gap-6">
+            {/* Desktop Nav */}
+            <nav className={cn(
+              "hidden lg:flex items-center gap-8 text-sm font-medium tracking-widest transition-colors duration-300",
+               isScrolled ? "text-primary" : "text-white"
+            )}>
+              {navLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="hover:opacity-70 transition-opacity">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
             {/* Mobile Menu Toggle */}
             <Button 
               variant="ghost" 
@@ -59,37 +92,6 @@ export function Header() {
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               <span className="sr-only">Toggle Menu</span>
             </Button>
-            
-            {/* Desktop Nav */}
-            <nav className={cn(
-              "hidden lg:flex items-center gap-6 text-xs font-medium tracking-wide transition-colors duration-300",
-               isScrolled ? "text-primary" : "text-white"
-            )}>
-              {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="hover:opacity-70 transition-opacity">
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          {/* Logo */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2 group" onClick={() => setIsMobileMenuOpen(false)}>
-            <h1 className={cn(
-              "font-serif font-bold tracking-tight uppercase transition-all duration-300 whitespace-nowrap",
-              isScrolled || isMobileMenuOpen ? "text-base md:text-lg" : "text-2xl md:text-2xl"
-            )}>
-              Chopra Retec
-            </h1>
-          </Link>
-
-          {/* CTA Button */}
-          <div className="flex items-center gap-2">
-             <Link href="/contact">
-              <Button variant="ghost" size="sm" className={cn("hidden md:inline-flex transition-colors text-xs font-bold tracking-widest bg-primary text-white hover:bg-primary/90", !isScrolled && !isMobileMenuOpen && "bg-white/10 text-white hover:bg-white/20")}>
-                REQUEST QUOTE
-              </Button>
-            </Link>
           </div>
         </div>
       </header>
@@ -116,7 +118,7 @@ export function Header() {
                 </Link>
               ))}
               <Link 
-                href="/contact" 
+                href="/#contact" 
                 className="mt-8 bg-primary text-white px-8 py-3 text-sm font-bold tracking-[0.15em] uppercase w-full text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
