@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -43,16 +44,16 @@ export function Header() {
         className={cn(
           'fixed top-0 w-full z-50 transition-all duration-300 border-transparent',
           isScrolled || isMobileMenuOpen
-            ? 'bg-white/95 backdrop-blur-md border-border py-6 shadow-sm text-black'
-            : 'bg-gradient-to-b from-black/50 to-transparent py-8 text-white'
+            ? 'bg-white/95 backdrop-blur-md border-border py-4 shadow-sm text-black'
+            : 'bg-gradient-to-b  from-black/50 to-transparent py-6 text-white'
         )}
       >
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-          {/* Logo */}
+         
           {/* Logo */}
           <Link 
             href="/" 
-            className="group relative z-10" 
+            className="group relative z-10 block" 
             onClick={(e) => {
               setIsMobileMenuOpen(false);
               if (window.location.pathname === '/') {
@@ -61,12 +62,15 @@ export function Header() {
               }
             }}
           >
-            <h1 className={cn(
-              "font-serif font-bold tracking-tight uppercase transition-all duration-300 whitespace-nowrap",
-              isScrolled || isMobileMenuOpen ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"
-            )}>
-              Chopra Retec
-            </h1>
+            <div className="relative h-12 w-48 md:h-16 md:w-64 transition-all duration-300">
+               <Image 
+                 src="/chopra-OG-logo.png" 
+                 alt="Chopra Retec" 
+                 fill
+                 className="object-contain object-left"
+                 priority
+               />
+            </div>
           </Link>
 
           <div className="flex items-center gap-6">
@@ -93,37 +97,19 @@ export function Header() {
               <span className="sr-only">Toggle Menu</span>
             </Button>
             
-            {/* Desktop Nav */}
-            <nav className={cn(
-              "hidden lg:flex items-center gap-6 text-xs font-medium tracking-wide transition-colors duration-300",
-               isScrolled ? "text-primary" : "text-white"
-            )}>
-              {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="hover:opacity-70 transition-opacity">
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+
           </div>
 
-          {/* Logo */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2 group" onClick={() => setIsMobileMenuOpen(false)}>
-            <h1 className={cn(
-              "font-serif font-bold tracking-tight uppercase transition-all duration-300 whitespace-nowrap",
-              isScrolled || isMobileMenuOpen ? "text-base md:text-lg" : "text-2xl md:text-2xl"
-            )}>
-              Chopra Retec
-            </h1>
-          </Link>
 
-          {/* CTA Button */}
+
+          {/* CTA Button
           <div className="flex items-center gap-2">
              <Link href="/contact">
               <Button size="sm" className={cn("hidden md:inline-flex transition-colors text-xs font-bold tracking-widest", !isScrolled && !isMobileMenuOpen && "border-white/30 bg-white/10 text-white hover:bg-white/20 hover:border-white/50 text-white")}>
                 REQUEST QUOTE
               </Button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </header>
 

@@ -25,7 +25,7 @@ export function CTASection() {
              </p>
 
              <Button asChild size="lg" className="h-auto py-5 px-10 bg-white text-primary font-bold tracking-widest text-base uppercase hover:bg-white/90 shadow-none">
-               <Link href="mailto:info@chopraretec.com">
+               <Link href="/contact">
                   Send Your RFQ / Drawing <ArrowRight className="w-5 h-5 ml-2" />
                </Link>
              </Button>

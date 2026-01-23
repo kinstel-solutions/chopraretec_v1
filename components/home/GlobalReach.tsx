@@ -90,7 +90,7 @@ export function GlobalReach() {
 
         <div className="text-center">
             <Button asChild size="lg" className="px-8 border-2 border-red-800 bg-transparent text-white font-bold tracking-widest text-sm uppercase hover:bg-red-800 hover:text-white">
-                <Link href="#contact">
+                <Link href="/contact">
                     Global Reach
                 </Link>
             </Button>

@@ -78,7 +78,7 @@ export function Capabilities() {
 
             <div className="pt-6">
               <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="#contact">
+                <Link href="/capabilities">
                   View Full Capabilities
                 </Link>
               </Button>

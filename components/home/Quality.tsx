@@ -76,7 +76,7 @@ export function Quality() {
 
         <div className="mt-16 text-center">
             <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="#contact">
+                <Link href="/quality">
                     Quality & Certifications
                 </Link>
             </Button>
