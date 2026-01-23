@@ -29,7 +29,7 @@ export function Capabilities() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-stone-100 shadow-2xl">
+            <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-lg bg-stone-100 shadow-2xl">
                <video
                  autoPlay
                  muted
@@ -41,7 +41,7 @@ export function Capabilities() {
                </video>
             </div>
             {/* Decorative Frame */}
-            <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-lg" />
+            <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-lg" />
           </motion.div>
 
           {/* Content Side */}
