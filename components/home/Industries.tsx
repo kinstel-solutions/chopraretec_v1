@@ -53,7 +53,7 @@ const industries = [
 
 export function Industries() {
   return (
-    <section id="industries" className="py-20 md:py-32 bg-secondary/30">
+    <section id="industries" className="py-20 md:py-32 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-16 space-y-4">
           <motion.p

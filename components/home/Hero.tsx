@@ -66,9 +66,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-start pt-4 md:pt-8"
           >
-            <Button asChild className="h-auto w-1/2 md:w-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-xs md:text-sm uppercase">
+            <Button asChild className="h-auto w-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-xs md:text-sm uppercase">
               <Link href="/contact" className="flex items-center gap-2">
-                Request a Quote (RFQ) <ArrowUpRight className="w-4 h-4" />
+                Request a Quote (RFQ) <ArrowUpRight className="w-4 h-4 shrink-0" />
               </Link>
             </Button>
             {/* <Button asChild variant="outline" className="h-auto py-4 px-8 border-2 border-white/30 bg-transparent text-white hover:bg-white hover:text-black rounded-none tracking-[0.1em] font-medium text-sm uppercase backdrop-blur-sm">

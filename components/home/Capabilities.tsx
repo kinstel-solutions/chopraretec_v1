@@ -17,7 +17,7 @@ const capabilities = [
 
 export function Capabilities() {
   return (
-    <section id="capabilities" className="py-20 md:py-32 bg-secondary/10">
+    <section id="capabilities" className="py-20 md:py-32 bg-secondary/10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           

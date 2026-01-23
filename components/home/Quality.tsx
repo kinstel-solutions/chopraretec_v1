@@ -30,7 +30,7 @@ const features = [
 
 export function Quality() {
   return (
-    <section className="py-20 md:py-32 bg-white" id="quality">
+    <section className="py-20 md:py-32 bg-white overflow-hidden" id="quality">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <motion.div

@@ -48,7 +48,7 @@ const products = [
 
 export function Products() {
   return (
-    <section className="py-20 md:py-32 bg-white" id="products">
+    <section className="py-20 md:py-32 bg-white overflow-hidden" id="products">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-16 space-y-4">
           <motion.p
