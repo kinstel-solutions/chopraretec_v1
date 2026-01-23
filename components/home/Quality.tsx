@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, Ruler, Activity, RefreshCw } from 'lucide-react';
+import { ShieldCheck, Ruler, Activity, RefreshCw, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -76,8 +76,8 @@ export function Quality() {
 
         <div className="mt-16 text-center">
             <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="/quality">
-                    Quality & Certifications
+                <Link href="/quality" className="flex items-center gap-2">
+                    Quality & Certifications <ArrowUpRight className="w-4 h-4" />
                 </Link>
             </Button>
         </div>

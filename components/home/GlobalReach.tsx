@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import { Globe, BookOpen, Clock, Truck } from 'lucide-react';
+import { Globe, BookOpen, Clock, Truck, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -90,8 +90,8 @@ export function GlobalReach() {
 
         <div className="text-center">
             <Button asChild size="lg" className="px-8 border-2 border-red-800 bg-transparent text-white font-bold tracking-widest text-sm uppercase hover:bg-red-800 hover:text-white">
-                <Link href="/contact">
-                    Global Reach
+                <Link href="/contact" className="flex items-center gap-2">
+                    Global Reach <ArrowUpRight className="w-4 h-4" />
                 </Link>
             </Button>
         </div>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const products = [
@@ -120,8 +120,8 @@ export function Products() {
 
          <div className="mt-16 text-center">
           <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-            <Link href="/products">
-              Explore Products
+            <Link href="/products" className="flex items-center gap-2">
+              Explore Products <ArrowUpRight className="w-4 h-4" />
             </Link>
           </Button>
         </div>

@@ -3,7 +3,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, ArrowRight } from 'lucide-react';
+import { Mail, ArrowRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -26,7 +26,7 @@ export function CTASection() {
 
              <Button asChild size="lg" className="h-auto py-5 px-10 bg-white text-primary font-bold tracking-widest text-base uppercase hover:bg-white/90 shadow-none">
                <Link href="/contact">
-                  Send Your RFQ / Drawing <ArrowRight className="w-5 h-5 ml-2" />
+                  Send Your RFQ / Drawing <ArrowUpRight className="w-5 h-5 ml-2" />
                </Link>
              </Button>
            </motion.div>
