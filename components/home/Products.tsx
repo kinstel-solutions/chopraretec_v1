@@ -4,44 +4,46 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const products = [
   {
     id: 'exhaust',
     title: 'Exhaust Suspension Components',
     description: 'High-temperature resistant hangers and mounts.',
-    image: '/products-exhaust.png', // Placeholder
+    image: '/assets/AI-gen_Rubber-Metal.png', // Placeholder
   },
   {
     id: 'anti-vibration',
     title: 'Anti-Vibration Mounts',
     description: 'Engine mounts, cab mounts, and isolation systems.',
-    image: '/products-av.png',
+    image: '/assets/AI-gen_Rubber-Metal.png',
   },
   {
     id: 'bonded',
     title: 'Rubber-to-Metal Bonded',
     description: 'Precision bonded assemblies for structural integrity.',
-    image: '/products-bonded.png',
+    image: '/assets/AI-gen_Rubber-Metal.png',
   },
   {
     id: 'bushes',
     title: 'Bushes & Ride Control',
     description: 'Suspension bushes, stabilizer links, and torque rods.',
-    image: '/products-bushes.png',
+    image: '/assets/AI-gen_Rubber-Metal.png',
   },
-  {
-    id: 'custom',
-    title: 'Buffers & Custom Moldings',
-    description: 'Grommets, seals, stoppers and custom shapes.',
-    image: '/products-custom.png',
-  },
+  
   {
     id: 'engineered',
     title: 'Customer-Specific Parts',
     description: 'Bespoke solutions developed from drawing to production.',
     image: '/products-engineered.png',
-  }
+  },
+  {
+    id: 'custom',
+    title: 'Buffers & Custom Moldings',
+    description: 'Grommets, seals, stoppers and custom shapes.',
+    image: '/assets/AI-gen_Rubber-Metal.png',
+  },
 ];
 
 export function Products() {
@@ -91,7 +93,7 @@ export function Products() {
                    {/* Placeholder visual if image missing */}
                    Product Image
                 </div>
-                {/* 
+                
                 <Image
                   src={product.image}
                   alt={product.title}
@@ -99,7 +101,7 @@ export function Products() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                */}
+               
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
               
@@ -117,9 +119,11 @@ export function Products() {
         </div>
 
          <div className="mt-16 text-center">
-          <Link href="#contact" className="inline-block px-8 py-4 bg-secondary text-secondary-foreground font-bold uppercase tracking-widest text-sm hover:bg-secondary/80 transition-colors rounded">
-            Explore Products
-          </Link>
+          <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
+            <Link href="#contact">
+              Explore Products
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

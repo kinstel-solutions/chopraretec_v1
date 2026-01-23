@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import { Globe, BookOpen, Clock, Truck } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const stats = [
   { icon: Clock, value: 30, suffix: '+', label: 'Years Experience', description: 'Manufacturing excellence' },
@@ -88,9 +89,11 @@ export function GlobalReach() {
         </div>
 
         <div className="text-center">
-            <Link href="#contact" className="inline-block px-8 py-4 bg-red-800 text-white font-bold uppercase tracking-widest text-sm hover:bg-red-700 transition-colors rounded shadow-lg shadow-red-900/20">
-                Global Reach
-            </Link>
+            <Button asChild size="lg" className="px-8 border-2 border-red-800 bg-transparent text-white font-bold tracking-widest text-sm uppercase hover:bg-red-800 hover:text-white">
+                <Link href="#contact">
+                    Global Reach
+                </Link>
+            </Button>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Car, Factory, Shield, Plane, Package, Activity, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const industries = [
   {
@@ -106,9 +107,11 @@ export function Industries() {
         </div>
 
         <div className="mt-16 text-center">
-          <Link href="#contact" className="inline-block px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-colors rounded">
-            View All Industries
-          </Link>
+          <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
+            <Link href="#contact">
+              View All Industries
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

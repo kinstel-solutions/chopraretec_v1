@@ -86,7 +86,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="flex items-center gap-2">
              <Link href="/contact">
-              <Button variant="ghost" size="sm" className={cn("hidden md:inline-flex transition-colors text-xs font-bold tracking-widest bg-primary text-white hover:bg-primary/90", !isScrolled && !isMobileMenuOpen && "bg-white/10 text-white hover:bg-white/20")}>
+              <Button size="sm" className={cn("hidden md:inline-flex transition-colors text-xs font-bold tracking-widest", !isScrolled && !isMobileMenuOpen && "border-white/30 bg-white/10 text-white hover:bg-white/20 hover:border-white/50 text-white")}>
                 REQUEST QUOTE
               </Button>
             </Link>

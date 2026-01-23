@@ -5,6 +5,7 @@
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export function CTASection() {
   return (
@@ -23,12 +24,11 @@ export function CTASection() {
                 Partner with us for precision engineering, global standards, and consistent quality.
              </p>
 
-             <Link 
-               href="mailto:info@chopraretec.com"
-               className="inline-flex items-center gap-2 bg-white text-primary px-10 py-5 text-base font-bold tracking-widest uppercase hover:bg-white/90 transition-all rounded shadow-xl"
-             >
-                Send Your RFQ / Drawing <ArrowRight className="w-5 h-5" />
-             </Link>
+             <Button asChild size="lg" className="h-auto py-5 px-10 bg-white text-primary font-bold tracking-widest text-base uppercase hover:bg-white/90 shadow-none">
+               <Link href="mailto:info@chopraretec.com">
+                  Send Your RFQ / Drawing <ArrowRight className="w-5 h-5 ml-2" />
+               </Link>
+             </Button>
            </motion.div>
         </div>
       </div>

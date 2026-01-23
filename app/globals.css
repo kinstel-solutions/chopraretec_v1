@@ -27,7 +27,7 @@
   --foreground: #0a0a0a;
   
   /* Chopra Retec Brand Theme */
-  --primary: #8B0000;
+  --primary: #bf2026;
   --primary-foreground: #ffffff;
   
   --secondary: #f4f4f5;
@@ -37,7 +37,7 @@
   --muted-foreground: #737373;
 
   --accent: #f4f4f5;
-  --accent-foreground: #8B0000;
+  --accent-foreground: #bf2026;
   
   --border: #e5e5e5;
 }
@@ -47,7 +47,7 @@
     --background: #0a0a0a;
     --foreground: #ffffff;
     
-    --primary: #8B0000;
+    --primary: #bf2026;
     --primary-foreground: #ffffff;
     
     --secondary: #27272a;

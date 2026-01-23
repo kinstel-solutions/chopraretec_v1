@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Play, ChevronDown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export function Hero() {
   return (
@@ -21,7 +22,7 @@ export function Hero() {
         >
           <source src="/assets/Video_Ready_After_Seal_Release.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       
@@ -47,13 +48,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-base md:text-xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed"
+          className="text-base md:text-4xl text-gray-200 max-w-3xl mx-auto font-medium leading-relaxed"
         >
-         Chopra Retec manufactures precision molded rubber and rubber-to-metal bonded components for high-performance applications across industries.
+         Quiet Strength. Proven Durability.
         </motion.p>
 
         {/* Hero Highlights */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -71,7 +72,7 @@ export function Hero() {
               <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
               Trusted for quality, consistency and reliability
            </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -79,18 +80,16 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8"
         >
-          <Link 
-            href="#contact" 
-            className="inline-block bg-red-800 text-primary-foreground px-8 py-4 text-sm font-bold tracking-[0.1em] uppercase hover:bg-red-900 transition-all rounded shadow-lg shadow-red-900/20"
-          >
-            Request a Quote (RFQ)
-          </Link>
-          <Link 
-            href="#capabilities" 
-            className="inline-flex items-center gap-2 border-2 border-white/30 px-8 py-4 text-sm font-medium tracking-[0.1em] uppercase hover:bg-white hover:text-black transition-all rounded backdrop-blur-sm"
-          >
-            Explore Capabilities
-          </Link>
+          <Button asChild className="h-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-sm uppercase">
+            <Link href="#contact">
+              Request a Quote (RFQ)
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="h-auto py-4 px-8 border-2 border-white/30 bg-transparent text-white hover:bg-white hover:text-black rounded-none tracking-[0.1em] font-medium text-sm uppercase backdrop-blur-sm">
+            <Link href="#capabilities">
+              Explore Capabilities
+            </Link>
+          </Button>
         </motion.div>
       </div>
 

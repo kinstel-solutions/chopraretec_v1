@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Ruler, Activity, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const features = [
   {
@@ -74,9 +75,11 @@ export function Quality() {
         </div>
 
         <div className="mt-16 text-center">
-            <Link href="#contact" className="inline-block px-8 py-4 bg-secondary text-secondary-foreground font-bold uppercase tracking-widest text-sm hover:bg-secondary/80 transition-colors rounded">
-                Quality & Certifications
-            </Link>
+            <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
+                <Link href="#contact">
+                    Quality & Certifications
+                </Link>
+            </Button>
         </div>
       </div>
     </section>

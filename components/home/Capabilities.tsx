@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const capabilities = [
   "Precision Rubber Moulding",
@@ -76,9 +77,11 @@ export function Capabilities() {
             </ul>
 
             <div className="pt-6">
-              <Link href="#contact" className="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors rounded shadow-lg">
-                View Full Capabilities
-              </Link>
+              <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
+                <Link href="#contact">
+                  View Full Capabilities
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
