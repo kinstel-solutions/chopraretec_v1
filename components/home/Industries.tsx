@@ -1,46 +1,53 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Car, Factory, Shield, Plane, Package, Activity, ArrowRight } from 'lucide-react';
+import { Car, Factory, Shield, Plane, Package, Activity, ArrowRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 const industries = [
   {
     title: 'Automotive',
     slug: 'automotive',
-    icon: <Car className="w-6 h-6" />,
-    description: 'High-performance rubber components for passenger and commercial vehicles.'
+    // icon: <Car className="w-6 h-6" />,
+    description: 'High-performance rubber components for passenger and commercial vehicles.',
+    image: '/assets/AI-gen_Rubber-Metal.png'
   },
   {
     title: 'Engineering & Industrial',
     slug: 'engineering-industrial',
-    icon: <Factory className="w-6 h-6" />,
-    description: 'Durable solutions for heavy machinery and industrial applications.'
+    // icon: <Factory className="w-6 h-6" />,
+    description: 'Durable solutions for heavy machinery and industrial applications.',
+    image: '/assets/AI-gen_Rubber-Metal.png'
   },
   {
     title: 'Defence',
     slug: 'defence',
-    icon: <Shield className="w-6 h-6" />,
-    description: 'Mission-critical components meeting strict military standards.'
+    // icon: <Shield className="w-6 h-6" />,
+    description: 'Mission-critical components meeting strict military standards.',
+    image: '/assets/AI-gen_Rubber-Metal.png'
   },
   {
     title: 'Aerospace',
     slug: 'aerospace',
-    icon: <Plane className="w-6 h-6" />,
-    description: 'Precision engineered parts for aircraft and aviation support.'
+    // icon: <Plane className="w-6 h-6" />,
+    description: 'Precision engineered parts for aircraft and aviation support.',
+    image: '/assets/AI-gen_Rubber-Metal.png'
   },
   {
     title: 'Material Handling',
     slug: 'material-handling',
-    icon: <Package className="w-6 h-6" />,
-    description: 'Robust components for logistics and material transport equipment.'
+    // icon: <Package className="w-6 h-6" />,
+    description: 'Robust components for logistics and material transport equipment.',
+    image: '/assets/AI-gen_Rubber-Metal.png'
   },
   {
     title: 'Healthcare & Medical',
     slug: 'healthcare-medical',
-    icon: <Activity className="w-6 h-6" />,
-    description: 'Hygienic and precision molded parts for medical devices.'
+    // icon: <Activity className="w-6 h-6" />,
+    description: 'Hygienic and precision molded parts for medical devices.',
+    image: '/assets/AI-gen_Rubber-Metal.png'
   }
 ];
 
@@ -82,25 +89,29 @@ export function Industries() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex overflow-x-auto pb-8 gap-6 snap-x hide-scrollbar">
           {industries.map((item, index) => (
             <motion.div
               key={item.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-background p-8 rounded-xl shadow-sm border border-border/50 hover:shadow-xl hover:border-primary/20 transition-all duration-300 group cursor-pointer"
+              className="relative flex-shrink-0 w-[300px] h-[400px] rounded-xl overflow-hidden group cursor-pointer snap-center shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div className="bg-primary/10 text-primary w-14 h-14 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                {item.icon}
-              </div>
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
               
-              <h3 className="text-xl font-serif font-bold mb-3 text-foreground group-hover:text-primary transition-colors">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">{item.description}</p>
-              
-              <div className="flex items-center text-xs font-bold uppercase tracking-widest text-primary/80 group-hover:text-primary transition-colors">
-                 Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-white bg-black/65 backdrop-blur-sm">
+                <h3 className="text-xl font-serif font-bold mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4 line-clamp-3">{item.description}</p>
+                 <div className="flex items-center text-xs font-bold uppercase tracking-widest text-primary/80 group-hover:text-primary transition-colors">
+                   Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
             </motion.div>
           ))}
@@ -108,8 +119,8 @@ export function Industries() {
 
         <div className="mt-16 text-center">
           <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-            <Link href="/industries">
-              View All Industries
+            <Link href="/industries" className="flex items-center gap-2">
+              View All Industries <ArrowUpRight className="w-4 h-4" />
             </Link>
           </Button>
         </div>

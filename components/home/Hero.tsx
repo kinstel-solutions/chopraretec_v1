@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Play, ChevronDown } from 'lucide-react';
+import { Play, ChevronDown, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
@@ -32,9 +32,9 @@ export function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex items-center mb-8 gap-2 text-lg font-bold text-gray-300"
+            className="flex items-center mb-8 gap-2 text-2xl font-bold text-gray-300"
           >
-             <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+             <span className="w-0.5 h-5 rounded-full bg-red-600 shrink-0"></span>
              Rubber Moulding Solutions
           </motion.div>
 
@@ -66,9 +66,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-start pt-4 md:pt-8"
           >
-            <Button asChild className="h-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-sm uppercase">
-              <Link href="/contact">
-                Request a Quote (RFQ)
+            <Button asChild className="h-auto w-1/2 md:w-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-xs md:text-sm uppercase">
+              <Link href="/contact" className="flex items-center gap-2">
+                Request a Quote (RFQ) <ArrowUpRight className="w-4 h-4" />
               </Link>
             </Button>
             {/* <Button asChild variant="outline" className="h-auto py-4 px-8 border-2 border-white/30 bg-transparent text-white hover:bg-white hover:text-black rounded-none tracking-[0.1em] font-medium text-sm uppercase backdrop-blur-sm">

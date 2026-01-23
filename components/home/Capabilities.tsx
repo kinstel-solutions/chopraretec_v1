@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -78,8 +78,8 @@ export function Capabilities() {
 
             <div className="pt-6">
               <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="/capabilities">
-                  View Full Capabilities
+                <Link href="/capabilities" className="flex items-center gap-2">
+                  View Full Capabilities <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>
