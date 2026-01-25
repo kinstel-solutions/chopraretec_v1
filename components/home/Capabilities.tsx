@@ -35,6 +35,7 @@ export function Capabilities() {
                  muted
                  loop
                  playsInline
+                 preload="none"
                  className="object-cover w-full h-full"
                >
                  <source src="/videos/industrial-components.mp4" type="video/mp4" />

@@ -153,6 +153,7 @@ export function Industries() {
                         src={item.image}
                         alt={item.title}
                         fill
+                        loading="lazy"
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     
