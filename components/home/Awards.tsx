@@ -31,24 +31,52 @@ export function Awards() {
           </h3>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 transition-all duration-500">
-          {awards.map((src, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="relative w-24 h-24 md:w-32 md:h-32 bg-white rounded-lg flex items-center justify-center p-3 shadow-sm border border-stone-100 hover:shadow-md transition-shadow duration-300"
-            >
-              <Image
-                src={src}
-                alt={`Award ${index + 1}`}
-                fill
-                className="object-contain p-2"
-              />
-            </motion.div>
-          ))}
+        <div className="relative max-w-5xl mx-auto">
+          {/* First Row - Top */}
+          <div className="flex justify-center items-center gap-6 md:gap-12 mb-4">
+            {awards.slice(0, 4).map((src, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative w-20 h-20 md:w-28 md:h-28 bg-white rounded-lg flex items-center justify-center p-3 shadow-sm border border-stone-100 hover:shadow-lg hover:scale-105 transition-all duration-300 ${
+                  index % 2 === 0 ? 'mt-0' : 'mt-6 md:mt-8'
+                }`}
+              >
+                <Image
+                  src={src}
+                  alt={`Award ${index + 1}`}
+                  fill
+                  className="object-contain p-2"
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Second Row - Bottom */}
+          <div className="flex justify-center items-center gap-6 md:gap-12">
+            {awards.slice(4).map((src, index) => (
+              <motion.div
+                key={index + 4}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: (index + 4) * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative w-20 h-20 md:w-28 md:h-28 bg-white rounded-lg flex items-center justify-center p-3 shadow-sm border border-stone-100 hover:shadow-lg hover:scale-105 transition-all duration-300 ${
+                  index % 2 === 0 ? 'mb-6 md:mb-8' : 'mb-0'
+                }`}
+              >
+                <Image
+                  src={src}
+                  alt={`Award ${index + 5}`}
+                  fill
+                  className="object-contain p-2"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
