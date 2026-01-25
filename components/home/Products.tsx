@@ -11,38 +11,38 @@ const products = [
     id: 'exhaust',
     title: 'Exhaust Suspension Components',
     description: 'High-temperature resistant hangers and mounts.',
-    image: '/created-assets/rubber-to-metal-bonded-engine-mount-v2.png', // Placeholder
+    image: '/images/products/engine-mount-v2-1200w.webp',
   },
   {
     id: 'anti-vibration',
     title: 'Anti-Vibration Mounts',
     description: 'Engine mounts, cab mounts, and isolation systems.',
-    image: '/created-assets/Group-of-rubber-to-metal-components-v1.png',
+    image: '/images/products/rubber-metal-components-v1-1200w.webp',
   },
   {
     id: 'bonded',
     title: 'Rubber-to-Metal Bonded',
     description: 'Precision bonded assemblies for structural integrity.',
-    image: '/created-assets/Rubber-to-Metal-Bonding-stage3.png',
+    image: '/images/bonding-process/bonding-stage3-1200w.webp',
   },
   {
     id: 'bushes',
     title: 'Bushes & Ride Control',
     description: 'Suspension bushes, stabilizer links, and torque rods.',
-    image: '/created-assets/Group-of-rubber-to-metal-components-v2.png',
+    image: '/images/products/rubber-metal-components-v2-1200w.webp',
   },
   
   {
     id: 'engineered',
     title: 'Customer-Specific Parts',
     description: 'Bespoke solutions developed from drawing to production.',
-    image: '/created-assets/industries-served-basic.png',
+    image: '/images/industries/industries-basic-1200w.webp',
   },
   {
     id: 'custom',
     title: 'Buffers & Custom Moldings',
     description: 'Grommets, seals, stoppers and custom shapes.',
-    image: '/created-assets/custom-molded-rubber-grommet.png',
+    image: '/images/products/rubber-grommet-1200w.webp',
   },
 ];
 

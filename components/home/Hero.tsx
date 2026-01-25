@@ -19,7 +19,7 @@ export function Hero() {
           playsInline
           className="object-cover object-center w-full h-full"
         >
-          <source src="/assets/Video_Ready_After_Seal_Release.mp4" type="video/mp4" />
+          <source src="/videos/seal-release.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50" />
       </div>

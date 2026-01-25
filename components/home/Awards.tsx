@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const awards = [
-  '/award-Icons/ecovadis.png',
-  '/award-Icons/nqa-logo.png',
-  '/award-Icons/ic1.png',
-  '/award-Icons/ic2.jpg',
-  '/award-Icons/ic3.jpg',
-  '/award-Icons/ic4.png',
-  '/award-Icons/ic5.png',
+  '/images/awards/ecovadis.png',
+  '/images/awards/nqa-logo.png',
+  '/images/awards/ic1.png',
+  '/images/awards/ic2.png',
+  '/images/awards/ic3.png',
+  '/images/awards/ic4.png',
+  '/images/awards/ic5.png',
 ];
 
 export function Awards() {

@@ -13,7 +13,7 @@ const industries = [
     slug: 'automotive',
     // icon: <Car className="w-6 h-6" />,
     description: 'High-performance rubber components for passenger and commercial vehicles.',
-    image: '/created-assets/industries-served-basic.png'
+    image: '/images/industries/industries-basic-1200w.webp'
   },
   
   {
@@ -21,35 +21,35 @@ const industries = [
     slug: 'defence',
     // icon: <Shield className="w-6 h-6" />,
     description: 'Mission-critical components meeting strict military standards.',
-    image: '/created-assets/rubber-injection-molding-facility-side-view.png'
+    image: '/images/facility/facility-side-view-1200w.webp'
   },
   {
     title: 'Aerospace',
     slug: 'aerospace',
     // icon: <Plane className="w-6 h-6" />,
     description: 'Precision engineered parts for aircraft and aviation support.',
-    image: '/created-assets/rubber-injection-molding-facility-front-view.png'
+    image: '/images/facility/facility-front-view-1200w.webp'
   },
   {
     title: 'Engineering & Industrial',
     slug: 'engineering-industrial',
     // icon: <Factory className="w-6 h-6" />,
     description: 'Durable solutions for heavy machinery and industrial applications.',
-    image: '/created-assets/industries-served-advanced.png'
+    image: '/images/industries/industries-advanced-1200w.webp'
   },
   {
     title: 'Material Handling',
     slug: 'material-handling',
     // icon: <Package className="w-6 h-6" />,
     description: 'Robust components for logistics and material transport equipment.',
-    image: '/created-assets/rubber-injection-molding-facility-side-view.png'
+    image: '/images/facility/facility-side-view-1200w.webp'
   },
   {
     title: 'Healthcare & Medical',
     slug: 'healthcare-medical',
     // icon: <Activity className="w-6 h-6" />,
     description: 'Hygienic and precision molded parts for medical devices.',
-    image: '/created-assets/rubber-injection-molding-facility-side-view.png'
+    image: '/images/facility/facility-side-view-1200w.webp'
   }
 ];
 

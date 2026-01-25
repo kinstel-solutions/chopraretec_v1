@@ -37,7 +37,7 @@ export function Capabilities() {
                  playsInline
                  className="object-cover w-full h-full"
                >
-                 <source src="/assets/Industrial_Video_of_Rubber_Components.mp4" type="video/mp4" />
+                 <source src="/videos/industrial-components.mp4" type="video/mp4" />
                </video>
             </div>
             {/* Decorative Frame */}
