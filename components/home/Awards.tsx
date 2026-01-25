@@ -39,13 +39,13 @@ export function Awards() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center p-4 shadow-sm border border-stone-100"
+              className="relative w-24 h-24 md:w-32 md:h-32 bg-white rounded-lg flex items-center justify-center p-3 shadow-sm border border-stone-100 hover:shadow-md transition-shadow duration-300"
             >
               <Image
                 src={src}
                 alt={`Award ${index + 1}`}
                 fill
-                className="object-contain p-4"
+                className="object-contain p-2"
               />
             </motion.div>
           ))}
