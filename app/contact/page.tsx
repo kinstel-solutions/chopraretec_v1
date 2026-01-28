@@ -31,8 +31,19 @@ export default function ContactPage() {
                  <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">Chopra Retec Rubber Products Limited</h3>
                     <p className="text-gray-600">
-                       Full Address Here<br />
-                       Lucknow, India
+                      <span className='text-primary'>Corporate & Registered Office:</span>
+                       <br />
+                       
+                        6-B, Way Road, Lucknow-226001 (U.P.) India.
+                       <br />
+                       {/* <div className='h-0.5 w-30 bg-primary/50'></div> */}
+                       <div className='h-2'></div>
+                       <span className='text-primary'>               
+                         Manufacturing Plant:</span>
+
+<br /> Plot No. 544A/ 544B, Dewa Chinhat Road, Lucknow-227105 (U.P.) India.
+                 
+
                     </p>
                  </div>
               </div>
@@ -43,7 +54,7 @@ export default function ContactPage() {
                  </div>
                  <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+91 [Number Here]</p>
+                    <p className="text-gray-600">+91 9839014750  <br />+91 9839437744</p>
                  </div>
               </div>
 
@@ -53,7 +64,7 @@ export default function ContactPage() {
                  </div>
                  <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@chopraretec.com</p>
+                    <p className="text-gray-600">chopra@chopraretec.com <br /> anurag@chopraretec.com</p>
                  </div>
               </div>
             </div>

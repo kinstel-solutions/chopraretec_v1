@@ -24,7 +24,7 @@ export function CTASection() {
                 Partner with us for precision engineering, global standards, and consistent quality.
              </p>
 
-             <Button asChild size="lg" className="h-auto py-5 px-10 bg-white text-primary font-bold tracking-widest text-base uppercase hover:bg-white/90 shadow-none">
+             <Button asChild size="lg" className="h-auto py-5 px-10 bg-white text-primary font-bold tracking-widest text-base uppercase hover:bg-secondary-foreground/80 shadow-none">
                <Link href="/contact">
                   Send Your RFQ / Drawing <ArrowUpRight className="w-5 h-5 ml-2" />
                </Link>

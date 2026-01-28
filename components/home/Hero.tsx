@@ -13,7 +13,7 @@ export function Hero() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          autoPlay
+          autoPlay  
           muted
           loop
           playsInline
@@ -27,17 +27,17 @@ export function Hero() {
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-center">
         <div className="max-w-4xl space-y-6 md:space-y-0 text-left">
-          
-          {/* Hero Highlights */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex items-center mb-8 gap-2 text-2xl font-bold text-gray-300"
+            
+            {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-base md:text-4xl text-gray-200 font-medium leading-relaxed"
           >
-             <span className="w-0.5 h-5 rounded-full bg-red-600 shrink-0"></span>
-             Rubber Moulding Solutions
-          </motion.div>
+          | Chopra Retec: Trusted for Reliability
+          </motion.p>
+
 
           {/* Heading */}
           <motion.div
@@ -46,20 +46,25 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-0 drop-shadow-lg leading-tight text-white">
-             Precision Rubber Manufacturing
+             Precision Molded Rubber & Rubber-to-Metal Bonded Components
             </h1>
           </motion.div>
 
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base md:text-4xl text-gray-200 font-medium leading-relaxed"
+          {/* Hero Highlights */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex items-center mb-8 gap-2 text-2xl font-bold text-gray-300"
           >
-          ChopraRetec: Trusted for Reliability
-          </motion.p>
-
+             <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+             Automotive  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+             Industrial  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+             Healthcare  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+             Defence  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+             Material Handling
+          </motion.div>
+        
           {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -69,7 +74,7 @@ export function Hero() {
           >
             <Button asChild className="h-auto w-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-xs md:text-sm uppercase">
               <Link href="/contact" className="flex items-center gap-2">
-                Request a Quote (RFQ) <ArrowUpRight className="w-4 h-4 shrink-0" />
+                Request a Quote <ArrowUpRight className="w-4 h-4 shrink-0" />
               </Link>
             </Button>
             {/* <Button asChild variant="outline" className="h-auto py-4 px-8 border-2 border-white/30 bg-transparent text-white hover:bg-white hover:text-black rounded-none tracking-[0.1em] font-medium text-sm uppercase backdrop-blur-sm">

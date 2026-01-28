@@ -7,44 +7,22 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const capabilities = [
-  "Conceptualizing and R&D (Conceptualizing + R&D)",
-  "Component Design",
-  "Mould Design and Making",
-  "Compound design",
-  "Moulding using multiple processes [compression, transfer, vacuum & injection moulding]",
-  "In-House testing & quality assurance",
-  "Customised Packaging"
+  "Real-Time, Top Notch Communication",
+  "Comprehensive Range of Products",
+  "100% Fill Rates",
+  "On-Time Deliveries, Always",
+  "In-House Capability of Research, Design & Development, sets us apart from our others",
+  "Customised Packaging",
+  "Competitive Pricing",
 ];
 
-export function Capabilities() {
+export function Why_Us() {
   return (
     <section id="capabilities" className="py-20 md:py-32 bg-secondary/10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          {/* Image Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-lg bg-stone-100 shadow-2xl">
-               <video
-                 autoPlay
-                 muted
-                 loop
-                 playsInline
-                 preload="none"
-                 className="object-cover w-full h-full"
-               >
-                 <source src="/videos/industrial-components.mp4" type="video/mp4" />
-               </video>
-            </div>
-            {/* Decorative Frame */}
-            <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-lg" />
-          </motion.div>
+         
 
           {/* Content Side */}
           <motion.div
@@ -56,18 +34,18 @@ export function Capabilities() {
           >
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
-                Manufacturing Capabilities(facilities?)
+                Why Choose Us
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-foreground">
-                End-to-End Manufacturing Solutions
+               The Chopra Retec Advantage
               </h2>
             </div>
 
-            <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+            {/* <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
               <p>
                 From compound selection to molding, bonding and validation — we offer end-to-end rubber component manufacturing capabilities.
               </p>
-            </div>
+            </div> */}
 
             <ul className="space-y-4">
               {capabilities.map((item, index) => (
@@ -86,8 +64,42 @@ export function Capabilities() {
               </Button>
             </div>
           </motion.div>
+
+           {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative hidden md:block"
+          >
+            {/* <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-lg bg-stone-100 shadow-2xl">
+               <video
+                 autoPlay
+                 muted
+                 loop
+                 playsInline
+                 preload="none"
+                 className="object-cover w-full h-full"
+               >
+                 <source src="/videos/industrial-components.mp4" type="video/mp4" />
+               </video>
+            </div> */}
+            <Image
+              src="/images/facility/facility-side-view-1200w.webp"
+              alt="Chopra Retec Facility"
+              width={800}
+              height={1000}
+              className="object-cover w-full h-full"
+            />
+            {/* Decorative Frame */}
+            <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-lg" />
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
+
+
+

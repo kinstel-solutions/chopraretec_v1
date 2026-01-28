@@ -24,7 +24,7 @@ export function Footer() {
               <p className="text-xs text-white/50 uppercase tracking-widest pl-1">Rubber Technology Excellence</p>
             </div>
             <p className="text-gray-400 text-sm font-light leading-relaxed">
-              Manufacturing precision molded rubber and rubber-to-metal bonded components for global industries since 1990.
+              Manufacturing precision molded rubber and rubber-to-metal bonded components for valued customers worldwide, since 1966.
             </p>
             {/* Social Media */}
             <div className="flex gap-4">
@@ -66,18 +66,31 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
                 <span>
-                  Plot No. 123, Industrial Area,<br />
-                  Chennai, Tamil Nadu, India
+                  Corporate & Registered Office:<br /> 6-B, Way Road, Lucknow-226001 (U.P.) India.
+                 
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-primary shrink-0" />
+                <span>               
+Manufacturing Plant:<br /> Plot No. 544A/ 544B, Dewa Chinhat Road, Lucknow-227105 (U.P.) India.
+                 
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 9839014750  </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a href="mailto:info@chopraretec.com" className="hover:text-white transition-colors">
-                  info@chopraretec.com
+                <a href="mailto:chopra@chopraretec.com" className="hover:text-white transition-colors">
+                   chopra@chopraretec.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-primary/90 shrink-0" />
+                <a href="mailto:anurag@chopraretec.com" className="hover:text-white transition-colors">
+                   anurag@chopraretec.com
                 </a>
               </li>
             </ul>

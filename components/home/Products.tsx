@@ -10,40 +10,36 @@ const products = [
   {
     id: 'exhaust',
     title: 'Exhaust Suspension Components',
-    description: 'High-temperature resistant hangers and mounts.',
+    description: 'High Performance hangers and mounts.',
     image: '/images/products/engine-mount-v2-1200w.webp',
+  },
+   {
+    id: 'bushes',
+    title: 'Ride Control Parts',
+    description: 'Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.',
+    image: '/images/products/rubber-metal-components-v2-1200w.webp',
   },
   {
     id: 'anti-vibration',
     title: 'Anti-Vibration Mounts',
-    description: 'Engine mounts, cab mounts, and isolation systems.',
+    description: 'Controll Arm Bushing, Trailer Arm Bushings, Silent Block.',
     image: '/images/products/rubber-metal-components-v1-1200w.webp',
   },
   {
     id: 'bonded',
-    title: 'Rubber-to-Metal Bonded',
-    description: 'Precision bonded assemblies for structural integrity.',
+    title: 'Rubber-to-Metal Bonded Components',
+    description: 'Designed for structural integrity.',
     image: '/images/bonding-process/bonding-stage3-1200w.webp',
   },
-  {
-    id: 'bushes',
-    title: 'Bushes & Ride Control',
-    description: 'Suspension bushes, stabilizer links, and torque rods.',
-    image: '/images/products/rubber-metal-components-v2-1200w.webp',
-  },
+ 
   
   {
-    id: 'engineered',
-    title: 'Customer-Specific Parts',
-    description: 'Bespoke solutions developed from drawing to production.',
+    id: 'custom',
+    title: 'Custom-Designed Components',
+    description: 'End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.',
     image: '/images/industries/industries-basic-1200w.webp',
   },
-  {
-    id: 'custom',
-    title: 'Buffers & Custom Moldings',
-    description: 'Grommets, seals, stoppers and custom shapes.',
-    image: '/images/products/rubber-grommet-1200w.webp',
-  },
+  
 ];
 
 export function Products() {
@@ -65,7 +61,7 @@ export function Products() {
             viewport={{ once: true }}
             className="font-serif text-3xl text-black md:text-4xl font-bold"
           >
-            Components That Perform Under Stress
+            Components That Perform Under Adverse Conditions
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -74,7 +70,7 @@ export function Products() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground max-w-2xl mx-auto text-lg"
           >
-            We manufacture a wide range of molded rubber and rubber-to-metal bonded components, engineered for consistent performance and long service life.
+            We manufacture a wide range of molded rubber and rubber-to-metal bonded components, engineered for consistent performance and long service life with focus on Noise, Vibration and Harshness (NVH).
           </motion.p>
         </div>
 

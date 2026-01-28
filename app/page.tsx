@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import { Hero } from '@/components/home/Hero';
 import { Industries } from '@/components/home/Industries';
+import { Why_Us } from '@/components/home/Why_Us';
 
 // Lazy load below-fold components for better performance
 const Products = dynamic(() => import('@/components/home/Products').then(mod => ({ default: mod.Products })), {
@@ -27,15 +28,21 @@ const CTASection = dynamic(() => import('@/components/home/CTASection').then(mod
   loading: () => <div className="py-16 bg-primary" />
 });
 
+const WhyUs = dynamic(() => import('@/components/home/WhyUs').then(mod => ({ default: mod.WhyUs })), {
+  loading: () => <div className="py-20 md:py-32 bg-stone-50" />
+});
+
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
       <Hero />
       <Industries />
       <Products />
+      <Why_Us />
       <Capabilities />
       <Awards />
       <Quality />
+      {/* <WhyUs /> */}
       <GlobalReach />
       <CTASection />
     </div>

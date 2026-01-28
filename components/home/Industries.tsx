@@ -20,21 +20,14 @@ const industries = [
     title: 'Defence',
     slug: 'defence',
     // icon: <Shield className="w-6 h-6" />,
-    description: 'Mission-critical components meeting strict military standards.',
+    description: 'Mission-critical components meeting global standards.',
     image: '/images/facility/facility-side-view-1200w.webp'
-  },
-  {
-    title: 'Aerospace',
-    slug: 'aerospace',
-    // icon: <Plane className="w-6 h-6" />,
-    description: 'Precision engineered parts for aircraft and aviation support.',
-    image: '/images/facility/facility-front-view-1200w.webp'
   },
   {
     title: 'Engineering & Industrial',
     slug: 'engineering-industrial',
     // icon: <Factory className="w-6 h-6" />,
-    description: 'Durable solutions for heavy machinery and industrial applications.',
+    description: 'Durable solutions for machinery, engineering and industrial applications.',
     image: '/images/industries/industries-advanced-1200w.webp'
   },
   {
@@ -48,7 +41,7 @@ const industries = [
     title: 'Healthcare & Medical',
     slug: 'healthcare-medical',
     // icon: <Activity className="w-6 h-6" />,
-    description: 'Hygienic and precision molded parts for medical devices.',
+    description: 'Hygienic and precision molded parts for medical and healthcare applications.',
     image: '/images/facility/facility-side-view-1200w.webp'
   }
 ];
@@ -108,7 +101,7 @@ export function Industries() {
             viewport={{ once: true }}
             className="font-serif text-3xl md:text-4xl font-bold text-foreground"
           >
-            Engineered for Multiple Industries
+            Engineered for Multiple Industries & Applications (SILENCING THE NEEDS OF GLOBAL INDUSTRIES)
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
@@ -123,7 +116,7 @@ export function Industries() {
              transition={{ delay: 0.1 }}
              className="text-muted-foreground max-w-2xl mx-auto pt-4 text-lg"
           >
-            Chopra Retec partners with customers across diverse sectors, delivering engineered rubber components designed for demanding working conditions.
+            Chopra Retec partners with customers across diverse sectors, delivering engineered rubber and rubber-to-metal bonded components designed for extreme conditions.
           </motion.p>
         </div>
 
