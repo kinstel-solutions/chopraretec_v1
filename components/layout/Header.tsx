@@ -31,12 +31,12 @@ export function Header() {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
+    { href: '/', label: 'HOME' },
     { href: '/about', label: 'ABOUT US' },
-    { href: '/#industries', label: 'INDUSTRIES' },
-    { href: '/#products', label: 'PRODUCTS' },
-    { href: '/#capabilities', label: 'CAPABILITIES' },
-    { href: '/#quality', label: 'QUALITY' },
-    { href: '/#contact', label: 'CONTACT' },
+    { href: '/our-facility', label: 'OUR FACILITY' },
+    { href: '/certifications', label: 'CERTIFICATIONS' },
+    { href: '/awards-media', label: 'AWARDS & MEDIA' },
+    { href: '/contact', label: 'CONTACT' },
   ];
 
   return (
