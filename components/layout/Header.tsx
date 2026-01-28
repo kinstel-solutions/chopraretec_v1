@@ -52,6 +52,7 @@ export function Header() {
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
          
           {/* Logo */}
+          {/* Logo */}
           <Link 
             href="/" 
             className="group relative z-10 block" 
@@ -65,13 +66,13 @@ export function Header() {
           >
             <div className="relative h-12 w-48 md:h-16 md:w-64 transition-all duration-300">
                <Image 
-                 src="/chopra-OG-logo.png" 
+                 src={isScrolled || isMobileMenuOpen 
+                   ? "/logos/_2291947363488light-mode-noBG.svg" 
+                   : "/logos/_2291947363488dark-mode-noBG.svg"
+                 }
                  alt="Chopra Retec" 
                  fill
-                 className={cn(
-                   "object-contain object-left transition-all duration-300",
-                   !isScrolled && "drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]"
-                 )}
+                 className="object-contain object-left transition-all duration-300"
                  priority
                />
             </div>

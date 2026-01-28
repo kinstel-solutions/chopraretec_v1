@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Linkedin, Facebook } from 'lucide-react';
 
 export function Footer() {
@@ -11,9 +12,16 @@ export function Footer() {
           
           {/* Brand */}
           <div className="space-y-6">
-            <div>
-              <h2 className="font-serif text-2xl font-bold uppercase tracking-wider">Chopra Retec</h2>
-              <p className="text-xs text-white/50 mt-2 uppercase tracking-widest">Rubber Technology Excellence</p>
+            <div className="space-y-4">
+              <div className="relative h-12 w-48">
+                <Image 
+                  src="/logos/_2291947363488dark-mode-noBG.svg"
+                  alt="Chopra Retec"
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
+              <p className="text-xs text-white/50 uppercase tracking-widest pl-1">Rubber Technology Excellence</p>
             </div>
             <p className="text-gray-400 text-sm font-light leading-relaxed">
               Manufacturing precision molded rubber and rubber-to-metal bonded components for global industries since 1990.

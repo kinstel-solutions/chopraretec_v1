@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  icons: {
+    icon: '/logos/GroupNo-text-light-mode-noBG.svg',
+    apple: '/logos/GroupNo-text-light-mode-noBG.svg',
+  },
 };
 
 export default function RootLayout({
