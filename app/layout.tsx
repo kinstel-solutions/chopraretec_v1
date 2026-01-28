@@ -6,6 +6,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 
+import { Loader } from '@/components/ui/Loader';
+
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
   display: 'swap',
@@ -30,6 +32,8 @@ export const metadata: Metadata = {
   },
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -45,6 +49,7 @@ export default function RootLayout({
             forcedTheme="light"
             disableTransitionOnChange
           >
+          <Loader />
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />
