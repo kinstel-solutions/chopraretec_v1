@@ -18,23 +18,36 @@ export function Industries() {
     if (!scrollContainer) return;
 
     let animationFrameId: number;
+    let resetThreshold = 0;
+    let resetTo = 0;
+
+    // Cache dimensions to avoid layout thrashing in the loop
+    const updateDimensions = () => {
+      if (scrollContainer) {
+        // We are scrolling a container that has 3 sets of items.
+        // We reset when we reach the end of the first set (1/3 of total width)
+        const partWidth = scrollContainer.scrollWidth / 3;
+        resetThreshold = partWidth * 2;
+        resetTo = partWidth;
+      }
+    };
+
+    // Initial measurement
+    updateDimensions();
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateDimensions();
+    });
+    resizeObserver.observe(scrollContainer);
     
     // Auto-scroll loop
     const scroll = () => {
-      if (!isPaused) {
+      if (!isPaused && resetThreshold > 0) {
         scrollContainer.scrollLeft += 1; // Adjust speed here (1px per frame)
         
-        // Check for seamless loop reset
-        // We are scrolling a container that has 3 sets of items.
-        // We reset when we reach the end of the first set (1/3 of total width)
-        // However, calculating exact width can be tricky with gaps.
-        // Simplified approach: Scroll until near end, then jump back.
-        // Better approach for seamlessness:
-        // If scrollLeft >= (scrollWidth / 3) * 2, reset to (scrollWidth / 3)
-        // This ensures we are always in the middle "safe" zone.
-        
-        if (scrollContainer.scrollLeft >= (scrollContainer.scrollWidth / 3) * 2) {
-            scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3;
+        // Check for seamless loop reset using cached values
+        if (scrollContainer.scrollLeft >= resetThreshold) {
+            scrollContainer.scrollLeft = resetTo;
         }
       }
       animationFrameId = requestAnimationFrame(scroll);
@@ -42,7 +55,10 @@ export function Industries() {
 
     animationFrameId = requestAnimationFrame(scroll);
 
-    return () => cancelAnimationFrame(animationFrameId);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      resizeObserver.disconnect();
+    };
   }, [isPaused]);
 
   return (

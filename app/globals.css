@@ -68,11 +68,12 @@ body {
 }
 
 /* Only enable smooth scroll for mouse users, not touch devices */
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+/* Note: Disabled because it causes 'sticky' or 'hanging' feel on laptop touchpads which report as hover devices */
+/* @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
   }
-}
+} */
 
 /* Performance optimizations for smoother scrolling */
 * {
@@ -83,5 +84,5 @@ body {
 /* Optimize touch scrolling on mobile */
 html {
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
+  /* touch-action: pan-y; -- Removed to prevent interference with horizontal scrolling regions */
 }
