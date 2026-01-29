@@ -98,6 +98,33 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Separator */}
+        <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full" />
+
+        {/* Factory Building */}
+        <section className="w-full">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Factory</h2>
+            <p className="text-lg text-muted-foreground mt-4">Located in Lucknow, India</p>
+          </div>
+          <motion.div
+             initial={{ opacity: 0, scale: 0.95 }}
+             whileInView={{ opacity: 1, scale: 1 }}
+             viewport={{ once: true }}
+             className="relative rounded-3xl overflow-hidden shadow-2xl border"
+          >
+            <Image
+              src={about.factoryImage}
+              alt="Chopra Retec Factory Building"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              className="object-cover"
+            />
+          </motion.div>
+        </section>
+
       </div>
     </div>
   );

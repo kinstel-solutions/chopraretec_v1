@@ -1,7 +1,7 @@
 export const pagesData = {
   about: {
     heading: "About Chopra Retec",
-    heroImage: "/real-assets/shop-floor.webp",
+    heroImage: "/real-assets/building-outside-photo-4.webp",
     intro: [
       "CHOPRA RETEC RUBBER PRODUCTS LIMITED (CRRPL), is a globally placed Manufacturing and Exporting company, located in Lucknow.",
       "Our company, which is a Small Medium Enterprise, with 3 decades of manufacturing experience, is an ISO 9001 Certified & IATF compliant, ESG Certified, ZED Certified Govt. of India recognized Star Export House and specializes in making all kinds of molded rubber and rubber to metal bonded parts and accessories for Global Industries."
@@ -12,42 +12,53 @@ export const pagesData = {
       "Capable across automotive and non-automotive sectors",
       "High-mix and repeat-volume supply capability",
       "Strong expertise in rubber-to-metal bonding applications"
-    ]
+    ],
+    factoryImage: "/real-assets/building-outside-photo-4.webp"
   },
   facility: {
     heading: "World-Class Infrastructure",
     subHeading: "Merging decades of expertise with modern technology in Lucknow, India.",
     heroImage: "/real-assets/DSC_4040-Edit-2.webp",
-    sections: [
+    processSteps: [
       {
-        title: 'Advanced Manufacturing Hub',
-        description: 'Our Lucknow facility is equipped with modern compression and injection molding machines, ensuring high-volume repeatability and precision.',
-        image: '/real-assets/moulding-1.webp',
-        align: 'right' as const
+        title: "Engineering & Tooling",
+        description: "Where precision begins. Our in-house tool room is the heart of our operations, equipped with advanced VMC and CNC machines to design and fabricate complex molds with micron-level accuracy.",
+        images: [
+          { src: "/real-assets/tool-making-1.webp", alt: "Tool Room Overview" },
+          { src: "/real-assets/Designing.webp", alt: "CAD/CAM Designing" },
+          { src: "/real-assets/tool-making-2.webp", alt: "CNC Machining" },
+          { src: "/real-assets/tool-making-3.webp", alt: "Mold Finishing" },
+          { src: "/real-assets/tool-making-4.webp", alt: "Precision Verification" }
+        ]
       },
       {
-        title: 'In-House Tool Room',
-        description: 'Speed to market is critical. Our dedicated tool room with VMC and CNC capabilities allows us to design, fabricate, and maintain molds internally, reducing lead times significantly.',
-        image: '/real-assets/tool-making-3.webp',
-        align: 'left' as const
+        title: "Production Ecosystem",
+        description: "A seamless flow from raw material to finished product. We utilize automated batch weighing for consistency, followed by high-capacity compression and injection molding lines.",
+        images: [
+          { src: "/real-assets/steel-stamping.webp", alt: "Metal Stamping" },
+          { src: "/real-assets/moulding-2.webp", alt: "Injection Molding" },
+          { src: "/real-assets/automated-batch-weighing.webp", alt: "Automated Compounding" },
+          { src: "/real-assets/shop-floor.webp", alt: "Shop Floor Overview" },
+          { src: "/real-assets/moulding-1.webp", alt: "Compression Molding" }
+        ]
       },
       {
-        title: 'Rubber Compounding & Prep',
-        description: 'Quality starts at the mix. We use automated batch weighing systems to ensure every rubber compound meets exact specifications before it even reaches the mold.',
-        image: '/real-assets/automated-batch-weighing.webp',
-        align: 'right' as const
+        title: "Precision & Quality",
+        description: "Zero defect is our standard. Our quality lab validates every batch, while laser marking ensures traceability for critical components.",
+        images: [
+          { src: "/real-assets/test-lab.webp", alt: "Quality Assurance Lab" },
+          { src: "/real-assets/lazer-marking.webp", alt: "Laser Marking" },
+          { src: "/real-assets/suspension-parts.webp", alt: "Finished Parts Inspection" },
+          { src: "/real-assets/exhaust-parts.webp", alt: "Final Quality Check" }
+        ]
       },
       {
-        title: 'Quality Assurance Lab',
-        description: 'Our onsite lab features rheometers, tensile testers, and other critical testing equipment to validate material properties and finished part performance.',
-        image: '/real-assets/test-lab.webp',
-        align: 'left' as const
-      },
-      {
-        title: 'Foundational Strength',
-        description: 'From raw material storage to final dispatch, our shop floor is organized for efficiency, safety, and scalability.',
-        image: '/real-assets/shop-floor.webp',
-        align: 'right' as const
+        title: "Final Packaging",
+        description: "Delivered with care. Our packaging solutions, including skin packaging and individual bagging, ensure products reach you in pristine condition.",
+        images: [
+          { src: "/real-assets/skin-packaging.webp", alt: "Skin Packaging" },
+          { src: "/real-assets/single-bagging.webp", alt: "Individual Bagging" }
+        ]
       }
     ]
   },
