@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -10,9 +11,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ModeToggle } from '@/components/mode-toggle';
 import { navigationData } from '@/data/navigation';
 
+const TRANSPARENT_HEADER_ROUTES = ['/', '/our-facility'];
+
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  const isTransparentPage = TRANSPARENT_HEADER_ROUTES.includes(pathname);
+  // If not a transparent page, force "scrolled" look (solid background) always
+  const showSolidHeader = isScrolled || isMobileMenuOpen || !isTransparentPage;
 
   React.useEffect(() => {
     let ticking = false;
@@ -47,7 +55,7 @@ export function Header() {
       <header
         className={cn(
           'fixed top-0 w-full z-50 transition-all duration-300 border-transparent',
-          isScrolled || isMobileMenuOpen
+          showSolidHeader
             ? 'bg-white/95 backdrop-blur-md border-border h-20 md:h-24 shadow-sm text-black'
             : 'bg-gradient-to-b from-black/50 to-transparent h-24 md:h-28 text-white'
         )}
@@ -68,7 +76,7 @@ export function Header() {
           >
             <div className="relative h-full aspect-[4/1] transition-all duration-300">
                <Image 
-                 src={isScrolled || isMobileMenuOpen 
+                 src={showSolidHeader 
                    ? "/logos/_2291947363488light-mode-noBG.svg" 
                    : "/logos/_2291947363488dark-mode-noBG.svg"
                  }
@@ -84,7 +92,7 @@ export function Header() {
             {/* Desktop Nav */}
             <nav className={cn(
               "hidden lg:flex items-center gap-8 text-sm font-medium tracking-widest transition-colors duration-300",
-               isScrolled ? "text-secondary-foreground" : "text-white"
+               showSolidHeader ? "text-secondary-foreground" : "text-white"
             )}>
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="group relative py-2">
@@ -93,7 +101,7 @@ export function Header() {
                   </span>
                   <span className={cn(
                     "absolute left-0 bottom-0 w-full h-0.5 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100",
-                    isScrolled ? "bg-primary" : "bg-white" // Use accent/primary color when scrolled (white background), white when transparent background
+                    showSolidHeader ? "bg-primary" : "bg-white" // Use accent/primary color when scrolled (white background), white when transparent background
                   )} />
                 </Link>
               ))}
@@ -103,7 +111,7 @@ export function Header() {
             <Button 
               variant="ghost" 
               size="icon" 
-              className={cn("lg:hidden relative z-10", !isScrolled && !isMobileMenuOpen && "hover:bg-white/10 hover:text-white")}
+              className={cn("lg:hidden relative z-10", !showSolidHeader && "hover:bg-white/10 hover:text-white")}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
