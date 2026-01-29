@@ -49,7 +49,7 @@ export function CompanyTimeline() {
             className="flex-shrink-0 w-80 relative z-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: index * 0.1 }}
           >
             <div className="bg-black/80 border border-red-900/30 p-6 rounded-lg backdrop-blur-sm hover:border-red-500/50 transition-colors h-full flex flex-col">

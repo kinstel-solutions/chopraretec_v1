@@ -50,7 +50,7 @@ export function Products() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold"
           >
             Products Snapshot
@@ -58,7 +58,7 @@ export function Products() {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="font-serif text-3xl text-black md:text-4xl font-bold"
           >
             Components That Perform Under Adverse Conditions
@@ -66,7 +66,7 @@ export function Products() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.1 }}
             className="text-muted-foreground max-w-2xl mx-auto text-lg"
           >
@@ -80,7 +80,7 @@ export function Products() {
               key={product.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
               className="group cursor-pointer"
             >

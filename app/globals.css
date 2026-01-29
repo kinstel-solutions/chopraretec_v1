@@ -65,5 +65,23 @@
 html,
 body {
   overflow-x: hidden;
-  scroll-behavior: smooth;
+}
+
+/* Only enable smooth scroll for mouse users, not touch devices */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Performance optimizations for smoother scrolling */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize touch scrolling on mobile */
+html {
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }

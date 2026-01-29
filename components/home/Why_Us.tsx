@@ -28,7 +28,7 @@ export function Why_Us() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -58,8 +58,8 @@ export function Why_Us() {
 
             <div className="pt-6">
               <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="/capabilities" className="flex items-center gap-2">
-                  View Full Capabilities <ArrowUpRight className="w-4 h-4" />
+                <Link href="/contact" className="flex items-center gap-2">
+                  Get in Touch <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>
@@ -69,7 +69,7 @@ export function Why_Us() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="relative hidden md:block"
           >

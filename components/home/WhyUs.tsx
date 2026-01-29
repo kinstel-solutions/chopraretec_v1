@@ -43,7 +43,7 @@ export function WhyUs() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16 space-y-4"
         >
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
@@ -61,7 +61,7 @@ export function WhyUs() {
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
               className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-border/50"
             >

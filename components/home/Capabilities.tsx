@@ -7,12 +7,12 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const capabilities = [
-  "Conceptualizing and R&D (Conceptualizing + R&D)",
+  "Conceptualizing and R&D",
   "Component Design",
-  "Mould Design and Making",
-  "Compound design",
-  "Moulding using multiple processes [compression, transfer, vacuum & injection moulding]",
-  "In-House testing & quality assurance",
+  "Mould Design & Making",
+  "Compound Design",
+  "Moulding using multiple processes: Compression, Transfer, Vacuum & Injection moulding",
+  "In-House Testing & Quality Assurance",
   "Customised Packaging"
 ];
 
@@ -26,7 +26,7 @@ export function Capabilities() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
@@ -50,13 +50,13 @@ export function Capabilities() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
-                Manufacturing Capabilities(facilities?)
+                Manufacturing Facilities
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-foreground">
                 End-to-End Manufacturing Solutions
@@ -80,8 +80,8 @@ export function Capabilities() {
 
             <div className="pt-6">
               <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="/capabilities" className="flex items-center gap-2">
-                  View Full Capabilities <ArrowUpRight className="w-4 h-4" />
+                <Link href="/our-facility" className="flex items-center gap-2">
+                  View Our Facility <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>

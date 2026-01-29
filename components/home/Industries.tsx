@@ -90,7 +90,7 @@ export function Industries() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold"
           >
             Industries We Serve
@@ -98,7 +98,7 @@ export function Industries() {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="font-serif text-3xl md:text-4xl font-bold text-foreground"
           >
             Engineered for Multiple Industries & Applications
@@ -106,13 +106,13 @@ export function Industries() {
           <motion.div 
             initial={{ width: 0 }}
             whileInView={{ width: '80px' }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="h-1 bg-primary mx-auto rounded-full"
           />
           <motion.p 
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
+             viewport={{ once: true, margin: "-100px" }}
              transition={{ delay: 0.1 }}
              className="text-muted-foreground max-w-2xl mx-auto pt-4 text-lg"
           >
@@ -139,7 +139,7 @@ export function Industries() {
                     key={`${item.slug}-${index}`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="relative flex-shrink-0 w-[300px] h-[400px] rounded-xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-300"
                     >
                     <Image
