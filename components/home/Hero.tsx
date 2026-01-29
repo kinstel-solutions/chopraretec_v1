@@ -33,7 +33,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base md:text-4xl text-gray-200 font-medium leading-relaxed"
+            className="text-base md:text-4xl text-gray-200 font-thin leading-relaxed"
           >
           | Chopra Retec: Trusted for Reliability
           </motion.p>

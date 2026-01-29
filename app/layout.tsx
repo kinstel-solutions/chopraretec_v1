@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Nunito_Sans } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/Header';
@@ -8,10 +8,11 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 import { Loader } from '@/components/ui/Loader';
 
-const nunitoSans = Nunito_Sans({
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-nunito-sans',
+  variable: '--font-roboto',
 });
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn(nunitoSans.variable)} suppressHydrationWarning>
+    <html lang="en" className={cn(roboto.variable)} suppressHydrationWarning>
       <body className="font-sans antialiased text-foreground bg-background selection:bg-primary selection:text-white">
         <ThemeProvider
             attribute="class"
