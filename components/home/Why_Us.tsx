@@ -58,8 +58,8 @@ export function Why_Us() {
 
             <div className="pt-6">
               <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="/capabilities" className="flex items-center gap-2">
-                  View Full Capabilities <ArrowUpRight className="w-4 h-4" />
+                <Link href="/contact" className="flex items-center gap-2">
+                  Get in Touch <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>
