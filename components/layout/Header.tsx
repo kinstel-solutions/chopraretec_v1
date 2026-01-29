@@ -48,17 +48,16 @@ export function Header() {
         className={cn(
           'fixed top-0 w-full z-50 transition-all duration-300 border-transparent',
           isScrolled || isMobileMenuOpen
-            ? 'bg-white/95 backdrop-blur-md border-border py-4 shadow-sm text-black'
-            : 'bg-gradient-to-b from-black/50 to-transparent py-6 text-white'
+            ? 'bg-white/95 backdrop-blur-md border-border h-20 md:h-24 shadow-sm text-black'
+            : 'bg-gradient-to-b from-black/50 to-transparent h-24 md:h-28 text-white'
         )}
       >
-        <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
+        <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-full">
          
-          {/* Logo */}
           {/* Logo */}
           <Link 
             href="/" 
-            className="group relative z-10 block" 
+            className="group relative z-10 block h-full pt-1 md:pt-1" 
             onClick={(e) => {
               setIsMobileMenuOpen(false);
               if (window.location.pathname === '/') {
@@ -67,7 +66,7 @@ export function Header() {
               }
             }}
           >
-            <div className="relative h-12 w-48 md:h-16 md:w-64 transition-all duration-300">
+            <div className="relative h-full aspect-[4/1] transition-all duration-300">
                <Image 
                  src={isScrolled || isMobileMenuOpen 
                    ? "/logos/_2291947363488light-mode-noBG.svg" 
