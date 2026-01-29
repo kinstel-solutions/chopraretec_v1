@@ -61,7 +61,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-4xl text-gray-200 font-light leading-relaxed tracking-wide drop-shadow-lg mt-2 flex items-center gap-2"
+            className="text-lg md:text-4xl text-gray-200 font-light leading-relaxed tracking-wide drop-shadow-lg mt-2 flex items-center gap-2"
           >
           <span className="text-primary">Chopra</span> Retec : Trusted for Reliability
           </motion.p>
