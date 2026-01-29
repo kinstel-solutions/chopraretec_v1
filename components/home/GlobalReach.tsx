@@ -7,11 +7,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { GlobalReachMap } from './GlobalReachMap';
 import { CompanyTimeline } from './CompanyTimeline';
-
-const stats = [
-  { icon: Truck, value: 98, suffix: '%', label: 'On-Time Delivery', description: 'Reliable logistics' },
-  { icon: BookOpen, value: 5000, suffix: '+', label: 'Parts Developed', description: 'Extensive product portfolio' },
-];
+import { homeData } from '@/data/home';
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -46,6 +42,8 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export function GlobalReach() {
+  const { globalReach } = homeData;
+
   return (
     <section className="py-20 md:py-0 bg-black text-white relative overflow-hidden" id="global">
       {/* Background Pattern */}
@@ -65,15 +63,14 @@ export function GlobalReach() {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-12"
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-bold mb-4">Global Presence</p>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">SILENCING THE NEEDS <br />OF GLOBAL INDUSTRIES</h2>
+            <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-bold mb-4">{globalReach.subHeading}</p>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">{globalReach.heading}</h2>
             <p className="text-gray-300 text-lg max-w-xl leading-relaxed mb-8">
-              From our state-of-the-art facility in Lucknow to companies in Europe and the Americas, 
-              Chopra Retec ensures precision goes global.
+              {globalReach.description}
             </p>
             
             <div className="grid grid-cols-2 gap-8 mb-10">
-               {stats.map((stat, index) => (
+               {globalReach.stats.map((stat, index) => (
                 <div key={stat.label}>
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                     <p className="text-sm font-bold mt-2 text-white">{stat.label}</p>

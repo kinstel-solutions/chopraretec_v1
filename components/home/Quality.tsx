@@ -4,31 +4,11 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Ruler, Activity, RefreshCw, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-
-const features = [
-  {
-    icon: RefreshCw,
-    title: 'Robust Process Controls',
-    description: 'Our systems are designed for repeatability, ensuring consistent quality output for every batch.',
-  },
-  {
-    icon: Ruler,
-    title: 'Inspection & Validation',
-    description: 'Rigorous validation standards and dimensional checks at every stage of production.',
-  },
-  {
-    icon: Activity,
-    title: 'Durability & Performance',
-    description: 'We focus on creating parts that withstand stress, heat, and vibration over long service lives.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Continuous Improvement',
-    description: 'A commitment to refining our processes and adopting best practices for global supply requirements.',
-  },
-];
+import { homeData } from '@/data/home';
 
 export function Quality() {
+  const { quality } = homeData;
+
   return (
     <section className="py-20 md:py-32 bg-white overflow-hidden" id="quality">
       <div className="container mx-auto px-4 md:px-8">
@@ -40,10 +20,10 @@ export function Quality() {
           className="text-center mb-20 space-y-4"
         >
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold">
-            Quality & Reliability
+            {quality.subHeading}
           </p>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
-            Quality You Can Depend On
+            {quality.heading}
           </h2>
           <motion.div 
             initial={{ width: 0 }}
@@ -55,7 +35,7 @@ export function Quality() {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+          {quality.features.map((feature, index) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 30 }}

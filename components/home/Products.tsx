@@ -5,44 +5,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const products = [
-  {
-    id: 'exhaust',
-    title: 'Exhaust Suspension Components',
-    description: 'High Performance hangers and mounts.',
-    image: '/images/products/engine-mount-v2-1200w.webp',
-  },
-   {
-    id: 'bushes',
-    title: 'Ride Control Parts',
-    description: 'Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.',
-    image: '/images/products/rubber-metal-components-v2-1200w.webp',
-  },
-  {
-    id: 'anti-vibration',
-    title: 'Anti-Vibration Mounts',
-    description: 'Controll Arm Bushing, Trailer Arm Bushings, Silent Block.',
-    image: '/images/products/rubber-metal-components-v1-1200w.webp',
-  },
-  {
-    id: 'bonded',
-    title: 'Rubber-to-Metal Bonded Components',
-    description: 'Designed for structural integrity.',
-    image: '/images/bonding-process/bonding-stage3-1200w.webp',
-  },
- 
-  
-  {
-    id: 'custom',
-    title: 'Custom-Designed Components',
-    description: 'End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.',
-    image: '/images/industries/industries-basic-1200w.webp',
-  },
-  
-];
+import { homeData } from '@/data/home';
 
 export function Products() {
+  const { products } = homeData;
+
   return (
     <section className="py-20 md:py-32 bg-white overflow-hidden" id="products">
       <div className="container mx-auto px-4 md:px-8">
@@ -53,7 +20,7 @@ export function Products() {
             viewport={{ once: true, margin: "-100px" }}
             className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold"
           >
-            Products Snapshot
+            {products.subHeading}
           </motion.p>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +28,7 @@ export function Products() {
             viewport={{ once: true, margin: "-100px" }}
             className="font-serif text-3xl text-black md:text-4xl font-bold"
           >
-            Components That Perform Under Adverse Conditions
+            {products.heading}
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -70,12 +37,12 @@ export function Products() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground max-w-2xl mx-auto text-lg"
           >
-            We manufacture a wide range of molded rubber and rubber-to-metal bonded components, engineered for consistent performance and long service life with focus on Noise, Vibration and Harshness (NVH).
+            {products.description}
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
+          {products.items.map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 30 }}

@@ -4,31 +4,11 @@ import { motion } from 'framer-motion';
 import { FileText, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { IllustrationWrapper } from '@/components/ui/IllustrationWrapper';
-
-const certifications = [
-  {
-    title: "ISO 9001:2015",
-    description: "Quality Management System Certification by NQA.",
-    file: "/real-assets/certs/iso-9001-2015-cerficate-(nqa).pdf"
-  },
-  {
-    title: "One Star Export House",
-    description: "Government of India Recognition (2021-2026).",
-    file: "/real-assets/certs/one-star-export-house-certificate-(2021-2026).pdf"
-  },
-  {
-    title: "ZED Bronze Certified",
-    description: "Zero Defect Zero Effect Certification.",
-    file: "/real-assets/certs/zed-certificate-bronze-(072122).pdf"
-  },
-  {
-    title: "D&B Registered",
-    description: "Dun & Bradstreet Global Database Registration.",
-    file: "/real-assets/certs/d&b-certificate.pdf"
-  }
-];
+import { pagesData } from '@/data/pages';
 
 export default function CertificationsPage() {
+  const { certifications } = pagesData;
+
   return (
     <div className="pt-24 pb-20 min-h-screen bg-gray-50/50">
       <div className="container mx-auto px-4 md:px-8 space-y-16">
@@ -39,7 +19,7 @@ export default function CertificationsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-primary"
           >
-            Certifications & Standards
+            {certifications.heading}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -47,12 +27,12 @@ export default function CertificationsPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
           >
-            Our commitment to quality is validated by international standards and government recognitions.
+            {certifications.description}
           </motion.p>
         </section>
 
         <div className="flex flex-col gap-20 max-w-5xl mx-auto">
-          {certifications.map((cert, index) => (
+          {certifications.items.map((cert, index) => (
             <div key={index} className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
               
               {/* Certificate Preview */}

@@ -5,18 +5,11 @@ import { motion } from 'framer-motion';
 import { CheckCircle, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-
-const capabilities = [
-  "Conceptualizing and R&D",
-  "Component Design",
-  "Mould Design & Making",
-  "Compound Design",
-  "Moulding using multiple processes: Compression, Transfer, Vacuum & Injection moulding",
-  "In-House Testing & Quality Assurance",
-  "Customised Packaging"
-];
+import { homeData } from '@/data/home';
 
 export function Capabilities() {
+  const { capabilities } = homeData;
+
   return (
     <section id="capabilities" className="py-20 md:py-32 bg-secondary/10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
@@ -56,21 +49,21 @@ export function Capabilities() {
           >
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
-                Manufacturing Facilities
+                {capabilities.subHeading}
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-foreground">
-                End-to-End Manufacturing Solutions
+                {capabilities.heading}
               </h2>
             </div>
 
             <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
               <p>
-                From compound selection to molding, bonding and validation — we offer end-to-end rubber component manufacturing capabilities.
+                {capabilities.description}
               </p>
             </div>
 
             <ul className="space-y-4">
-              {capabilities.map((item, index) => (
+              {capabilities.items.map((item, index) => (
                 <li key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0" />
                   <span className="font-medium text-foreground/90">{item}</span>

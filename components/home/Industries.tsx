@@ -6,50 +6,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-
-const industries = [
-  {
-    title: 'Automotive',
-    slug: 'automotive',
-    // icon: <Car className="w-6 h-6" />,
-    description: 'High-performance rubber components for passenger and commercial vehicles.',
-    image: '/images/industries/industries-basic-1200w.webp'
-  },
-  
-  {
-    title: 'Defence',
-    slug: 'defence',
-    // icon: <Shield className="w-6 h-6" />,
-    description: 'Mission-critical components meeting global standards.',
-    image: '/images/facility/facility-side-view-1200w.webp'
-  },
-  {
-    title: 'Engineering & Industrial',
-    slug: 'engineering-industrial',
-    // icon: <Factory className="w-6 h-6" />,
-    description: 'Durable solutions for machinery, engineering and industrial applications.',
-    image: '/images/industries/industries-advanced-1200w.webp'
-  },
-  {
-    title: 'Material Handling',
-    slug: 'material-handling',
-    // icon: <Package className="w-6 h-6" />,
-    description: 'Robust components for logistics and material transport equipment.',
-    image: '/images/facility/facility-side-view-1200w.webp'
-  },
-  {
-    title: 'Healthcare & Medical',
-    slug: 'healthcare-medical',
-    // icon: <Activity className="w-6 h-6" />,
-    description: 'Hygienic and precision molded parts for medical and healthcare applications.',
-    image: '/images/facility/facility-side-view-1200w.webp'
-  }
-];
-
+import { homeData } from '@/data/home';
 
 export function Industries() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
+  const { industries } = homeData;
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -93,7 +55,7 @@ export function Industries() {
             viewport={{ once: true, margin: "-100px" }}
             className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold"
           >
-            Industries We Serve
+            {industries.subHeading}
           </motion.p>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -101,7 +63,7 @@ export function Industries() {
             viewport={{ once: true, margin: "-100px" }}
             className="font-serif text-3xl md:text-4xl font-bold text-foreground"
           >
-            Engineered for Multiple Industries & Applications
+            {industries.heading}
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
@@ -116,7 +78,7 @@ export function Industries() {
              transition={{ delay: 0.1 }}
              className="text-muted-foreground max-w-2xl mx-auto pt-4 text-lg"
           >
-            Chopra Retec partners with customers across diverse sectors, delivering engineered rubber and rubber-to-metal bonded components designed for extreme conditions.
+            {industries.description}
           </motion.p>
         </div>
 
@@ -134,7 +96,7 @@ export function Industries() {
                 onTouchEnd={() => setIsPaused(false)}
             >
                 {/* Tripled list for infinite scroll feeling */}
-                {[...industries, ...industries, ...industries].map((item, index) => (
+                {[...industries.items, ...industries.items, ...industries.items].map((item, index) => (
                     <motion.div
                     key={`${item.slug}-${index}`}
                     initial={{ opacity: 0, scale: 0.9 }}

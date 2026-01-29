@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ModeToggle } from '@/components/mode-toggle';
+import { navigationData } from '@/data/navigation';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -39,14 +40,7 @@ export function Header() {
     }
   }, [isMobileMenuOpen]);
 
-  const navLinks = [
-    { href: '/', label: 'HOME' },
-    { href: '/about', label: 'ABOUT US' },
-    { href: '/our-facility', label: 'OUR FACILITY' },
-    { href: '/certifications', label: 'CERTIFICATIONS' },
-    { href: '/awards-media', label: 'AWARDS & MEDIA' },
-    { href: '/contact', label: 'CONTACT' },
-  ];
+  const { header: navLinks } = navigationData;
 
   return (
     <>

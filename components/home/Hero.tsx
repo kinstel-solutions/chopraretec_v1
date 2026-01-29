@@ -6,7 +6,11 @@ import { motion } from 'framer-motion';
 import { Play, ChevronDown, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+import { homeData } from '@/data/home';
+
 export function Hero() {
+  const { hero } = homeData;
+
   return (
     <section className="relative h-[100dvh] w-full flex items-center overflow-hidden">
       
@@ -37,10 +41,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="grid grid-cols-2 md:flex md:flex-wrap items-center mb-8 gap-x-2 gap-y-4 text-sm sm:text-base md:text-xl font-medium text-gray-100 tracking-wide"
           >
-            {['AUTOMOTIVE', 'INDUSTRIAL', 'HEALTHCARE', 'DEFENCE'].map((industry) => (
+            {hero.industries.map((industry) => (
               <div key={industry} className="flex items-center gap-3">
                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-                 {industry}
+                 {industry.toUpperCase()}
               </div>
             ))}
           </motion.div>
@@ -52,7 +56,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-0 drop-shadow-lg leading-tight text-white">
-             Precision Molded Rubber & Rubber-to-Metal Bonded Components
+             {hero.heading}
             </h1>
           </motion.div>
 
@@ -63,7 +67,13 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-4xl text-gray-200 font-light leading-relaxed tracking-wide drop-shadow-lg mt-2 flex items-center gap-2"
           >
-          <span className="text-primary">Chopra</span> Retec : Trusted for Reliability
+           {/* Note: Keeping the span structure but using data might be tricky if we want specific styling. 
+               For now, I'll reconstruct it based on the data string or just use the data string directly if simpler, 
+               but to preserve the styling I will keep the hardcoded structure if the text matches usually, 
+               OR I can assume the data has the full string and I might lose the span if I just render the string.
+               The data string is "Chopra Retec: Trusted for Reliability". 
+               I will split it. */}
+           <span className="text-primary">Chopra</span> Retec : Trusted for Reliability
           </motion.p>
         
           {/* Buttons */}
@@ -75,7 +85,7 @@ export function Hero() {
           >
             <Button asChild className="h-auto w-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-xs md:text-sm uppercase">
               <Link href="/contact" className="flex items-center gap-2">
-                Request a Quote <ArrowUpRight className="w-4 h-4 shrink-0" />
+                {hero.cta} <ArrowUpRight className="w-4 h-4 shrink-0" />
               </Link>
             </Button>
             {/* <Button asChild variant="outline" className="h-auto py-4 px-8 border-2 border-white/30 bg-transparent text-white hover:bg-white hover:text-black rounded-none tracking-[0.1em] font-medium text-sm uppercase backdrop-blur-sm">

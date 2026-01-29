@@ -5,18 +5,11 @@ import { motion } from 'framer-motion';
 import { CheckCircle, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-
-const capabilities = [
-  "Real-Time, Top Notch Communication",
-  "Comprehensive Range of Products",
-  "100% Fill Rates",
-  "On-Time Deliveries, Always",
-  "In-House Capability of Research, Design & Development, sets us apart from our others",
-  "Customised Packaging",
-  "Competitive Pricing",
-];
+import { homeData } from '@/data/home';
 
 export function Why_Us() {
+  const { whyUs } = homeData;
+
   return (
     <section id="capabilities" className="py-20 md:py-32 bg-secondary/10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
@@ -34,10 +27,10 @@ export function Why_Us() {
           >
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
-                Why Choose Us
+                {whyUs.subHeading}
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-foreground">
-               The Chopra Retec Advantage
+               {whyUs.heading}
               </h2>
             </div>
 
@@ -48,7 +41,7 @@ export function Why_Us() {
             </div> */}
 
             <ul className="space-y-4">
-              {capabilities.map((item, index) => (
+              {whyUs.capabilities.map((item, index) => (
                 <li key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0" />
                   <span className="font-medium text-foreground/90">{item}</span>

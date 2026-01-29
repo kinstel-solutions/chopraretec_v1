@@ -3,8 +3,14 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, FileDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { companyData } from '@/data/company';
+import { pagesData } from '@/data/pages';
 
 export default function ContactPage() {
+  const { contact } = pagesData;
+  const { contact: companyContact } = companyData;
+  const { address } = companyContact;
+
   return (
     <div className="pt-24 pb-20 mt-18">
       <div className="container mx-auto px-4 md:px-8">
@@ -17,9 +23,9 @@ export default function ContactPage() {
             className="space-y-10"
           >
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-primary">Contact Us</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary">{contact.heading}</h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Let’s discuss your requirement. Send your drawing, sample or specifications — our team will respond promptly.
+                {contact.description}
               </p>
             </div>
 
@@ -29,22 +35,22 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6" />
                  </div>
                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">Chopra Retec Rubber Products Limited</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">{companyData.name}</h3>
+                    <div className="text-gray-600">
                       <span className='text-primary'>Corporate & Registered Office:</span>
                        <br />
                        
-                        6-B, Way Road, Lucknow-226001 (U.P.) India.
+                        {address.registered}
                        <br />
                        {/* <div className='h-0.5 w-30 bg-primary/50'></div> */}
                        <div className='h-2'></div>
                        <span className='text-primary'>               
                          Manufacturing Plant:</span>
 
-<br /> Plot No. 544A/ 544B, Dewa Chinhat Road, Lucknow-227105 (U.P.) India.
+<br /> {address.plant}
                  
 
-                    </p>
+                    </div>
                  </div>
               </div>
 
@@ -54,7 +60,11 @@ export default function ContactPage() {
                  </div>
                  <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+91 9839014750  <br />+91 9839437744</p>
+                    <p className="text-gray-600">
+                        {companyContact.phone.map((phone) => (
+                          <span key={phone} className="block">{phone}</span>
+                        ))}
+                    </p>
                  </div>
               </div>
 
@@ -64,7 +74,11 @@ export default function ContactPage() {
                  </div>
                  <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">chopra@chopraretec.com <br /> anurag@chopraretec.com</p>
+                    <p className="text-gray-600">
+                        {companyContact.email.map((email) => (
+                          <span key={email} className="block">{email}</span>
+                        ))}
+                    </p>
                  </div>
               </div>
             </div>
@@ -104,6 +118,21 @@ export default function ContactPage() {
                     <input type="text" id="quantity" className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg" placeholder="Annual volume" />
                  </div>
                  <div className="space-y-2">
+                    <label htmlFor="orderType" className="text-sm font-bold uppercase tracking-widest text-gray-500">Order Frequency</label>
+                    <div className="relative">
+                      <select id="orderType" className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg bg-transparent appearance-none cursor-pointer">
+                        <option value="one-time">One Time Order</option>
+                        <option value="repetitive">Repetitive Order</option>
+                      </select>
+                       {/* Custom Arrow */}
+                       <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                       </div>
+                    </div>
+                 </div>
+                 <div className="space-y-2 md:col-span-2">
                     <label htmlFor="location" className="text-sm font-bold uppercase tracking-widest text-gray-500">Delivery Location</label>
                     <input type="text" id="location" className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg" placeholder="City/Country" />
                  </div>

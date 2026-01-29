@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import { pagesData } from '@/data/pages';
 
 export default function AboutPage() {
+  const { about } = pagesData;
+
   return (
     <div className="pt-24 pb-20 mt-18">
       <div className="container mx-auto px-4 md:px-8 space-y-20">
@@ -15,7 +18,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-primary"
           >
-            About Chopra Retec
+            {about.heading}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +26,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
           >
-            CHOPRA RETEC RUBBER PRODUCTS LIMITED (CRRPL), is a globally placed Manufacturing and Exporting company, located in Lucknow.   
+            {about.intro[0]}
           </motion.p>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -31,47 +34,12 @@ export default function AboutPage() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
           >
-            Our company, which is a Small Medium Enterprise, with 3 decades of manufacturing experience, is an ISO 9001 Certified & IATF compliant, ESG Certified, ZED Certified Govt. of India recognized Star Export House and specializes in making all kinds of molded rubber and rubber to metal bonded parts and accessories for Global Industries.
+            {about.intro[1]}
           </motion.p>
         </section>
 
         {/* Separator */}
         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full" />
-
-        {/* What We Stand For */}
-        
-        {/* <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-gray-900">What We Stand For</h2>
-            <ul className="space-y-4">
-              {[
-                "Precision manufacturing and repeatability",
-                "Performance-focused product design",
-                "Strong quality culture and compliance mindset",
-                "Long-term partnerships with customers",
-                "Reliable exports and international servicing"
-              ].map((item, index) => (
-                <motion.li 
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-3 text-lg text-gray-700"
-                >
-                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-secondary/10 p-8 rounded-2xl border border-secondary/20">
-             
-             <div className="aspect-video bg-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold">
-                Company Values / Facility Image
-             </div>
-          </div>
-        </section> */}
 
         {/* Our Strengths */}
         <section className="bg-primary text-white p-10 md:p-16 rounded-3xl shadow-xl">
@@ -79,13 +47,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold">Our Strengths</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "30+ years of manufacturing experience",
-              "Exports to 30+ countries",
-              "Capable across automotive and non-automotive sectors",
-              "High-mix and repeat-volume supply capability",
-              "Strong expertise in rubber-to-metal bonding applications"
-            ].map((strength, index) => (
+            {about.strengths.map((strength, index) => (
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

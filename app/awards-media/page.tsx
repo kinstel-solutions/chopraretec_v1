@@ -4,66 +4,11 @@ import { motion } from 'framer-motion';
 import { Trophy, Award, Star } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-
-const awards = [
-  {
-    category: "Export Excellence",
-    items: [
-      {
-        title: "State Export Award (1999-2000)",
-        description: "Excellence in Export Performance.",
-        file: "/real-assets/certs/state-export-award-1999-2000.pdf"
-      },
-      {
-        title: "State Export Award (2003-2004)",
-        description: "Recognition for outstanding export growth.",
-        file: "/real-assets/certs/state-export-award-2003-2004.pdf"
-      },
-      {
-         title: "State Export Award (2004-2005)",
-         description: "Consistent export excellence award.",
-         file: "/real-assets/certs/state-export-award-2004-2005.pdf"
-      },
-      {
-        title: "Capexil Recognition (2015-2016)",
-         description: "Certificate of Export Recognition.",
-         file: "/real-assets/certs/capexil-certificate-of-export-recognition-2015-2016.pdf"
-      },
-      {
-         title: "Capexil Recognition (2016-2017)",
-          description: "Certificate of Export Recognition.",
-          file: "/real-assets/certs/capexil-certificate-of-export-recognition-2016-2017.pdf"
-       }
-    ]
-  },
-  {
-    category: "Business Leadership",
-    items: [
-      {
-        title: "India SME 100 Award (2016-17)",
-        description: "Ranked among top 100 SMEs in India.",
-        file: "/real-assets/certs/certificate-india-sme-100-award-2016-2017.pdf"
-      },
-       {
-        title: "India SME 100 Award (2017-18)",
-        description: "Continued excellence in SME sector.",
-        file: "/real-assets/certs/certificate-india-sme-100-award-2017-2018.pdf"
-      },
-      {
-        title: "SME Business Excellence 2016",
-        description: "Certificate of Participation & Excellence.",
-        file: "/real-assets/certs/sme-business-excellence-awards-2016-certificate-of-participation.pdf"
-      },
-       {
-        title: "Top 10 Recognition",
-        description: "CRRPL recognized as one of the Top 10.",
-        file: "/real-assets/certs/crrpl-one-of-the-top-10-certificate.pdf"
-      }
-    ]
-  }
-];
+import { pagesData } from '@/data/pages';
 
 export default function AwardsMediaPage() {
+  const { awards } = pagesData;
+
   return (
     <div className="pt-24 pb-20 min-h-screen bg-background">
       <div className="container mx-auto px-4 md:px-8 space-y-20">
@@ -74,7 +19,7 @@ export default function AwardsMediaPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-primary"
           >
-            Awards & Recognition
+            {awards.heading}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +27,7 @@ export default function AwardsMediaPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
           >
-             Celebrating our journey of excellence, quality, and leadership.
+             {awards.description}
           </motion.p>
         </section>
         
@@ -94,7 +39,7 @@ export default function AwardsMediaPage() {
         </div> */}
 
         <div className="space-y-16">
-          {awards.map((section, sIndex) => (
+          {awards.categories.map((section, sIndex) => (
             <div key={sIndex} className="space-y-8">
               <motion.h2 
                 initial={{ opacity: 0, x: -20 }}
