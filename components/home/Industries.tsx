@@ -164,8 +164,8 @@ export function Industries() {
 
         <div className="mt-16 text-center">
           <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-            <Link href="/industries" className="flex items-center gap-2">
-              View All Industries <ArrowUpRight className="w-4 h-4" />
+            <Link href="/contact" className="flex items-center gap-2">
+              Request a Quote <ArrowUpRight className="w-4 h-4" />
             </Link>
           </Button>
         </div>
