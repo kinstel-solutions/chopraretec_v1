@@ -35,9 +35,9 @@ export function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid grid-cols-2 md:flex md:flex-wrap items-center mb-8 gap-x-6 gap-y-4 text-sm sm:text-base md:text-xl font-medium text-gray-100 tracking-wide"
+            className="grid grid-cols-2 md:flex md:flex-wrap items-center mb-8 gap-x-2 gap-y-4 text-sm sm:text-base md:text-xl font-medium text-gray-100 tracking-wide"
           >
-            {['Automotive', 'Industrial', 'Healthcare', 'Defence'].map((industry) => (
+            {['AUTOMOTIVE', 'INDUSTRIAL', 'HEALTHCARE', 'DEFENCE'].map((industry) => (
               <div key={industry} className="flex items-center gap-3">
                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
                  {industry}
@@ -61,7 +61,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-4xl text-gray-200 font-light leading-relaxed tracking-wide drop-shadow-lg mt-2 flex items-center gap-2"
+            className="text-xl md:text-4xl text-gray-200 font-light leading-relaxed tracking-wide drop-shadow-lg mt-2 flex items-center gap-2"
           >
           <span className="text-primary">Chopra</span> Retec : Trusted for Reliability
           </motion.p>

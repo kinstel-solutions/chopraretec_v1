@@ -160,7 +160,7 @@ export function Header() {
               ))}
               <Link 
                 href="/#contact" 
-                className="mt-8 bg-primary text-white px-8 py-3 text-sm font-bold tracking-[0.15em] uppercase w-full text-center"
+                className="mt-8 bg-transparent border-primary border px-8 py-3 text-sm font-bold tracking-[0.15em] uppercase w-full text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Request Quote
