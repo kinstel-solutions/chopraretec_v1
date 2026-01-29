@@ -1,6 +1,7 @@
 export const pagesData = {
   about: {
     heading: "About Chopra Retec",
+    heroImage: "/real-assets/shop-floor.webp",
     intro: [
       "CHOPRA RETEC RUBBER PRODUCTS LIMITED (CRRPL), is a globally placed Manufacturing and Exporting company, located in Lucknow.",
       "Our company, which is a Small Medium Enterprise, with 3 decades of manufacturing experience, is an ISO 9001 Certified & IATF compliant, ESG Certified, ZED Certified Govt. of India recognized Star Export House and specializes in making all kinds of molded rubber and rubber to metal bonded parts and accessories for Global Industries."
@@ -52,6 +53,7 @@ export const pagesData = {
   },
   certifications: {
     heading: "Certifications & Standards",
+    heroImage: "/real-assets/test-lab.webp",
     description: "Our commitment to quality is validated by international standards and government recognitions.",
     items: [
       {
@@ -82,6 +84,7 @@ export const pagesData = {
   },
   awards: {
     heading: "Awards & Recognition",
+    heroImage: "/real-assets/moulding-2.webp",
     description: "Celebrating our journey of excellence, quality, and leadership.",
     categories: [
       {
@@ -152,6 +155,7 @@ export const pagesData = {
   },
   contact: {
       heading: "Contact Us",
+      heroImage: "/real-assets/Designing.webp",
       description: "Let’s discuss your requirement. Send your drawing, sample or specifications — our team will respond promptly."
   }
 };

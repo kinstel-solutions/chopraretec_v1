@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ModeToggle } from '@/components/mode-toggle';
 import { navigationData } from '@/data/navigation';
 
-const TRANSPARENT_HEADER_ROUTES = ['/', '/our-facility'];
+const TRANSPARENT_HEADER_ROUTES = ['/', '/about', '/our-facility', '/certifications', '/awards-media', '/contact'];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);

@@ -14,26 +14,38 @@ export default function AwardsMediaPage() {
 
   return (
     <>
-      <div className="pt-24 pb-20 min-h-screen bg-background">
-        <div className="container mx-auto px-4 md:px-8 space-y-20">
-          
-          <section className="max-w-4xl mx-auto text-center space-y-6">
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+               src={awards.heroImage || ''}
+               alt="Awards & Recognition"
+               fill
+               className="object-cover brightness-[0.4]"
+               priority
+            />
+          </div>
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold text-primary"
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               {awards.heading}
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-lg md:text-xl text-muted-foreground leading-relaxed"
+              transition={{ delay: 0.2 }}
+              className="text-lg md:text-2xl text-gray-200"
             >
-              {awards.description}
+               {awards.description}
             </motion.p>
-          </section>
+          </div>
+        </section>
+
+        <div className="py-20 container mx-auto px-4 md:px-8 space-y-20">
           
           <div className="space-y-16">
             {awards.categories.map((section, sIndex) => (

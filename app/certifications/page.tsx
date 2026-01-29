@@ -15,26 +15,38 @@ export default function CertificationsPage() {
 
   return (
     <>
-      <div className="pt-24 pb-20 min-h-screen bg-gray-50/50">
-        <div className="container mx-auto px-4 md:px-8 space-y-16">
-          
-          <section className="max-w-4xl mx-auto text-center space-y-6">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold text-primary"
-            >
-              {certifications.heading}
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-lg md:text-xl text-muted-foreground leading-relaxed"
-            >
-              {certifications.description}
-            </motion.p>
-          </section>
+    <div className="min-h-screen bg-gray-50/50">
+      {/* Hero Section */}
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+             src={certifications.heroImage || ''}
+             alt="Certifications & Standards"
+             fill
+             className="object-cover brightness-[0.4]"
+             priority
+          />
+        </div>
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+          >
+            {certifications.heading}
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-2xl text-gray-200"
+          >
+             {certifications.description}
+          </motion.p>
+        </div>
+      </section>
+
+      <div className="py-20 container mx-auto px-4 md:px-8 space-y-16">
 
           <div className="flex flex-col gap-20 max-w-5xl mx-auto">
             {certifications.items.map((cert, index) => (
@@ -92,8 +104,8 @@ export default function CertificationsPage() {
             ))}
           </div>
 
-        </div>
       </div>
+    </div>
 
       <PdfModal 
         isOpen={!!selectedCert}
