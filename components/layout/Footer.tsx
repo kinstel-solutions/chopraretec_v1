@@ -112,3 +112,40 @@ Manufacturing Plant:<br /> Plot No. 544A/ 544B, Dewa Chinhat Road, Lucknow-22710
   );
 }
 
+{/* <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-wrap items-center mb-6 md:mb-8 gap-x-3 gap-y-2 text-sm md:text-lg lg:text-xl font-medium text-gray-100/90 tracking-wide"
+          >
+            {['Automotive', 'Industrial', 'Healthcare', 'Defence', 'Material Handling'].map((industry) => (
+              <div key={industry} className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.6)]" />
+                 {industry}
+              </div>
+            ))}
+          </motion.div>
+
+        
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-4 md:mb-6"
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-2xl leading-[1.1] text-white">
+             Precision Molded Rubber & <br className="hidden md:block" />
+             Rubber-to-Metal Bonded Components
+            </h1>
+          </motion.div>
+
+     
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-3xl text-gray-200 font-light leading-relaxed tracking-wide drop-shadow-lg flex items-center gap-3"
+          >
+            <span className="w-8 h-[1px] bg-red-500 inline-block" /> 
+            Chopra Retec: Trusted for Reliability
+          </motion.p> */}
