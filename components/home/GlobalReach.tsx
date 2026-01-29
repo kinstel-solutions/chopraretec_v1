@@ -67,7 +67,7 @@ export function GlobalReach() {
           >
             <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-bold mb-4">Global Presence</p>
             <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">SILENCING THE NEEDS <br />OF GLOBAL INDUSTRIES</h2>
-            <p className="text-gray-400 text-lg max-w-xl leading-relaxed mb-8">
+            <p className="text-gray-300 text-lg max-w-xl leading-relaxed mb-8">
               From our state-of-the-art facility in Lucknow to companies in Europe and the Americas, 
               Chopra Retec ensures precision goes global.
             </p>

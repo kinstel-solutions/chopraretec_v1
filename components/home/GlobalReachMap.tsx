@@ -69,7 +69,7 @@ export function GlobalReachMap() {
                 <div className="w-3 h-3 rounded-full bg-red-600 animate-pulse" />
                 <span className="text-white text-sm font-bold tracking-wider">LUCKNOW HQ</span>
             </div>
-            <p className="text-xs text-gray-400">Connecting strictly controlled aerospace supply chains.</p>
+            <p className="text-xs text-gray-300">Connecting strictly controlled aerospace supply chains.</p>
         </div> */}
     </div>
   );

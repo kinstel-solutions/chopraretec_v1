@@ -22,7 +22,7 @@ export function Hero() {
         >
           <source src="/videos/seal-release.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-center">
@@ -35,7 +35,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-wrap items-center mb-8 gap-x-4 gap-y-2 text-xl md:text-2xl font-bold text-gray-300"
+            className="flex flex-wrap items-center mb-8 gap-x-4 gap-y-2 text-xl md:text-2xl font-bold text-gray-200"
           >
             {['Automotive', 'Industrial', 'Healthcare', 'Defence', 'Material Handling'].map((industry) => (
               <div key={industry} className="flex items-center gap-2">
@@ -61,7 +61,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base md:text-4xl text-gray-200 font-thin leading-relaxed"
+            className="text-base md:text-4xl text-gray-100 font-thin leading-relaxed"
           >
           | Chopra Retec: Trusted for Reliability
           </motion.p>

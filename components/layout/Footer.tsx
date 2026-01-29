@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="relative h-12 w-48">
+              <div className="relative h-48 w-48">
                 <Image 
                   src="/logos/_2291947363488dark-mode-noBG.svg"
                   alt="Chopra Retec"
@@ -23,7 +23,7 @@ export function Footer() {
               </div>
               <p className="text-xs text-white/50 uppercase tracking-widest pl-1">Rubber Technology Excellence</p>
             </div>
-            <p className="text-gray-400 text-sm font-light leading-relaxed">
+            <p className="text-gray-300 text-sm font-light leading-relaxed">
               Manufacturing precision molded rubber and rubber-to-metal bonded components for valued customers worldwide, since 1996.
             </p>
             {/* Social Media */}
@@ -40,7 +40,7 @@ export function Footer() {
           {/* Navigation */}
           <div>
             <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Company</h3>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <ul className="space-y-3 text-sm text-gray-300">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/#capabilities" className="hover:text-white transition-colors">Capabilities</Link></li>
               <li><Link href="/#quality" className="hover:text-white transition-colors">Quality & Standards</Link></li>
@@ -51,7 +51,7 @@ export function Footer() {
           {/* Solutions */}
           <div>
             <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Solutions</h3>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <ul className="space-y-3 text-sm text-gray-300">
               <li><Link href="/#industries" className="hover:text-white transition-colors">Industries Served</Link></li>
               <li><Link href="/#products" className="hover:text-white transition-colors">Product Range</Link></li>
               <li><Link href="/#products" className="hover:text-white transition-colors">Custom Molding</Link></li>
@@ -62,7 +62,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Get In Touch</h3>
-            <ul className="space-y-4 text-sm text-gray-400">
+            <ul className="space-y-4 text-sm text-gray-300">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
                 <span>
@@ -98,7 +98,7 @@ Manufacturing Plant:<br /> Plot No. 544A/ 544B, Dewa Chinhat Road, Lucknow-22710
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <p>
             © {currentYear} Chopra Retec Rubber Products. All rights reserved.
           </p>

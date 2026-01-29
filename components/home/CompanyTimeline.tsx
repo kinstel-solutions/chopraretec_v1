@@ -58,7 +58,7 @@ export function CompanyTimeline() {
               </div>
               <span className="text-4xl font-serif font-bold text-white mb-2 block">{milestone.year}</span>
               <h3 className="text-xl font-bold text-red-500 mb-2">{milestone.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{milestone.description}</p>
+              <p className="text-gray-300 text-sm leading-relaxed">{milestone.description}</p>
             </div>
             {/* Dot on the line */}
             <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-red-600 rounded-full -translate-x-1/2 -translate-y-1/2 hidden md:block border-4 border-black" style={{ marginTop: '-4rem' }} />
