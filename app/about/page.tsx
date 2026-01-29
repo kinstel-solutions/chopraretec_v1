@@ -17,7 +17,7 @@ export default function AboutPage() {
              src={about.heroImage || ''} // Fallback if undefined, though we just added it
              alt="About Chopra Retec"
              fill
-             className="object-cover brightness-[0.4]"
+             className="object-cover object-top brightness-[0.4]"
              priority
           />
         </div>
