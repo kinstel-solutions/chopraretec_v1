@@ -23,7 +23,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
           >
-            Chopra Retec Rubber Products Limited is a reputed manufacturer of molded rubber and rubber-to-metal bonded components, serving customers across multiple industries and global markets.
+            CHOPRA RETEC RUBBER PRODUCTS LIMITED (CRRPL), is a globally placed Manufacturing and Exporting company, located in Lucknow.   
           </motion.p>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function AboutPage() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
           >
-            With a modern manufacturing facility in Lucknow, India, we combine engineering capability, process reliability and export experience to deliver components that perform consistently in challenging environments.
+            Our company, which is a Small Medium Enterprise, with 3 decades of manufacturing experience, is an ISO 9001 Certified & IATF compliant, ESG Certified, ZED Certified Govt. of India recognized Star Export House and specializes in making all kinds of molded rubber and rubber to metal bonded parts and accessories for Global Industries.
           </motion.p>
         </section>
 
@@ -39,7 +39,8 @@ export default function AboutPage() {
         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full" />
 
         {/* What We Stand For */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        {/* <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-gray-900">What We Stand For</h2>
             <ul className="space-y-4">
@@ -65,12 +66,12 @@ export default function AboutPage() {
             </ul>
           </div>
           <div className="bg-secondary/10 p-8 rounded-2xl border border-secondary/20">
-             {/* Placeholder for an image or graphic */}
+             
              <div className="aspect-video bg-gray-200 rounded-xl flex items-center justify-center text-gray-400 font-bold">
                 Company Values / Facility Image
              </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Our Strengths */}
         <section className="bg-primary text-white p-10 md:p-16 rounded-3xl shadow-xl">

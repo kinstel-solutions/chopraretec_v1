@@ -101,7 +101,7 @@ export function Industries() {
             viewport={{ once: true }}
             className="font-serif text-3xl md:text-4xl font-bold text-foreground"
           >
-            Engineered for Multiple Industries & Applications (SILENCING THE NEEDS OF GLOBAL INDUSTRIES)
+            Engineered for Multiple Industries & Applications
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}

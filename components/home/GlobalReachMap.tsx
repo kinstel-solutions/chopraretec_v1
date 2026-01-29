@@ -64,13 +64,13 @@ export function GlobalReachMap() {
             onPointerEnter={() => (isHovering.current = true)}
             onPointerLeave={() => (isHovering.current = false)}
         />
-        <div className="absolute bottom-4 left-4 md:left-8 pointer-events-none">
+        {/* <div className="absolute bottom-4 left-4 md:left-8 pointer-events-none">
             <div className="flex items-center gap-2 mb-2">
                 <div className="w-3 h-3 rounded-full bg-red-600 animate-pulse" />
                 <span className="text-white text-sm font-bold tracking-wider">LUCKNOW HQ</span>
             </div>
             <p className="text-xs text-gray-400">Connecting strictly controlled aerospace supply chains.</p>
-        </div>
+        </div> */}
     </div>
   );
 }

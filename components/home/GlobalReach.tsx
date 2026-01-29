@@ -66,9 +66,9 @@ export function GlobalReach() {
             className="mb-12"
           >
             <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-bold mb-4">Global Presence</p>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">Connecting Continents<br />Delivering Trust</h2>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">SILENCING THE NEEDS <br />OF GLOBAL INDUSTRIES</h2>
             <p className="text-gray-400 text-lg max-w-xl leading-relaxed mb-8">
-              From our state-of-the-art facility in Lucknow to aerospace giants in Europe and the Americas, 
+              From our state-of-the-art facility in Lucknow to companies in Europe and the Americas, 
               Chopra Retec ensures precision goes global.
             </p>
             
@@ -96,7 +96,7 @@ export function GlobalReach() {
       </div>
 
       {/* Timeline Section */}
-      <div className="container mx-auto px-4 pb-20">
+      {/* <div className="container mx-auto px-4 pb-20">
          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ export function GlobalReach() {
             <div className="w-20 h-1 bg-red-600 mb-8" />
         </motion.div>
         <CompanyTimeline />
-      </div>
+      </div> */}
 
     </section>
   );

@@ -24,7 +24,7 @@ export function Footer() {
               <p className="text-xs text-white/50 uppercase tracking-widest pl-1">Rubber Technology Excellence</p>
             </div>
             <p className="text-gray-400 text-sm font-light leading-relaxed">
-              Manufacturing precision molded rubber and rubber-to-metal bonded components for valued customers worldwide, since 1966.
+              Manufacturing precision molded rubber and rubber-to-metal bonded components for valued customers worldwide, since 1996.
             </p>
             {/* Social Media */}
             <div className="flex gap-4">

@@ -28,7 +28,35 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-center">
         <div className="max-w-4xl space-y-6 md:space-y-0 text-left">
             
-            {/* Description */}
+           
+
+          {/* Hero Highlights */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-wrap items-center mb-8 gap-x-4 gap-y-2 text-xl md:text-2xl font-bold text-gray-300"
+          >
+            {['Automotive', 'Industrial', 'Healthcare', 'Defence', 'Material Handling'].map((industry) => (
+              <div key={industry} className="flex items-center gap-2">
+                 <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0" />
+                 {industry}
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-0 drop-shadow-lg leading-tight text-white">
+             Precision Molded Rubber & Rubber-to-Metal Bonded Components
+            </h1>
+          </motion.div>
+
+          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,33 +65,6 @@ export function Hero() {
           >
           | Chopra Retec: Trusted for Reliability
           </motion.p>
-
-
-          {/* Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-0 drop-shadow-lg leading-tight text-white">
-             Precision Molded Rubber & Rubber-to-Metal Bonded Components
-            </h1>
-          </motion.div>
-
-          {/* Hero Highlights */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex items-center mb-8 gap-2 text-2xl font-bold text-gray-300"
-          >
-             <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
-             Automotive  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
-             Industrial  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
-             Healthcare  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
-             Defence  <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
-             Material Handling
-          </motion.div>
         
           {/* Buttons */}
           <motion.div
