@@ -54,6 +54,25 @@ export default function AboutPage() {
           </motion.p>
         </section>
 
+
+        {/* Corporate Video */}
+        <section className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border bg-black/5"
+          >
+            <iframe
+              src="https://www.youtube.com/embed/IJRFXwprUqo?rel=0"
+              title="Chopra Retec Corporate Video"
+              className="absolute top-0 left-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </motion.div>
+        </section>
+
         {/* Separator */}
         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full" />
 
