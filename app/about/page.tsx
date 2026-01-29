@@ -56,7 +56,11 @@ export default function AboutPage() {
 
 
         {/* Corporate Video */}
-        <section className="max-w-4xl mx-auto">
+        <section className="w-full">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{about.videoTitle}</h2>
+            <p className="text-lg text-muted-foreground mt-4">{about.videoSubtitle}</p>
+          </div>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}

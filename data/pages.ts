@@ -13,6 +13,8 @@ export const pagesData = {
       "High-mix and repeat-volume supply capability",
       "Strong expertise in rubber-to-metal bonding applications"
     ],
+    videoTitle: "Our Journey",
+    videoSubtitle: "A glimpse into our world of precision manufacturing.",
     factoryImage: "/real-assets/building-outside-photo-4.webp"
   },
   facility: {
