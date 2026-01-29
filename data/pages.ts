@@ -57,22 +57,26 @@ export const pagesData = {
       {
         title: "ISO 9001:2015",
         description: "Quality Management System Certification by NQA.",
-        file: "/real-assets/certs/iso-9001-2015-cerficate-(nqa).pdf"
+        file: "/real-assets/certs/iso-9001-2015-cerficate-(nqa).pdf",
+        thumbnail: "/real-assets/certs/thumbnails/iso-9001-2015-cerficate-(nqa).jpg"
       },
       {
         title: "One Star Export House",
         description: "Government of India Recognition (2021-2026).",
-        file: "/real-assets/certs/one-star-export-house-certificate-(2021-2026).pdf"
+        file: "/real-assets/certs/one-star-export-house-certificate-(2021-2026).pdf",
+        thumbnail: "/real-assets/certs/thumbnails/one-star-export-house-certificate-(2021-2026)-conv-0.jpeg"
       },
       {
         title: "ZED Bronze Certified",
         description: "Zero Defect Zero Effect Certification.",
-        file: "/real-assets/certs/zed-certificate-bronze-(072122).pdf"
+        file: "/real-assets/certs/zed-certificate-bronze-(072122).pdf",
+        thumbnail: "/real-assets/certs/thumbnails/zed-certificate-bronze-(072122).jpg"
       },
       {
         title: "D&B Registered",
         description: "Dun & Bradstreet Global Database Registration.",
-        file: "/real-assets/certs/d&b-certificate.pdf"
+        file: "/real-assets/certs/d&b-certificate.pdf",
+        thumbnail: "/real-assets/certs/thumbnails/d&b-certificate.jpg"
       }
     ]
   },
@@ -86,27 +90,32 @@ export const pagesData = {
           {
             title: "State Export Award (1999-2000)",
             description: "Excellence in Export Performance.",
-            file: "/real-assets/certs/state-export-award-1999-2000.pdf"
+            file: "/real-assets/certs/state-export-award-1999-2000.pdf",
+            thumbnail: "/real-assets/certs/thumbnails/state-export-award-1999-2000.jpg"
           },
           {
             title: "State Export Award (2003-2004)",
             description: "Recognition for outstanding export growth.",
-            file: "/real-assets/certs/state-export-award-2003-2004.pdf"
+            file: "/real-assets/certs/state-export-award-2003-2004.pdf",
+            thumbnail: "/real-assets/certs/thumbnails/state-export-award-2003-2004.jpg"
           },
           {
              title: "State Export Award (2004-2005)",
              description: "Consistent export excellence award.",
-             file: "/real-assets/certs/state-export-award-2004-2005.pdf"
+             file: "/real-assets/certs/state-export-award-2004-2005.pdf",
+             thumbnail: "/real-assets/certs/thumbnails/state-export-award-2004-2005.jpg"
           },
           {
             title: "Capexil Recognition (2015-2016)",
              description: "Certificate of Export Recognition.",
-             file: "/real-assets/certs/capexil-certificate-of-export-recognition-2015-2016.pdf"
+             file: "/real-assets/certs/capexil-certificate-of-export-recognition-2015-2016.pdf",
+             thumbnail: "/real-assets/certs/thumbnails/capexil-certificate-of-export-recognition-2015-2016.jpg"
           },
           {
              title: "Capexil Recognition (2016-2017)",
               description: "Certificate of Export Recognition.",
-              file: "/real-assets/certs/capexil-certificate-of-export-recognition-2016-2017.pdf"
+              file: "/real-assets/certs/capexil-certificate-of-export-recognition-2016-2017.pdf",
+              thumbnail: "/real-assets/certs/thumbnails/capexil-certificate-of-export-recognition-2016-2017.jpg"
            }
         ]
       },
@@ -116,22 +125,26 @@ export const pagesData = {
           {
             title: "India SME 100 Award (2016-17)",
             description: "Ranked among top 100 SMEs in India.",
-            file: "/real-assets/certs/certificate-india-sme-100-award-2016-2017.pdf"
+            file: "/real-assets/certs/certificate-india-sme-100-award-2016-2017.pdf",
+            thumbnail: "/real-assets/certs/thumbnails/certificate-india-sme-100-award-2016-2017.jpg"
           },
            {
             title: "India SME 100 Award (2017-18)",
             description: "Continued excellence in SME sector.",
-            file: "/real-assets/certs/certificate-india-sme-100-award-2017-2018.pdf"
+            file: "/real-assets/certs/certificate-india-sme-100-award-2017-2018.pdf",
+            thumbnail: "/real-assets/certs/thumbnails/certificate-india-sme-100-award-2017-2018.jpg"
           },
           {
             title: "SME Business Excellence 2016",
             description: "Certificate of Participation & Excellence.",
-            file: "/real-assets/certs/sme-business-excellence-awards-2016-certificate-of-participation.pdf"
+            file: "/real-assets/certs/sme-business-excellence-awards-2016-certificate-of-participation.pdf",
+            thumbnail: "/real-assets/certs/thumbnails/sme-business-excellence-awards-2016-certificate-of-participation.jpg"
           },
            {
             title: "Top 10 Recognition",
             description: "CRRPL recognized as one of the Top 10.",
-            file: "/real-assets/certs/crrpl-one-of-the-top-10-certificate.pdf"
+            file: "/real-assets/certs/crrpl-one-of-the-top-10-certificate.pdf",
+            thumbnail: "/real-assets/certs/thumbnails/crrpl-one-of-the-top-10-certificate.jpg"
           }
         ]
       }
