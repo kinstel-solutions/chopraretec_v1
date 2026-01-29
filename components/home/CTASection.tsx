@@ -15,7 +15,7 @@ export function CTASection() {
            <motion.div
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
+             viewport={{ once: true, margin: "-100px" }}
            >
              <h2 className="font-serif text-3xl md:text-5xl font-bold leading-tight mb-6">
                 Looking for a reliable rubber components manufacturing partner?

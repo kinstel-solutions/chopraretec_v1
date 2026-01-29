@@ -28,6 +28,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
       <motion.div 
         initial={{ opacity: 0, x: align === 'right' ? 20 : -20, y: 20 }}
         whileInView={{ opacity: 1, x: align === 'right' ? 30 : -30, y: 30 }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="absolute inset-0 border-2 border-primary/20 rounded-2xl z-0"
       />
@@ -36,6 +37,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: 0.4 }}
         className={cn(
           "absolute w-32 h-32 rounded-full bg-primary/5 blur-2xl z-0",
@@ -47,6 +49,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1, delay: 0.5 }}
         className={cn(
             "absolute text-primary z-0",
@@ -76,6 +79,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
         )}
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ delay: 0.6, type: "spring" }}
       />
       <motion.div 
@@ -85,6 +89,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
         )}
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ delay: 0.7, type: "spring" }}
       />
 

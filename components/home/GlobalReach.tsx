@@ -62,7 +62,7 @@ export function GlobalReach() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mb-12"
           >
             <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-bold mb-4">Global Presence</p>
@@ -100,7 +100,7 @@ export function GlobalReach() {
          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mb-8"
         >
             <h3 className="text-2xl font-serif font-bold text-white mb-2">Our Evolution</h3>

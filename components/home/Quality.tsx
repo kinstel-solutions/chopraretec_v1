@@ -36,7 +36,7 @@ export function Quality() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-20 space-y-4"
         >
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold">
@@ -48,7 +48,7 @@ export function Quality() {
           <motion.div 
             initial={{ width: 0 }}
             whileInView={{ width: '80px' }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="h-1 bg-primary mx-auto rounded-full"
           />
         </motion.div>
@@ -60,7 +60,7 @@ export function Quality() {
               key={feature.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
               className="group p-8 border border-border/50 hover:border-primary/50 hover:shadow-lg transition-all duration-300 rounded-xl bg-secondary/5"
             >

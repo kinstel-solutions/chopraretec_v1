@@ -20,7 +20,7 @@ export function Awards() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-10"
         >
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold mb-2">
@@ -40,7 +40,7 @@ export function Awards() {
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className={`relative w-20 h-20 md:w-28 md:h-28 bg-white rounded-lg flex items-center justify-center p-3 shadow-sm border border-stone-100 hover:shadow-lg hover:scale-105 transition-all duration-300 ${
                   index % 2 === 0 ? 'mt-0' : 'mt-6 md:mt-8'
                 }`}
@@ -63,7 +63,7 @@ export function Awards() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: (index + 4) * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className={`relative w-20 h-20 md:w-28 md:h-28 bg-white rounded-lg flex items-center justify-center p-3 shadow-sm border border-stone-100 hover:shadow-lg hover:scale-105 transition-all duration-300 ${
                   index % 2 === 0 ? 'mb-6 md:mb-8' : 'mb-0'
                 }`}
