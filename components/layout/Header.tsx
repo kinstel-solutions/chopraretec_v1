@@ -111,7 +111,7 @@ export function Header() {
             <Button 
               variant="ghost" 
               size="icon" 
-              className={cn("lg:hidden relative z-10", !showSolidHeader && "hover:bg-white/10 hover:text-white")}
+              className={cn("lg:hidden relative z-10", !showSolidHeader ? "text-white hover:bg-white/10" : "text-secondary-foreground")}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
