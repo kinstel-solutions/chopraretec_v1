@@ -79,7 +79,7 @@ export function Why_Us() {
                </video>
             </div> */}
             <Image
-              src="/real-assets/building-outside-photo-4.webp"
+              src={whyUs.image}
               alt="Chopra Retec Facility"
               width={800}
               height={1000}

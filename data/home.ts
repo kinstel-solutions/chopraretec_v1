@@ -94,7 +94,7 @@ export const homeData = {
       "Customised Packaging",
       "Competitive Pricing",
     ],
-    image: "/real-assets/building-outside-photo-4.webp"
+    image: "/real-assets/building-our-plant-side-view.webp"
   },
   capabilities: {
     heading: "End-to-End Manufacturing Solutions",
