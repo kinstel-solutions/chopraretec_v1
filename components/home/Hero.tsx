@@ -29,8 +29,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-center">
-        <div className="max-w-4xl space-y-6 md:space-y-0 text-left">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-end pb-12">
+        <div className="max-w-4xl min-h-[60%] space-y-6 md:space-y-0 text-left">
             
            
 

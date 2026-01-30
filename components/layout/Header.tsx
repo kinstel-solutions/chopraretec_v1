@@ -63,9 +63,9 @@ export function Header() {
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-full">
          
           {/* Logo */}
-          <Link 
+        <Link 
             href="/" 
-            className="group relative z-10 block h-full pt-1 md:pt-1" 
+            className="group relative z-10 block h-full py-2 md:py-2" 
             onClick={(e) => {
               setIsMobileMenuOpen(false);
               if (window.location.pathname === '/') {
@@ -73,7 +73,7 @@ export function Header() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
-          >
+            >
             <div className="relative h-full aspect-[4/1] transition-all duration-300">
                <Image 
                  src={showSolidHeader 
@@ -86,7 +86,7 @@ export function Header() {
                  priority
                />
             </div>
-          </Link>
+        </Link>
 
           <div className="flex items-center gap-6">
             {/* Desktop Nav */}
