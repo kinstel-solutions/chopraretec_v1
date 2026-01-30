@@ -153,7 +153,7 @@ export const homeData = {
   globalReach: {
     heading: "SILENCING THE NEEDS OF GLOBAL INDUSTRIES",
     subHeading: "Global Presence",
-    description: "From our state-of-the-art facility in Lucknow to companies in Europe and the Americas, Chopra Retec ensures precision goes global.",
+    description: "From our state-of-the-art facility in Lucknow, India to companies worldwide, Chopra Retec ensures precision goes global.",
     stats: [
       { icon: Truck, value: 98, suffix: '%', label: 'On-Time Delivery', description: 'Reliable logistics' },
       { icon: BookOpen, value: 5000, suffix: '+', label: 'Parts Developed', description: 'Extensive product portfolio' },

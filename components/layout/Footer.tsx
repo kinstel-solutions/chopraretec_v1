@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Linkedin, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 import { companyData } from '@/data/company';
 import { navigationData } from '@/data/navigation';
 
@@ -15,7 +15,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="relative h-48 w-48">
+              <div className="relative h-28 w-48">
                 <Image 
                   src="/logos/_2291947363488dark-mode-noBG.svg"
                   alt={companyData.shortName}
@@ -28,15 +28,7 @@ export function Footer() {
             <p className="text-gray-300 text-sm font-light leading-relaxed">
               {companyData.description}
             </p>
-            {/* Social Media */}
-            <div className="flex gap-4">
-              <Link href={companyData.social.linkedin} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <Linkedin className="w-4 h-4" />
-              </Link>
-              <Link href={companyData.social.facebook} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <Facebook className="w-4 h-4" />
-              </Link>
-            </div>
+
           </div>
 
           {/* Navigation */}
@@ -90,6 +82,35 @@ export function Footer() {
                 <a href={`mailto:${companyData.contact.email[1]}`} className="hover:text-white transition-colors">
                    {companyData.contact.email[1]}
                 </a>
+              </li>
+              
+              {/* Social Media */}
+              <li className="pt-4 flex gap-4 flex-wrap">
+                {companyData.social.linkedin && (
+                  <Link href={companyData.social.linkedin} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
+                    <Linkedin className="w-4 h-4" />
+                  </Link>
+                )}
+                {companyData.social.facebook && (
+                  <Link href={companyData.social.facebook} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
+                    <Facebook className="w-4 h-4" />
+                  </Link>
+                )}
+                 {companyData.social.instagram && (
+                  <Link href={companyData.social.instagram} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Instagram">
+                    <Instagram className="w-4 h-4" />
+                  </Link>
+                )}
+                 {companyData.social.twitter && (
+                  <Link href={companyData.social.twitter} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Twitter">
+                    <Twitter className="w-4 h-4" />
+                  </Link>
+                )}
+                 {companyData.social.youtube && (
+                  <Link href={companyData.social.youtube} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="YouTube">
+                    <Youtube className="w-4 h-4" />
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
