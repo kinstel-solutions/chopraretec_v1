@@ -63,7 +63,7 @@ export function GlobalReach() {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-12"
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-bold mb-4">{globalReach.subHeading}</p>
+            <p className="text-lg uppercase tracking-[0.2em] text-red-500 font-semibold mb-4">{globalReach.subHeading}</p>
             <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">{globalReach.heading}</h2>
             <p className="text-gray-300 text-lg max-w-xl leading-relaxed mb-8">
               {globalReach.description}

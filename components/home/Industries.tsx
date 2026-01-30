@@ -69,7 +69,7 @@ export function Industries() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold"
+            className="text-lg uppercase tracking-[0.2em] text-primary/80 font-semibold"
           >
             {industries.subHeading}
           </motion.p>
@@ -131,9 +131,6 @@ export function Industries() {
                     <div className="absolute inset-x-0 bottom-0 p-6 text-white bg-black/65 backdrop-blur-sm">
                         <h3 className="text-xl font-serif font-bold mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
                         <p className="text-white/80 text-sm leading-relaxed mb-4 line-clamp-3">{item.description}</p>
-                        <div className="flex items-center text-xs font-bold uppercase tracking-widest text-primary/80 group-hover:text-primary transition-colors">
-                        Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </div>
                     </div>
                     </motion.div>
                 ))}

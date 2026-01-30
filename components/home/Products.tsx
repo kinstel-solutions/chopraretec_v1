@@ -18,7 +18,7 @@ export function Products() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold"
+            className="text-lg uppercase tracking-[0.2em] text-primary/80 font-semibold"
           >
             {products.subHeading}
           </motion.p>
@@ -72,11 +72,6 @@ export function Products() {
               <div className="space-y-2">
                 <h3 className="text-xl font-serif font-bold group-hover:text-primary transition-colors">{product.title}</h3>
                 <p className="text-muted-foreground text-sm">{product.description}</p>
-                <span 
-                  className="inline-flex items-center mt-2 text-xs font-bold tracking-widest uppercase text-primary border-b border-primary/20 pb-1 group-hover:border-primary transition-all"
-                >
-                  View Details <ArrowRight className="w-3 h-3 ml-2" />
-                </span>
               </div>
             </motion.div>
           ))}

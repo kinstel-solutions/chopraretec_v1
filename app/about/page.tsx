@@ -108,7 +108,7 @@ export default function AboutPage() {
         {/* Factory Building */}
         <section className="w-full">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Factory</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Plant</h2>
             <p className="text-lg text-muted-foreground mt-4">Located in Lucknow, India</p>
           </div>
           <motion.div

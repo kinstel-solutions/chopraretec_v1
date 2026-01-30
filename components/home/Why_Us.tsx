@@ -26,7 +26,7 @@ export function Why_Us() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
+              <p className="text-lg uppercase tracking-[0.2em] text-primary font-semibold">
                 {whyUs.subHeading}
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-foreground">
@@ -79,7 +79,7 @@ export function Why_Us() {
                </video>
             </div> */}
             <Image
-              src="/images/facility/facility-side-view-1200w.webp"
+              src="/real-assets/building-outside-photo-4.webp"
               alt="Chopra Retec Facility"
               width={800}
               height={1000}

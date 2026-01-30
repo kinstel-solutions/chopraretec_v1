@@ -23,10 +23,10 @@ export function Awards() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-10"
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold mb-2">
+          <p className="text-lg uppercase tracking-[0.2em] text-primary/80 font-semibold mb-2">
             Recognitions & Certifications
           </p>
-          <h3 className="font-serif text-2xl font-bold text-gray-900">
+          <h3 className="font-serif text-3xl md:text-4xl font-bold text-gray-900">
              Certified Excellence
           </h3>
         </motion.div>

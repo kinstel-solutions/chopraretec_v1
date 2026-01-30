@@ -28,9 +28,9 @@ const CTASection = dynamic(() => import('@/components/home/CTASection').then(mod
   loading: () => <div className="py-16 bg-primary" />
 });
 
-const WhyUs = dynamic(() => import('@/components/home/WhyUs').then(mod => ({ default: mod.WhyUs })), {
-  loading: () => <div className="py-20 md:py-32 bg-stone-50" />
-});
+// const WhyUs = dynamic(() => import('@/components/home/WhyUs').then(mod => ({ default: mod.WhyUs })), {
+//   loading: () => <div className="py-20 md:py-32 bg-stone-50" />
+// });
 
 export default function Home() {
   return (

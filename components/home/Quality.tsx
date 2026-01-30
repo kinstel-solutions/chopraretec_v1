@@ -19,7 +19,7 @@ export function Quality() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-20 space-y-4"
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold">
+          <p className="text-lg uppercase tracking-[0.2em] text-primary/80 font-semibold">
             {quality.subHeading}
           </p>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">

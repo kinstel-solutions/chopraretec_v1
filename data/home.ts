@@ -4,7 +4,7 @@ export const homeData = {
   hero: {
     heading: "Precision Molded Rubber & Rubber-to-Metal Bonded Components",
     subHeading: "Chopra Retec: Trusted for Reliability",
-    industries: ['Automotive', 'Industrial', 'Healthcare', 'Defence', 'Material Handling'],
+    industries: ['Automotive', 'Industrial', 'Healthcare', 'Defense', 'Material Handling'],
     cta: "Request a Quote",
     description: "Chopra Retec: Trusted for Reliability" // Added as per Hero.tsx
   },
@@ -17,31 +17,31 @@ export const homeData = {
         title: 'Automotive',
         slug: 'automotive',
         description: 'High-performance rubber components for passenger and commercial vehicles.',
-        image: '/images/industries/industries-basic-1200w.webp'
+        image: '/real-assets/suspension-parts.webp'
       },
       {
-        title: 'Defence',
-        slug: 'defence',
+        title: 'Defense',
+        slug: 'defense',
         description: 'Mission-critical components meeting global standards.',
-        image: '/images/facility/facility-side-view-1200w.webp'
+        image: '/real-assets/lazer-marking.webp'
       },
       {
         title: 'Engineering & Industrial',
         slug: 'engineering-industrial',
         description: 'Durable solutions for machinery, engineering and industrial applications.',
-        image: '/images/industries/industries-advanced-1200w.webp'
+        image: '/real-assets/moulding-1.webp'
       },
       {
         title: 'Material Handling',
         slug: 'material-handling',
         description: 'Robust components for logistics and material transport equipment.',
-        image: '/images/facility/facility-side-view-1200w.webp'
+        image: '/real-assets/shop-floor.webp'
       },
       {
         title: 'Healthcare & Medical',
         slug: 'healthcare-medical',
         description: 'Hygienic and precision molded parts for medical and healthcare applications.',
-        image: '/images/facility/facility-side-view-1200w.webp'
+        image: '/real-assets/test-lab.webp'
       }
     ]
   },
@@ -54,31 +54,31 @@ export const homeData = {
         id: 'exhaust',
         title: 'Exhaust Suspension Components',
         description: 'High Performance hangers and mounts.',
-        image: '/images/products/engine-mount-v2-1200w.webp',
+        image: '/real-assets/exhaust-parts.webp',
       },
       {
         id: 'bushes',
         title: 'Ride Control Parts',
         description: 'Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.',
-        image: '/images/products/rubber-metal-components-v2-1200w.webp',
+        image: '/real-assets/suspension-parts.webp',
       },
       {
         id: 'anti-vibration',
         title: 'Anti-Vibration Mounts',
         description: 'Controll Arm Bushing, Trailer Arm Bushings, Silent Block.',
-        image: '/images/products/rubber-metal-components-v1-1200w.webp',
+        image: '/real-assets/moulding-2.webp',
       },
       {
         id: 'bonded',
         title: 'Rubber-to-Metal Bonded Components',
         description: 'Designed for structural integrity.',
-        image: '/images/bonding-process/bonding-stage3-1200w.webp',
+        image: '/real-assets/steel-stamping.webp',
       },
       {
         id: 'custom',
         title: 'Custom-Designed Components',
         description: 'End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.',
-        image: '/images/industries/industries-basic-1200w.webp',
+        image: '/real-assets/Designing.webp',
       },
     ]
   },
@@ -94,7 +94,7 @@ export const homeData = {
       "Customised Packaging",
       "Competitive Pricing",
     ],
-    image: "/images/facility/facility-side-view-1200w.webp"
+    image: "/real-assets/building-outside-photo-4.webp"
   },
   capabilities: {
     heading: "End-to-End Manufacturing Solutions",

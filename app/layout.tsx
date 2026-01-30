@@ -17,11 +17,11 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'Chopra Retec | Precision Molded Rubber & Rubber-to-Metal Components',
-  description: 'Versatile manufacturing solutions for Automotive, Industrial, Defence, Aerospace, Material Handling and Healthcare applications. 30+ years of excellence.',
+  description: 'Versatile manufacturing solutions for Automotive, Industrial, Defense, Aerospace, Material Handling and Healthcare applications. 30+ years of excellence.',
   keywords: ['Rubber Components', 'Rubber-to-Metal Bonding', 'Automotive Rubber', 'Industrial Rubber', 'Chopra Retec', 'Precision Molding'],
   openGraph: {
     title: 'Chopra Retec | Precision Molded Rubber & Rubber-to-Metal Components',
-    description: 'Versatile manufacturing solutions for Automotive, Industrial, Defence, Aerospace, Material Handling and Healthcare applications.',
+    description: 'Versatile manufacturing solutions for Automotive, Industrial, Defense, Aerospace, Material Handling and Healthcare applications.',
     url: 'https://chopraretec.com', // Placeholder URL
     siteName: 'Chopra Retec',
     locale: 'en_IN',

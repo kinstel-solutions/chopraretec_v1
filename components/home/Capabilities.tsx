@@ -48,7 +48,7 @@ export function Capabilities() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
+              <p className="text-lg uppercase tracking-[0.2em] text-primary font-semibold">
                 {capabilities.subHeading}
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-foreground">
