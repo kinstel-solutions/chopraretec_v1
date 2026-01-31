@@ -29,7 +29,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-end pb-12">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-end pb-24 md:pb-12">
         <div className="max-w-4xl min-h-[60%] space-y-6 md:space-y-0 text-left">
             
            
@@ -39,7 +39,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid grid-cols-2 md:flex md:flex-wrap items-center mb-8 gap-x-2 gap-y-4 text-sm sm:text-base md:text-xl font-medium text-gray-100 tracking-wide"
+            className="flex flex-wrap items-center mb-8 gap-x-4 gap-y-4 text-sm sm:text-base md:text-xl font-medium text-gray-100 tracking-wide"
           >
             {hero.industries.map((industry) => (
               <div key={industry} className="flex items-center gap-3">
@@ -55,7 +55,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-0 drop-shadow-lg leading-tight text-white">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-0 drop-shadow-lg leading-tight text-white">
              {hero.heading}
             </h1>
           </motion.div>
@@ -102,7 +102,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
       >
         <a
           href="/#industries"

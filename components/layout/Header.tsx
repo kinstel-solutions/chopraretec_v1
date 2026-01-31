@@ -57,7 +57,7 @@ export function Header() {
           'fixed top-0 w-full z-50 transition-all duration-300 border-transparent',
           showSolidHeader
             ? 'bg-white/95 backdrop-blur-md border-border h-20 md:h-24 shadow-sm text-black'
-            : 'bg-gradient-to-b from-black/50 to-transparent h-24 md:h-28 text-white'
+            : 'bg-gradient-to-b from-black/50 to-transparent h-20 md:h-24 text-white'
         )}
       >
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-full">
