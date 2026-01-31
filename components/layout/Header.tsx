@@ -161,7 +161,7 @@ export function Header() {
               ))}
               <Link 
                 href="/#contact" 
-                className="mt-8 bg-transparent border-primary border px-8 py-3 text-sm font-bold tracking-[0.15em] uppercase w-full text-center"
+                className="mt-8 bg-transparent border-primary border px-8 py-3 text-xs md:text-sm font-bold tracking-[0.15em] uppercase w-3/4 md:w-auto text-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Request Quote
