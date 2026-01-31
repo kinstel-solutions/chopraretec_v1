@@ -8,10 +8,20 @@ import { Button } from '@/components/ui/button';
 import { homeData } from '@/data/home';
 import { useState } from 'react';
 import { ProductModal } from './ProductModal';
+import { useRouter } from 'next/navigation';
 
 export function Products() {
   const { products } = homeData;
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const router = useRouter();
+
+  const handleProductClick = (product: any) => {
+    if (product.layout === 'page' && product.slug) {
+      router.push(`/products/${product.slug}`);
+    } else {
+      setSelectedProduct(product);
+    }
+  };
 
   return (
     <section className="py-20 md:py-32 bg-white overflow-hidden" id="products">
@@ -53,7 +63,7 @@ export function Products() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
               className="group cursor-pointer"
-              onClick={() => setSelectedProduct(product)}
+              onClick={() => handleProductClick(product)}
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-secondary rounded-lg mb-6">
                 <div className="absolute inset-0 bg-secondary flex items-center justify-center text-muted-foreground/30 font-bold text-xl uppercase tracking-widest">
