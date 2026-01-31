@@ -83,7 +83,26 @@ export const homeData = {
         title: 'Custom-Designed Components',
         description: 'End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.',
         image: '/real-assets/Designing.webp',
-        layout: 'collage',
+        layout: 'page',
+        slug: 'custom-designed-components',
+        details: {
+          tagline: "Engineering the Future of Rubber Components",
+          subHeading: "Bespoke Solutions",
+          description: "Our custom design process is a collaborative journey. We don't just manufacture; we innovate. Using state-of-the-art CAD/CAM software and finite element analysis, we turn complex challenges into tangible, high-performance solutions.",
+          features: [
+            "Rapid Prototyping & 3D Modeling",
+            "Finite Element Analysis (FEA)",
+            "In-house Tool Design & Fabrication",
+            "Material Formulation for Specific Environments"
+          ],
+          showcase: [
+            { src: '/real-assets/Designing.webp', title: 'CAD Design', description: 'Precision modeling for accurate tooling.' },
+            { src: '/real-assets/moulding-1.webp', title: 'Moulding Process', description: 'Advanced compression and injection moulding.' },
+            { src: '/real-assets/test-lab.webp', title: 'Quality Testing', description: 'Rigorous validation in our certified labs.' },
+            { src: '/real-assets/shop-floor.webp', title: 'Production', description: 'Scalable manufacturing for global demand.' },
+            { src: '/real-assets/exhaust-parts.webp', title: 'Finished Product', description: 'Ready for assembly and deployment.' }
+          ]
+        }
       },
     ]
   },
