@@ -13,6 +13,7 @@ export const navigationData = {
       { href: "/#capabilities", label: "Capabilities" },
       { href: "/#quality", label: "Quality & Standards" },
       { href: "/contact", label: "Contact Us" },
+      { href: "/image-review", label: "Image Review" },
     ],
     solutions: [
       { href: "/#industries", label: "Industries Served" },

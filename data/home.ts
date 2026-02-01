@@ -17,31 +17,31 @@ export const homeData = {
         title: 'Automotive',
         slug: 'automotive',
         description: 'High-performance rubber components for passenger and commercial vehicles.',
-        image: '/real-assets/suspension-parts.webp'
+        image: '/images/industries/Automotive-1.png'
       },
       {
         title: 'Defense',
         slug: 'defense',
         description: 'Mission-critical components meeting global standards.',
-        image: '/real-assets/lazer-marking.webp'
+        image: '/images/industries/defense-1.png'
       },
       {
         title: 'Engineering & Industrial',
         slug: 'engineering-industrial',
         description: 'Durable solutions for machinery, engineering and industrial applications.',
-        image: '/real-assets/moulding-1.webp'
+        image: '/images/industries/industrial-1.jpg'
       },
       {
         title: 'Material Handling',
         slug: 'material-handling',
         description: 'Robust components for logistics and material transport equipment.',
-        image: '/real-assets/shop-floor.webp'
+        image: '/images/industries/forklift.jpg'
       },
       {
         title: 'Healthcare & Medical',
         slug: 'healthcare-medical',
         description: 'Hygienic and precision molded parts for medical and healthcare applications.',
-        image: '/real-assets/test-lab.webp'
+        image: '/images/industries/healthcare-1.png'
       }
     ]
   },
