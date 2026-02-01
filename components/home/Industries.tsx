@@ -125,7 +125,7 @@ export function Industries() {
                         alt={item.title}
                         fill
                         loading="lazy"
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="object-cover scale-100 -translate-y-16 transition-transform duration-700 group-hover:scale-110 group-hover:-translate-y-16"
                     />
                     
                     <div className="absolute inset-x-0 bottom-0 p-6 text-white bg-black/65 backdrop-blur-sm">
