@@ -29,8 +29,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-end pb-12">
-        <div className="max-w-4xl min-h-[60%] space-y-6 md:space-y-0 text-left">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex flex-col justify-end pb-24 md:pb-12">
+        <div className="max-w-4xl min-h-[75%] space-y-6 md:space-y-0 text-left">
             
            
 
@@ -39,7 +39,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid grid-cols-2 md:flex md:flex-wrap items-center mb-8 gap-x-2 gap-y-4 text-sm sm:text-base md:text-xl font-medium text-gray-100 tracking-wide"
+            className="flex flex-wrap items-center mb-8 gap-x-4 gap-y-4 text-sm sm:text-base md:text-xl font-medium text-gray-100 tracking-wide"
           >
             {hero.industries.map((industry) => (
               <div key={industry} className="flex items-center gap-3">
@@ -65,14 +65,8 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-4xl text-gray-200 font-light leading-relaxed tracking-wide drop-shadow-lg mt-2 flex items-center gap-2"
+            className="text-xl md:text-4xl text-white font-light leading-relaxed tracking-tight drop-shadow-lg mt-2 flex items-center gap-2"
           >
-           {/* Note: Keeping the span structure but using data might be tricky if we want specific styling. 
-               For now, I'll reconstruct it based on the data string or just use the data string directly if simpler, 
-               but to preserve the styling I will keep the hardcoded structure if the text matches usually, 
-               OR I can assume the data has the full string and I might lose the span if I just render the string.
-               The data string is "Chopra Retec: Trusted for Reliability". 
-               I will split it. */}
            <span className="text-primary">Chopra</span> Retec : Trusted for Reliability
           </motion.p>
         
@@ -83,7 +77,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-start pt-4 md:pt-8"
           >
-            <Button asChild className="h-auto w-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-xs md:text-sm uppercase">
+            <Button asChild className="h-auto w-3/4 md:w-auto py-4 px-8 border-2 border-primary bg-transparent text-white hover:bg-secondary-foreground hover:text-white rounded-none tracking-[0.1em] font-bold text-xs md:text-sm uppercase">
               <Link href="/contact" className="flex items-center gap-2">
                 {hero.cta} <ArrowUpRight className="w-4 h-4 shrink-0" />
               </Link>
@@ -97,19 +91,31 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Mouse Indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
       >
         <a
           href="/#industries"
-          className="flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors cursor-pointer"
+          className="flex flex-col items-center gap-2 group cursor-pointer"
         >
-          <span className="text-[10px] uppercase tracking-widest">Scroll</span>
-          <ChevronDown className="w-5 h-5 animate-bounce" />
+          <div className="w-[30px] h-[50px] rounded-full border-2 border-white/30 flex justify-center p-2 group-hover:border-white transition-colors duration-300">
+            <motion.div 
+              animate={{ 
+                y: [0, 8, 0],
+                opacity: [1, 0.5, 1]
+              }}
+              transition={{ 
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="w-1.5 h-1.5 rounded-full bg-primary"
+            />
+          </div>
         </a>
       </motion.div>
     </section>

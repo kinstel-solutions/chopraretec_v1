@@ -26,11 +26,19 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
       
       {/* 1. Offset Solid Frame (Behind) */}
       <motion.div 
-        initial={{ opacity: 0, x: align === 'right' ? 20 : -20, y: 20 }}
+        initial={{ opacity: 0, x: align === 'right' ? 10 : -10, y: 10 }}
         whileInView={{ opacity: 1, x: align === 'right' ? 30 : -30, y: 30 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="absolute inset-0 border-2 border-primary/20 rounded-2xl z-0"
+        className="absolute inset-0 border-2 border-primary/20 rounded-2xl z-0 hidden md:block"
+      />
+       {/* Mobile simplified frame - no huge offset */}
+       <motion.div 
+        initial={{ opacity: 0, x: align === 'right' ? 5 : -5, y: 5 }}
+        whileInView={{ opacity: 1, x: align === 'right' ? 10 : -10, y: 10 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="absolute inset-0 border-2 border-primary/20 rounded-2xl z-0 md:hidden"
       />
 
       {/* 2. Floating Circle Decoration */}
@@ -40,8 +48,8 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: 0.4 }}
         className={cn(
-          "absolute w-32 h-32 rounded-full bg-primary/5 blur-2xl z-0",
-          align === 'right' ? "-top-10 -right-10" : "-bottom-10 -left-10"
+          "absolute w-24 h-24 md:w-32 md:h-32 rounded-full bg-primary/5 blur-2xl z-0",
+          align === 'right' ? "-top-4 -right-2 md:-top-10 md:-right-10" : "-bottom-4 -left-4 md:-bottom-10 md:-left-10"
         )}
       />
 
@@ -53,7 +61,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
         transition={{ duration: 1, delay: 0.5 }}
         className={cn(
             "absolute text-primary z-0",
-            align === 'right' ? "-bottom-12 -left-12" : "-top-12 -right-12"
+            align === 'right' ? "-bottom-6 -left-6 md:-bottom-12 md:-left-12" : "-top-6 -right-2 md:-top-12 md:-right-12"
         )}
       >
         <DotPattern />
@@ -74,8 +82,8 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
       {/* 5. Corner Accent (Technical look) */}
       <motion.div 
         className={cn(
-            "absolute w-12 h-12 border-t-4 border-r-4 border-primary z-20",
-            align === 'right' ? "-top-2 -right-2" : "-top-2 -left-2 rotate-[-90deg]"
+            "absolute w-8 h-8 md:w-12 md:h-12 border-t-4 border-r-4 border-primary z-20",
+            align === 'right' ? "-top-1 -right-1 md:-top-2 md:-right-2" : "-top-1 -left-1 md:-top-2 md:-left-2 rotate-[-90deg]"
         )}
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -84,8 +92,8 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
       />
       <motion.div 
         className={cn(
-            "absolute w-12 h-12 border-b-4 border-l-4 border-primary z-20",
-            align === 'right' ? "-bottom-2 -left-2" : "-bottom-2 -right-2 rotate-[-90deg]"
+            "absolute w-8 h-8 md:w-12 md:h-12 border-b-4 border-l-4 border-primary z-20",
+            align === 'right' ? "-bottom-1 -left-1 md:-bottom-2 md:-left-2" : "-bottom-1 -right-1 md:-bottom-2 md:-right-2 rotate-[-90deg]"
         )}
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
