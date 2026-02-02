@@ -26,22 +26,22 @@ export const pagesData = {
         title: "Engineering & Tooling",
         description: "Where precision begins. Our in-house tool room is the heart of our operations, equipped with advanced VMC and CNC machines to design and fabricate complex molds with micron-level accuracy.",
         images: [
-          { src: "/real-assets/tool-making-1.webp", alt: "Tool Room Overview" },
-          { src: "/real-assets/Designing.webp", alt: "CAD/CAM Designing" },
-          { src: "/real-assets/tool-making-2.webp", alt: "CNC Machining" },
-          { src: "/real-assets/tool-making-3.webp", alt: "Mold Finishing" },
-          { src: "/real-assets/tool-making-4.webp", alt: "Precision Verification" }
+          { src: "/new-pics-2/DSC_3885.webp", alt: "Tool Room Overview" },
+          { src: "/new-pics-2/DSC_3897.webp", alt: "CAD/CAM Designing" },
+          { src: "/new-pics-2/DSC_3997.webp", alt: "CNC Machining" },
+          { src: "/new-pics-2/DSC_4017.webp", alt: "Mold Finishing" },
+          { src: "/new-pics-2/DSC_4057.webp", alt: "Precision Verification" }
         ]
       },
       {
         title: "Production Ecosystem",
         description: "A seamless flow from raw material to finished product. We utilize automated batch weighing for consistency, followed by high-capacity compression and injection molding lines.",
         images: [
-          { src: "/real-assets/steel-stamping.webp", alt: "Metal Stamping" },
-          { src: "/real-assets/moulding-2.webp", alt: "Injection Molding" },
+          { src: "/new-pics-2/DSC_3938.webp", alt: "Metal Stamping" },
+          { src: "/new-pics-2/DSC_4040-Edit-2.webp", alt: "Injection Molding" },
           { src: "/real-assets/automated-batch-weighing.webp", alt: "Automated Compounding" },
-          { src: "/real-assets/shop-floor.webp", alt: "Shop Floor Overview" },
-          { src: "/real-assets/moulding-1.webp", alt: "Compression Molding" }
+          // { src: "/real-assets/shop-floor.webp", alt: "Shop Floor Overview" },
+          // { src: "/real-assets/moulding-1.webp", alt: "Compression Molding" }
         ]
       },
       {
@@ -50,8 +50,9 @@ export const pagesData = {
         images: [
           { src: "/real-assets/test-lab.webp", alt: "Quality Assurance Lab" },
           { src: "/real-assets/lazer-marking.webp", alt: "Laser Marking" },
-          { src: "/real-assets/suspension-parts.webp", alt: "Finished Parts Inspection" },
-          { src: "/real-assets/exhaust-parts.webp", alt: "Final Quality Check" }
+          { src: "/new-pics-2/DSC_4000.webp", alt: "Laser Marking" },
+        //   { src: "/real-assets/suspension-parts.webp", alt: "Finished Parts Inspection" },
+        //   { src: "/real-assets/exhaust-parts.webp", alt: "Final Quality Check" }
         ]
       },
       {
@@ -59,14 +60,14 @@ export const pagesData = {
         description: "Delivered with care. Our packaging solutions, including skin packaging and individual bagging, ensure products reach you in pristine condition.",
         images: [
           { src: "/real-assets/skin-packaging.webp", alt: "Skin Packaging" },
-          { src: "/real-assets/single-bagging.webp", alt: "Individual Bagging" }
+          { src: "/new-pics-2/DSC_3953.webp", alt: "Individual Bagging" }
         ]
       }
     ]
   },
   certifications: {
     heading: "Certifications & Standards",
-    heroImage: "/real-assets/test-lab.webp",
+    heroImage: "/new-pics-2/DSC_4394.webp",
     description: "Our commitment to quality is validated by international standards and government recognitions.",
     items: [
       {
@@ -97,7 +98,7 @@ export const pagesData = {
   },
   awards: {
     heading: "Awards & Recognition",
-    heroImage: "/real-assets/moulding-2.webp",
+    heroImage: "/Ezzy-img/awards-1.jpg",
     description: "Celebrating our journey of excellence, quality, and leadership.",
     categories: [
       {
@@ -168,7 +169,7 @@ export const pagesData = {
   },
   contact: {
       heading: "Contact Us",
-      heroImage: "/real-assets/Designing.webp",
+      heroImage: "/new-pics-2/DSC_4394.webp",
       description: "Let’s discuss your requirement. Send your drawing, sample or specifications — our team will respond promptly."
   }
 };

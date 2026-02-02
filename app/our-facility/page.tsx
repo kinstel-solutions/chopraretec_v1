@@ -115,7 +115,7 @@ export default function OurFacilityPage() {
 
               {/* Production (Index 1): 3-Column Layout */}
               {stepIndex === 1 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 items-start">
                   {/* Column 1: Image 1 */}
                   <div className="flex flex-col gap-6">
                     {step.images[0] && (

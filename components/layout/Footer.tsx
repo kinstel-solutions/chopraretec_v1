@@ -87,12 +87,12 @@ export function Footer() {
               {/* Social Media */}
               <li className="pt-4 flex gap-4 flex-wrap">
                 {companyData.social.linkedin && (
-                  <Link href={companyData.social.linkedin} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
+                  <Link href={companyData.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
                     <Linkedin className="w-4 h-4" />
                   </Link>
                 )}
                 {companyData.social.facebook && (
-                  <Link href={companyData.social.facebook} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
+                  <Link href={companyData.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
                     <Facebook className="w-4 h-4" />
                   </Link>
                 )}
