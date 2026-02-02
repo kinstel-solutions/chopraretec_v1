@@ -19,10 +19,7 @@ export const companyData = {
     }
   },
   social: {
-    linkedin: "#",
-    facebook: "#",
-    instagram: "#",
-    twitter: "#",
-    youtube: "#"
+    linkedin: "https://www.linkedin.com/company/chopra-retec-rubber-products-limited/?viewAsMember=true",
+    facebook: "https://www.facebook.com/Chopraretec/"
   }
 };

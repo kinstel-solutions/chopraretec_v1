@@ -26,15 +26,21 @@ export default function OurFacilityPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-white mb-4"
           >
             {facility.heading}
           </motion.h1>
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: "80px" }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="h-1 bg-primary mx-auto rounded-full"
+          />
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-2xl text-gray-200"
+            className="text-lg mt-4 md:text-2xl text-gray-200"
           >
             {facility.subHeading}
           </motion.p>

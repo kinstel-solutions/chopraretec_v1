@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Facebook } from 'lucide-react';
 import { companyData } from '@/data/company';
 import { navigationData } from '@/data/navigation';
 
@@ -94,21 +94,6 @@ export function Footer() {
                 {companyData.social.facebook && (
                   <Link href={companyData.social.facebook} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
                     <Facebook className="w-4 h-4" />
-                  </Link>
-                )}
-                 {companyData.social.instagram && (
-                  <Link href={companyData.social.instagram} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Instagram">
-                    <Instagram className="w-4 h-4" />
-                  </Link>
-                )}
-                 {companyData.social.twitter && (
-                  <Link href={companyData.social.twitter} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Twitter">
-                    <Twitter className="w-4 h-4" />
-                  </Link>
-                )}
-                 {companyData.social.youtube && (
-                  <Link href={companyData.social.youtube} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="YouTube">
-                    <Youtube className="w-4 h-4" />
                   </Link>
                 )}
               </li>
