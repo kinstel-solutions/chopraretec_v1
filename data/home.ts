@@ -35,13 +35,13 @@ export const homeData = {
         title: 'Material Handling',
         slug: 'material-handling',
         description: 'Robust components for logistics and material transport equipment.',
-        image: '/Ezzy-img/forklift-Outside.jpg'
+        image: '/Ezzy-img/forklift-3-2.png'
       },
       {
         title: 'Healthcare & Medical',
         slug: 'healthcare-medical',
         description: 'Hygienic and precision molded parts for medical and healthcare applications.',
-        image: '/Ezzy-img/medical-2.png'
+        image: '/Ezzy-img/medical-4.jpeg'
       }
     ]
   },
