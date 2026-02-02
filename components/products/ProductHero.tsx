@@ -55,10 +55,16 @@ export function ProductHero({ image, title, tagline }: ProductHeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight mb-4"
         >
           {title}
         </motion.h1>
+        <motion.div
+           initial={{ width: 0 }}
+           animate={{ width: "80px" }}
+           transition={{ delay: 0.4, duration: 0.5 }}
+           className="h-1 bg-primary mx-auto rounded-full"
+        />
       </div>
     </section>
   );

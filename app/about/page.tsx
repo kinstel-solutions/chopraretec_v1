@@ -25,15 +25,21 @@ export default function AboutPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-white mb-4"
           >
             {about.heading}
           </motion.h1>
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: "6rem" }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="w-24 h-1 bg-primary mx-auto rounded-full"
+          />
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-2xl text-gray-200"
+            className="text-lg mt-4 md:text-2xl text-gray-200"
           >
              {about.intro[0]}
           </motion.p>
@@ -42,19 +48,6 @@ export default function AboutPage() {
 
       <div className="py-20 container mx-auto px-4 md:px-8 space-y-20">
         
-        {/* Intro Continuation */}
-        <section className="max-w-4xl mx-auto text-center space-y-6">
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed"
-          >
-            {about.intro[1]}
-          </motion.p>
-        </section>
-
-
         {/* Corporate Video */}
         <section className="w-full">
           <div className="text-center mb-12">
@@ -76,6 +69,20 @@ export default function AboutPage() {
             />
           </motion.div>
         </section>
+        
+        {/* Intro Continuation */}
+        <section className="max-w-4xl mx-auto text-center space-y-6">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed"
+          >
+            {about.intro[1]}
+          </motion.p>
+        </section>
+
+
 
         {/* Separator */}
         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full" />

@@ -24,7 +24,8 @@ export default function ImageReviewPage() {
 
   return (
     <div className="p-8 min-h-screen bg-gray-100 text-gray-900">
-      <h1 className="text-3xl font-bold mb-8 text-center">Image Review</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Image Review</h1>
+      <div className="h-1 bg-primary mx-auto rounded-full w-20 mb-8" />
       
       {allImages.length === 0 ? (
         <p className="text-center text-lg">No images found.</p>
