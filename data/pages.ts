@@ -67,7 +67,7 @@ export const pagesData = {
   },
   certifications: {
     heading: "Certifications & Standards",
-    heroImage: "/new-pics-2/DSC_4394.webp",
+    heroImage: "/generated-heroes/office_certs_wall_hero.png",
     description: "Our commitment to quality is validated by international standards and government recognitions.",
     items: [
       {

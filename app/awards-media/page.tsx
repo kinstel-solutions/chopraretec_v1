@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Trophy, Award, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PdfModal } from '@/components/ui/PdfModal';
+import { ImageModal } from '@/components/ui/ImageModal';
 import { pagesData } from '@/data/pages';
 
 export default function AwardsMediaPage() {
@@ -78,7 +78,7 @@ export default function AwardsMediaPage() {
                       {/* Thumbnail Section */}
                       <div 
                         className="relative h-56 w-full bg-gray-100 cursor-pointer overflow-hidden" 
-                        onClick={() => setSelectedAward({ url: item.file, title: item.title })}
+                        onClick={() => setSelectedAward({ url: item.thumbnail || '', title: item.title })}
                       >
                          {item.thumbnail ? (
                            <>
@@ -119,7 +119,7 @@ export default function AwardsMediaPage() {
                               variant="ghost" 
                               size="sm" 
                               className="w-full justify-between hover:bg-secondary/20 group/btn"
-                              onClick={() => setSelectedAward({ url: item.file, title: item.title })}
+                              onClick={() => setSelectedAward({ url: item.thumbnail || '', title: item.title })}
                             >
                                <span>View Award</span>
                                <Award className="w-4 h-4 group-hover/btn:text-primary transition-colors" />
@@ -136,10 +136,10 @@ export default function AwardsMediaPage() {
         </div>
       </div>
 
-      <PdfModal 
+      <ImageModal 
         isOpen={!!selectedAward}
         onClose={() => setSelectedAward(null)}
-        pdfUrl={selectedAward?.url || ''}
+        imageUrl={selectedAward?.url || ''}
         title={selectedAward?.title || ''}
       />
     </>

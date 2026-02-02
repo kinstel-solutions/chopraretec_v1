@@ -54,7 +54,7 @@ export default function CertificationsPage() {
                 
                 {/* Certificate Image */}
                 <div className="flex-1 w-full">
-                    <div className="relative w-full aspect-[1/1.414] bg-white shadow-2xl overflow-hidden rounded-sm border border-gray-200">
+                    <div className={`relative w-full ${cert.title.includes('D&B') ? 'aspect-[1.414/1]' : 'aspect-[1/1.414]'} bg-white shadow-2xl overflow-hidden rounded-sm border border-gray-200`}>
                         {cert.thumbnail ? (
                            <Image 
                               src={cert.thumbnail} 

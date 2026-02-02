@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Mail, Phone, MapPin, FileDown } from 'lucide-react';
+import { ContactForm } from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
 import { companyData } from '@/data/company';
 import { pagesData } from '@/data/pages';
@@ -54,63 +55,10 @@ export default function ContactPage() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
-          {/* Form Side */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100"
-          >
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100">
             <h2 className="text-3xl font-bold mb-8">Request a Quote (RFQ)</h2>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="space-y-2">
-                 <label className="text-sm font-bold uppercase tracking-widest text-gray-500">Part Drawing / Image</label>
-                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer">
-                    <p className="text-gray-500">Click to upload file</p>
-                 </div>
-              </div>
-
-              <div className="space-y-2">
-                 <label htmlFor="material" className="text-sm font-bold uppercase tracking-widest text-gray-500">Material Requirement</label>
-                 <input type="text" id="material" className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg" placeholder="Start typing..." />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                 <div className="space-y-2">
-                    <label htmlFor="quantity" className="text-sm font-bold uppercase tracking-widest text-gray-500">Quantity / Volume</label>
-                    <input type="text" id="quantity" className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg" placeholder="Annual volume" />
-                 </div>
-                 <div className="space-y-2">
-                    <label htmlFor="orderType" className="text-sm font-bold uppercase tracking-widest text-gray-500">Order Frequency</label>
-                    <div className="relative">
-                      <select id="orderType" className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg bg-transparent appearance-none cursor-pointer">
-                        <option value="one-time">One Time Order</option>
-                        <option value="repetitive">Repetitive Order</option>
-                      </select>
-                       {/* Custom Arrow */}
-                       <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                       </div>
-                    </div>
-                 </div>
-                 <div className="space-y-2 md:col-span-2">
-                    <label htmlFor="location" className="text-sm font-bold uppercase tracking-widest text-gray-500">Delivery Location</label>
-                    <input type="text" id="location" className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg" placeholder="City/Country" />
-                 </div>
-              </div>
-
-              <div className="space-y-2">
-                 <label htmlFor="details" className="text-sm font-bold uppercase tracking-widest text-gray-500">Application Details</label>
-                 <textarea id="details" rows={4} className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg resize-none" placeholder="Additional details..."></textarea>
-              </div>
-
-              <Button size="lg" className="w-full h-14 text-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
-                 Submit RFQ
-              </Button>
-            </form>
-          </motion.div>
+            <ContactForm />
+          </div>
 
 
           
