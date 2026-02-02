@@ -35,13 +35,13 @@ export const homeData = {
         title: 'Material Handling',
         slug: 'material-handling',
         description: 'Robust components for logistics and material transport equipment.',
-        image: '/images/industries/forklift.webp'
+        image: '/Ezzy-img/forklift-outside.jpg'
       },
       {
         title: 'Healthcare & Medical',
         slug: 'healthcare-medical',
         description: 'Hygienic and precision molded parts for medical and healthcare applications.',
-        image: '/images/industries/healthcare-1.webp'
+        image: '/Ezzy-img/medical-2.png'
       }
     ]
   },
@@ -54,55 +54,55 @@ export const homeData = {
         id: 'exhaust',
         title: 'Exhaust Suspension Components',
         description: 'High Performance hangers and mounts.',
-        image: '/real-assets/exhaust-parts.webp',
-        layout: 'simple',
+        image: '/new-pics-2/DSC_4412.webp',
+        images: [
+          '/new-pics-2/DSC_4412.webp',
+          '/new-pics-2/DSC_4431.webp',
+          '/new-pics-2/DSC_4421.webp'
+        ],
+        layout: 'gallery',
       },
       {
         id: 'bushes',
         title: 'Ride Control Parts',
         description: 'Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.',
-        image: '/real-assets/suspension-parts.webp',
+        image: '/new-pics-2/DSC_4440.webp',
+        images: [
+          '/new-pics-2/DSC_4440.webp',
+          '/new-pics-2/DSC_4446.webp'
+        ],
         layout: 'gallery',
       },
       {
         id: 'anti-vibration',
         title: 'Anti-Vibration Mounts',
         description: 'Controll Arm Bushing, Trailer Arm Bushings, Silent Block.',
-        image: '/real-assets/moulding-2.webp',
-        layout: 'collage',
+        image: '/new-pics-2/DSC_4437.webp',
+        images: [
+           '/new-pics-2/DSC_4437.webp'
+        ],
+        layout: 'gallery',
       },
       {
         id: 'bonded',
         title: 'Rubber-to-Metal Bonded Components',
         description: 'Designed for structural integrity.',
-        image: '/real-assets/steel-stamping.webp',
-        layout: 'simple',
+        image: '/new-pics-2/DSC_4066.webp',
+        images: [
+           '/new-pics-2/DSC_4066.webp'
+        ],
+        layout: 'gallery',
       },
       {
         id: 'custom',
         title: 'Custom-Designed Components',
         description: 'End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.',
-        image: '/real-assets/Designing.webp',
-        layout: 'page',
-        slug: 'custom-designed-components',
-        details: {
-          tagline: "Engineering the Future of Rubber Components",
-          subHeading: "Bespoke Solutions",
-          description: "Our custom design process is a collaborative journey. We don't just manufacture; we innovate. Using state-of-the-art CAD/CAM software and finite element analysis, we turn complex challenges into tangible, high-performance solutions.",
-          features: [
-            "Rapid Prototyping & 3D Modeling",
-            "Finite Element Analysis (FEA)",
-            "In-house Tool Design & Fabrication",
-            "Material Formulation for Specific Environments"
-          ],
-          showcase: [
-            { src: '/real-assets/Designing.webp', title: 'CAD Design', description: 'Precision modeling for accurate tooling.' },
-            { src: '/real-assets/moulding-1.webp', title: 'Moulding Process', description: 'Advanced compression and injection moulding.' },
-            { src: '/real-assets/test-lab.webp', title: 'Quality Testing', description: 'Rigorous validation in our certified labs.' },
-            { src: '/real-assets/shop-floor.webp', title: 'Production', description: 'Scalable manufacturing for global demand.' },
-            { src: '/real-assets/exhaust-parts.webp', title: 'Finished Product', description: 'Ready for assembly and deployment.' }
-          ]
-        }
+        image: '/new-pics-2/Custom-designed-comp.webp',
+        images: [
+          '/new-pics-2/Custom-designed-comp.webp',
+           '/real-assets/Designing.webp'       
+        ],
+        layout: 'gallery',
       },
     ]
   },
