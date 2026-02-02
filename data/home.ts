@@ -35,7 +35,7 @@ export const homeData = {
         title: 'Material Handling',
         slug: 'material-handling',
         description: 'Robust components for logistics and material transport equipment.',
-        image: '/Ezzy-img/forklift-outside.jpg'
+        image: '/Ezzy-img/forklift-Outside.jpg'
       },
       {
         title: 'Healthcare & Medical',
