@@ -6,12 +6,12 @@ export const companyData = {
   description: "Manufacturing precision molded rubber and rubber-to-metal bonded components for valued customers worldwide, since 1996.",
   contact: {
     phone: [
-      "+91 1234567890",
-      "+91 9999999999"
+      "+91 9839046474",
+      "+91 6393307505"
     ],
     email: [
-      "chopra@chopraretec.com",
-      "anurag@chopraretec.com"
+      "anurag@chopraretec.com",
+      "chopra@chopraretec.com"
     ],
     address: {
       registered: "6-B, Way Road, Lucknow-226001 (U.P.) India.",
@@ -20,6 +20,7 @@ export const companyData = {
   },
   social: {
     linkedin: "https://www.linkedin.com/company/chopra-retec-rubber-products-limited/?viewAsMember=true",
-    facebook: "https://www.facebook.com/Chopraretec/"
+    facebook: "https://www.facebook.com/Chopraretec/",
+    x: "https://x.com/FancyFootloose"
   }
 };
