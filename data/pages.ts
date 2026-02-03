@@ -98,7 +98,7 @@ export const pagesData = {
   },
   awards: {
     heading: "Awards & Recognition",
-    heroImage: "/Ezzy-img/awards-1.jpg",
+    heroImage: "/Ezzy-img/awards-r-1.jpeg",
     description: "Celebrating our journey of excellence, quality, and leadership.",
     categories: [
       {
