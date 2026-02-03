@@ -10,31 +10,56 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = 'force-dynamic';
+
 const NEW_PICS_DIR = path.join(process.cwd(), 'public/new-pics-2');
 const REAL_ASSETS_DIR = path.join(process.cwd(), 'public/real-assets');
 
 function getImages(dir: string, category: string) {
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir)
-    .filter(file => /\.(jpg|jpeg|png|webp|gif)$/i.test(file))
-    .map(file => ({
-      src: path.join('/', category, file).replace(/\\/g, '/'),
-      name: file,
-      category
-    }));
+  try {
+    if (!fs.existsSync(dir)) {
+      console.error(`Directory not found: ${dir}`);
+      return { images: [], error: `Directory not found: ${dir}` };
+    }
+    const images = fs.readdirSync(dir)
+      .filter(file => /\.(jpg|jpeg|png|webp|gif)$/i.test(file))
+      .map(file => ({
+        src: path.join('/', category, file).replace(/\\/g, '/'),
+        name: file,
+        category
+      }));
+    return { images, error: null };
+  } catch (error: any) {
+    console.error(`Error reading directory ${dir}:`, error);
+    return { images: [], error: `Error reading ${dir}: ${error.message}` };
+  }
 }
 
 export default function ImageReviewPage() {
-  const newPics = getImages(NEW_PICS_DIR, 'new-pics-2');
-  const realAssets = getImages(REAL_ASSETS_DIR, 'real-assets');
+  const { images: newPics, error: newPicsError } = getImages(NEW_PICS_DIR, 'new-pics-2');
+  const { images: realAssets, error: realAssetsError } = getImages(REAL_ASSETS_DIR, 'real-assets');
+  
   const allImages = [...newPics, ...realAssets];
+  const errors = [newPicsError, realAssetsError].filter(Boolean);
 
   return (
     <div className="p-8 min-h-screen bg-gray-100 text-gray-900">
       <h1 className="text-3xl font-bold mb-4 text-center">Image Review</h1>
       <div className="h-1 bg-primary mx-auto rounded-full w-20 mb-8" />
       
-      {allImages.length === 0 ? (
+      {errors.length > 0 && (
+        <div className="mb-8 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+          <h2 className="font-bold mb-2">Errors:</h2>
+          <ul className="list-disc pl-5">
+            {errors.map((err, i) => (
+              <li key={i}>{err}</li>
+            ))}
+          </ul>
+          <p className="mt-2 text-sm text-gray-600">CWD: {process.cwd()}</p>
+        </div>
+      )}
+
+      {allImages.length === 0 && errors.length === 0 ? (
         <p className="text-center text-lg">No images found.</p>
       ) : (
         <div className="grid grid-cols-2 gap-8">
