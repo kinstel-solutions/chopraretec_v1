@@ -88,9 +88,9 @@ export default function OurFacilityPage() {
                         style={{ width: '100%', height: 'auto' }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <p className="text-white text-2xl font-bold">{step.images[0].alt}</p>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                   {/* Remaining Images - 2x2 Grid */}
@@ -105,9 +105,9 @@ export default function OurFacilityPage() {
                         style={{ width: '100%', height: 'auto' }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                      {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
                         <p className="text-white font-medium text-center">{img.alt}</p>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>
@@ -129,9 +129,9 @@ export default function OurFacilityPage() {
                           style={{ width: '100%', height: 'auto' }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <p className="text-white text-xl font-bold">{step.images[0].alt}</p>
-                        </div>
+                        </div> */}
                       </div>
                     )}
                   </div>
@@ -149,9 +149,9 @@ export default function OurFacilityPage() {
                           style={{ width: '100%', height: 'auto' }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <p className="text-white font-medium">{img.alt}</p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -169,9 +169,9 @@ export default function OurFacilityPage() {
                           style={{ width: '100%', height: 'auto' }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <p className="text-white font-medium">{img.alt}</p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -193,9 +193,9 @@ export default function OurFacilityPage() {
                         style={{ width: '100%', height: 'auto' }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <p className="text-white text-xl font-bold">{step.images[0].alt}</p>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                   {/* Row 2: Image 2 Full Width */}
@@ -210,9 +210,9 @@ export default function OurFacilityPage() {
                         style={{ width: '100%', height: 'auto' }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <p className="text-white text-xl font-bold">{step.images[1].alt}</p>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                   {/* Row 3: Split Row (Image 3 & 4) */}
@@ -228,9 +228,9 @@ export default function OurFacilityPage() {
                           style={{ width: '100%', height: 'auto' }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <p className="text-white font-medium">{img.alt}</p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -251,9 +251,9 @@ export default function OurFacilityPage() {
                         style={{ width: '100%', height: 'auto' }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <p className="text-white text-2xl font-bold">{img.alt}</p>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>
