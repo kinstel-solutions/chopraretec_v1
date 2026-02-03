@@ -54,8 +54,9 @@ export const homeData = {
         id: 'exhaust',
         title: 'Exhaust Suspension Components',
         description: 'High Performance hangers and mounts.',
-        image: '/new-pics-2/DSC_4412.webp',
+        image: '/new-pics-2/DSC_4066.webp',
         images: [
+          '/new-pics-2/DSC_4066.webp',
           '/new-pics-2/DSC_4412.webp',
           '/new-pics-2/DSC_4431.webp',
           '/new-pics-2/DSC_4421.webp'
@@ -66,10 +67,10 @@ export const homeData = {
         id: 'bushes',
         title: 'Ride Control Parts',
         description: 'Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.',
-        image: '/new-pics-2/DSC_4440.webp',
+        image: '/new-pics-2/DSC_4446.webp',
         images: [
+          '/new-pics-2/DSC_4446.webp',
           '/new-pics-2/DSC_4440.webp',
-          '/new-pics-2/DSC_4446.webp'
         ],
         layout: 'gallery',
       },
