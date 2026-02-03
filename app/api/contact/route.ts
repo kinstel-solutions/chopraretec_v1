@@ -54,15 +54,52 @@ export async function POST(req: NextRequest) {
         });
     }
 
-    const data = await resend.emails.send({
-      from: process.env.EMAIL_FROM!,
-      to: [process.env.EMAIL_TO!],
+    // Send notification to admins
+    const adminRecipients = process.env.EMAIL_TO_ADMINS 
+      ? process.env.EMAIL_TO_ADMINS.split(',').map(email => email.trim())
+      : ['anurag@chopraretec.com', 'chopra@chopraretec.com']; // Fallback for safety
+
+    const adminEmail = await resend.emails.send({
+      from: `Chopra Retec Website <${process.env.EMAIL_FROM!}>`,
+      to: adminRecipients,
       subject: `New RFQ from Chopra Retec Website - ${material}`,
       html: emailContent,
       attachments: attachments.length > 0 ? attachments : undefined,
     });
 
-    return NextResponse.json({ success: true, data });
+    // Send confirmation to user
+    const userConfirmationHtml = `
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="margin-bottom: 24px;">
+           <img src="https://chopraretec.com/chopra-OG-logo.png" alt="Chopra Retec Logo" style="height: 50px; width: auto;" />
+        </div>
+        <h1 style="color: #E63946; margin-top: 0;">Thank you for your interest in Chopra Retec</h1>
+        <p>Dear ${name},</p>
+        <p>We have received your Request for Quotation (RFQ) for <strong>${material}</strong>.</p>
+        <p>Our team is reviewing your requirements and will get back to you shortly with a detailed response.</p>
+        <br/>
+        <h3>Your Submission Details:</h3>
+        <p><strong>Material:</strong> ${material}</p>
+        <p><strong>Quantity:</strong> ${quantity}</p>
+        <p><strong>Order Frequency:</strong> ${orderType}</p>
+        <br/>
+        <p>Best regards,</p>
+        <p><strong>Chopra Retec Team</strong><br/>
+        <a href="https://chopraretec.com">www.chopraretec.com</a></p>
+      </div>
+    `;
+
+    // We don't await this one to block the response, but we catch errors to ensure it doesn't crash if it fails
+    // Actually, safest to await it to ensure we know if it worked or not, or just fire and forget.
+    // Let's await it to keep it simple and consistent.
+    await resend.emails.send({
+      from: 'Chopra Retec <hello@chopraretec.com>',
+      to: [email],
+      subject: 'We received your RFQ - Chopra Retec',
+      html: userConfirmationHtml,
+    });
+
+    return NextResponse.json({ success: true, adminEmail });
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
