@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://masseyproduction.com/sitemap.xml',
+    sitemap: 'https://chopraretec.com/sitemap.xml',
   };
 }

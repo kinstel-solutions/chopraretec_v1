@@ -1,7 +1,14 @@
-
 import fs from 'fs';
 import path from 'path';
-import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Image Review | Internal',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 const NEW_PICS_DIR = path.join(process.cwd(), 'public/new-pics-2');
 const REAL_ASSETS_DIR = path.join(process.cwd(), 'public/real-assets');

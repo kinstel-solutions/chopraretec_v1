@@ -2,7 +2,28 @@ import { ProductHero } from '@/components/products/ProductHero';
 import { ProductShowcase } from '@/components/products/ProductShowcase';
 import { homeData } from '@/data/home';
 import { notFound } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const product = homeData.products.items.find((p: any) => p.slug === slug);
+
+  if (!product) {
+    return {
+      title: 'Product Not Found',
+    };
+  }
+
+  return {
+    title: product.title,
+    description: product.description || product.details?.description,
+    openGraph: {
+      title: `${product.title} | Chopra Retec`,
+      description: product.description || product.details?.description,
+      images: product.image ? [{ url: product.image }] : [],
+    },
+  };
+}
 
 export function generateStaticParams() {
   return homeData.products.items
