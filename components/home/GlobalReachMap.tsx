@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react';
 import createGlobe from 'cobe';
 
 
+import { origin, destinationCountries } from '../../data/country-data';
+
 export function GlobalReachMap() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const isHovering = useRef(false);
@@ -12,6 +14,16 @@ export function GlobalReachMap() {
     let phi = 0;
 
     if (!canvasRef.current) return;
+
+    const markers = [
+      // Origin
+      { location: [origin.coordinates[1], origin.coordinates[0]], size: 0.1 },
+      // Destinations
+      ...destinationCountries.map((country) => ({
+        location: [country.coordinates[1], country.coordinates[0]],
+        size: 0.05,
+      })),
+    ];
 
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
@@ -26,20 +38,7 @@ export function GlobalReachMap() {
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.8, 0.1, 0.1], // Red glow
       glowColor: [0.5, 0, 0], // Dark red glow
-      markers: [
-        // Lucknow (approx)
-        { location: [26.8467, 80.9462], size: 0.1 },
-        // USA (East Coast)
-        { location: [40.7128, -74.0060], size: 0.05 },
-        // Europe (Germany)
-        { location: [51.1657, 10.4515], size: 0.05 },
-        // UK
-        { location: [55.3781, -3.4360], size: 0.05 },
-        // Middle East (Dubai)
-        { location: [25.2048, 55.2708], size: 0.05 },
-        // Asia (Japan)
-        { location: [36.2048, 138.2529], size: 0.05 },
-      ],
+      markers: markers.map(m => ({ location: m.location as [number, number], size: m.size })),
       onRender: (state) => {
         // Called on every animation frame.
         // `state` will be an empty object, return updated params.
