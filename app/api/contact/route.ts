@@ -92,11 +92,28 @@ export async function POST(req: NextRequest) {
     // We don't await this one to block the response, but we catch errors to ensure it doesn't crash if it fails
     // Actually, safest to await it to ensure we know if it worked or not, or just fire and forget.
     // Let's await it to keep it simple and consistent.
+    // Use EMAIL_FROM_USER if defined, otherwise fall back to EMAIL_FROM
+    const userSender = process.env.EMAIL_FROM_USER || process.env.EMAIL_FROM!;
+    
+    // Add "no-reply" footer to the HTML
+    const userConfirmationHtmlWithFooter = userConfirmationHtml.replace(
+      '</div>',
+      `
+        <br/>
+        <hr style="border: 0; border-top: 1px solid #eaeaea; margin: 20px 0;" />
+        <p style="color: #666; font-size: 12px; text-align: center;">
+          This is an automated message, please do not reply to this email.
+        </p>
+      </div>
+      `
+    );
+
     await resend.emails.send({
-      from: 'Chopra Retec <hello@chopraretec.com>',
+      from: `Chopra Retec <${userSender}>`,
+      replyTo: 'no-reply@chopraretec.com',
       to: [email],
       subject: 'We received your RFQ - Chopra Retec',
-      html: userConfirmationHtml,
+      html: userConfirmationHtmlWithFooter,
     });
 
     return NextResponse.json({ success: true, adminEmail });
