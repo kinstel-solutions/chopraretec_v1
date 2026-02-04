@@ -59,11 +59,6 @@ export function ImageModal({ isOpen, onClose, imageUrl, title }: ImageModalProps
              
                {/* Controls */}
               <div className="absolute top-2 right-2 z-50 flex items-center gap-2">
-                 <a href={imageUrl} download target="_blank" rel="noopener noreferrer">
-                    <Button variant="secondary" size="icon" className="h-10 w-10 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-md border border-white/10" title="Download">
-                        <Download className="w-5 h-5" />
-                    </Button>
-                  </a>
                   <Button 
                     variant="secondary" 
                     size="icon" 
