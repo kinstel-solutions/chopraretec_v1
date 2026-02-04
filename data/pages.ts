@@ -91,6 +91,12 @@ export const pagesData = {
         thumbnail: "/real-assets/certs/thumbnails/zed-certificate-bronze-(072122).jpg"
       },
       {
+        title: "ESG Certified",
+        description: "Bronze Medal Recognition.",
+        file: "/real-assets/certs/bronze-medal.jpg",
+        thumbnail: "/real-assets/certs/bronze-medal.jpg"
+      },
+      {
         title: "D&B Registered",
         description: "Dun & Bradstreet Global Database Registration.",
         file: "/real-assets/certs/d&b-certificate.pdf",
