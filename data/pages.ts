@@ -15,6 +15,8 @@ export const pagesData = {
     ],
     videoTitle: "Our Journey",
     videoSubtitle: "A glimpse into our world of precision manufacturing.",
+    videoSource: "/videos/our-journey.mp4",
+    videoThumbnail: "",
     factoryImage: "/real-assets/building-our-plant-side-view.webp"
   },
   facility: {
