@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { StructuredData } from '@/components/seo/StructuredData';
+import { Analytics } from "@vercel/analytics/next"
 
 import { Loader } from '@/components/ui/Loader';
 
@@ -73,6 +74,7 @@ export default function RootLayout({
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />
+          <Analytics />
           <StructuredData />
         </ThemeProvider>
       </body>

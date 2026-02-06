@@ -61,7 +61,7 @@ export function ProductShowcase({ items, productTitle }: ProductShowcaseProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative cursor-pointer overflow-hidden rounded-xl bg-white shadow-lg border border-black/5
+              className={`group relative cursor-pointer overflow-hidden rounded-sm bg-white shadow-lg border border-black/5
                 ${index === 0 ? 'md:col-span-2 md:aspect-[2/1]' : 'aspect-square'}
               `}
               onClick={() => openGallery(index)}

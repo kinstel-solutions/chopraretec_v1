@@ -21,9 +21,6 @@ export const navigationData = {
       { href: "/#products", label: "Custom Molding" },
       { href: "/#contact", label: "Request Quote" },
     ],
-    legal: [
-      { href: "/privacy", label: "Privacy Policy" },
-      { href: "/terms", label: "Terms & Conditions" },
-    ]
+
   }
 };

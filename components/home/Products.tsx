@@ -65,7 +65,7 @@ export function Products() {
               className="group cursor-pointer"
               onClick={() => handleProductClick(product)}
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-secondary rounded-lg mb-6">
+              <div className="relative aspect-[4/3] overflow-hidden bg-secondary border-2 border-primary/60 rounded-sm mb-6">
                 <div className="absolute inset-0 bg-secondary flex items-center justify-center text-muted-foreground/30 font-bold text-xl uppercase tracking-widest">
                    {/* Placeholder visual if image missing */}
                    Product Image

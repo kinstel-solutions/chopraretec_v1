@@ -78,7 +78,7 @@ export default function OurFacilityPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* First Image - Full Width */}
                   {step.images[0] && (
-                    <div className="md:col-span-2 relative rounded-3xl overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
+                    <div className="md:col-span-2 relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={step.images[0].src}
                         alt={step.images[0].alt}
@@ -95,7 +95,7 @@ export default function OurFacilityPage() {
                   )}
                   {/* Remaining Images - 2x2 Grid */}
                   {step.images.slice(1).map((img, i) => (
-                    <div key={i} className="relative rounded-2xl overflow-hidden shadow-md group border bg-gray-100 dark:bg-gray-800">
+                    <div key={i} className="relative rounded-sm overflow-hidden shadow-md group border bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={img.src}
                         alt={img.alt}
@@ -119,7 +119,7 @@ export default function OurFacilityPage() {
                   {/* Column 1: Image 1 */}
                   <div className="flex flex-col gap-6">
                     {step.images[0] && (
-                      <div className="relative rounded-2xl overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
+                      <div className="relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={step.images[0].src}
                           alt={step.images[0].alt}
@@ -139,7 +139,7 @@ export default function OurFacilityPage() {
                   {/* Column 2: Stack of Image 2 & 3 */}
                   <div className="flex flex-col gap-6">
                     {step.images.slice(1, 3).map((img, i) => (
-                      <div key={i} className="relative rounded-2xl overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
+                      <div key={i} className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={img.src}
                           alt={img.alt}
@@ -159,7 +159,7 @@ export default function OurFacilityPage() {
                   {/* Column 3: Stack of Image 4 & 5 */}
                   <div className="flex flex-col gap-6">
                     {step.images.slice(3, 5).map((img, i) => (
-                      <div key={i} className="relative rounded-2xl overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
+                      <div key={i} className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={img.src}
                           alt={img.alt}
@@ -183,7 +183,7 @@ export default function OurFacilityPage() {
                 <div className="space-y-6">
                   {/* Row 1: Image 1 Full Width */}
                   {step.images[0] && (
-                    <div className="relative rounded-3xl overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
+                    <div className="relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={step.images[0].src}
                         alt={step.images[0].alt}
@@ -200,7 +200,7 @@ export default function OurFacilityPage() {
                   )}
                   {/* Row 2: Image 2 Full Width */}
                   {step.images[1] && (
-                    <div className="relative rounded-3xl overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
+                    <div className="relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={step.images[1].src}
                         alt={step.images[1].alt}
@@ -218,7 +218,7 @@ export default function OurFacilityPage() {
                   {/* Row 3: Split Row (Image 3 & 4) */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {step.images.slice(2).map((img, i) => (
-                      <div key={i} className="relative rounded-2xl overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
+                      <div key={i} className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={img.src}
                           alt={img.alt}
@@ -241,7 +241,7 @@ export default function OurFacilityPage() {
               {stepIndex === 3 && (
                 <div className="space-y-8 w-full">
                   {step.images.map((img, i) => (
-                    <div key={i} className="relative rounded-3xl overflow-hidden shadow-lg group border bg-gray-100 dark:bg-gray-800">
+                    <div key={i} className="relative rounded-sm overflow-hidden shadow-lg group border bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={img.src}
                         alt={img.alt}

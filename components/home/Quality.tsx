@@ -42,7 +42,7 @@ export function Quality() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
-              className="group p-8 border border-border/50 hover:border-primary/50 hover:shadow-lg transition-all duration-300 rounded-xl bg-secondary/5"
+              className="group p-8 border border-border/50 hover:border-primary/50 hover:shadow-lg transition-all duration-300 rounded-sm bg-secondary/5"
             >
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
                 <feature.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />

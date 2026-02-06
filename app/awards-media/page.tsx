@@ -73,7 +73,7 @@ export default function AwardsMediaPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.05 }}
                       viewport={{ once: true }}
-                      className="bg-card border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between group h-full"
+                      className="bg-card border rounded-sm overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between group h-full"
                     >
                       {/* Thumbnail Section */}
                       <div 

@@ -71,13 +71,24 @@ export default function AboutPage() {
 
       <div className="py-20 container mx-auto px-4 md:px-8 space-y-20">
         
-        {/* Intro Text (Moved from previous Hero) */}
-        <div className="max-w-4xl mx-auto text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold mb-6 text-foreground"
+        {/* Corporate Video */}
+        <section className="w-full">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{about.videoTitle}</h2>
+            <p className="text-lg text-muted-foreground mt-4">{about.videoSubtitle}</p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative aspect-video rounded-sm overflow-hidden shadow-2xl border bg-black/5"
+          >
+            <video
+              src={about.videoSource}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              controls
+              playsInline
+              poster={about.videoThumbnail || about.heroImage} // Fallback to hero image if no specific thumbnail
             >
               {about.heading}
             </motion.h1>
@@ -109,7 +120,7 @@ export default function AboutPage() {
         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full" />
 
         {/* Our Strengths */}
-        <section className="bg-primary text-white p-10 md:p-16 rounded-3xl shadow-xl">
+        <section className="bg-primary text-white p-10 md:p-16 rounded-sm shadow-xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Our Strengths</h2>
           </div>
@@ -121,7 +132,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm"
+                className="flex items-start gap-4 bg-white/10 p-6 rounded-sm backdrop-blur-sm"
               >
                 <CheckCircle2 className="w-6 h-6 text-green-400 shrink-0 mt-1" />
                 <p className="text-lg font-medium">{strength}</p>
@@ -143,7 +154,7 @@ export default function AboutPage() {
              initial={{ opacity: 0, scale: 0.95 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             className="relative rounded-3xl overflow-hidden shadow-2xl border"
+             className="relative rounded-sm overflow-hidden shadow-2xl border"
           >
             <Image
               src={about.factoryImage}
