@@ -60,13 +60,15 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border bg-black/5"
           >
-            <iframe
-              src="https://www.youtube.com/embed/IJRFXwprUqo?rel=0"
-              title="Chopra Retec Corporate Video"
-              className="absolute top-0 left-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            <video
+              src={about.videoSource}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              controls
+              playsInline
+              poster={about.videoThumbnail || about.heroImage} // Fallback to hero image if no specific thumbnail
+            >
+              Your browser does not support the video tag.
+            </video>
           </motion.div>
         </section>
         
