@@ -83,10 +83,10 @@ export function Why_Us() {
               alt="Chopra Retec Facility"
               width={800}
               height={1000}
-              className="object-cover w-full h-full rounded-lg border-2 border-primary/80 shadow-2xl"
+              className="object-cover w-full h-full rounded-sm border-2 border-primary/80 shadow-2xl"
             />
             {/* Decorative Frame */}
-            <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-lg" />
+            <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-sm" />
           </motion.div>
         </div>
       </div>

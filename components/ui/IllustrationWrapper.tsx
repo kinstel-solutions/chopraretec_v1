@@ -30,7 +30,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
         whileInView={{ opacity: 1, x: align === 'right' ? 30 : -30, y: 30 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="absolute inset-0 border-2 border-primary/20 rounded-2xl z-0 hidden md:block"
+        className="absolute inset-0 border-2 border-primary/20 rounded-sm z-0 hidden md:block"
       />
        {/* Mobile simplified frame - no huge offset */}
        <motion.div 
@@ -38,7 +38,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
         whileInView={{ opacity: 1, x: align === 'right' ? 10 : -10, y: 10 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="absolute inset-0 border-2 border-primary/20 rounded-2xl z-0 md:hidden"
+        className="absolute inset-0 border-2 border-primary/20 rounded-sm z-0 md:hidden"
       />
 
       {/* 2. Floating Circle Decoration */}
@@ -69,7 +69,7 @@ export function IllustrationWrapper({ children, className, align = 'right', aspe
 
       {/* 4. Main Content Container */}
       <motion.div
-        className="relative z-10 w-full h-full overflow-hidden rounded-2xl shadow-xl group border border-white/10 bg-white"
+        className="relative z-10 w-full h-full overflow-hidden rounded-sm shadow-xl group border border-white/10 bg-white"
         whileHover={{ y: -5 }}
         transition={{ duration: 0.3 }}
       >

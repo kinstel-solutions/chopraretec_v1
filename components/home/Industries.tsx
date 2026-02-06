@@ -63,8 +63,8 @@ export function Industries() {
 
   return (
     <section id="industries" className="py-20 md:py-32 bg-secondary/30 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center mb-16 space-y-4">
+      <div className="container mx-auto px-4   md:px-8">
+        <div className="text-center mb-16  space-y-4">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export function Industries() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-100px" }}
-                    className="relative flex-shrink-0 w-[300px] h-[400px] rounded-xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-300"
+                    className="relative flex-shrink-0 w-[300px] h-[400px] rounded-sm overflow-hidden group shadow-md hover:shadow-xl transition-all duration-300"
                     >
                     <Image
                         src={item.image}

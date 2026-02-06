@@ -64,7 +64,7 @@ export default function ImageReviewPage() {
       ) : (
         <div className="grid grid-cols-2 gap-8">
           {allImages.map((img, index) => (
-            <div key={`${img.category}-${img.name}-${index}`} className="flex flex-col items-center bg-white p-4 rounded-lg shadow-md">
+            <div key={`${img.category}-${img.name}-${index}`} className="flex flex-col items-center bg-white p-4 rounded-sm shadow-md">
               <span className="mb-2 font-mono text-sm break-all font-semibold text-gray-700">{img.name}</span>
               <div className="w-full relative">
                 {/* 
@@ -74,7 +74,7 @@ export default function ImageReviewPage() {
                 <img 
                   src={img.src} 
                   alt={img.name}
-                  className="w-full h-auto rounded"
+                  className="w-full h-auto rounded-sm"
                   loading="lazy"
                 />
               </div>

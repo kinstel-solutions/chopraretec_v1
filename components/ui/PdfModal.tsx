@@ -53,7 +53,7 @@ export function PdfModal({ isOpen, onClose, pdfUrl, title }: PdfModalProps) {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-white dark:bg-zinc-900 w-full max-w-5xl h-[85vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col pointer-events-auto border border-white/10"
+              className="bg-white dark:bg-zinc-900 w-full max-w-5xl h-[85vh] rounded-sm shadow-2xl overflow-hidden flex flex-col pointer-events-auto border border-white/10"
             >
               {/* Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-10">

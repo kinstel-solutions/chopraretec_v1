@@ -47,7 +47,7 @@ export default function Home() {
       {/* <WhyUs /> */}
       <GlobalReach />
       <CTASection />
-      <FloatingVideoButton />
+      {/* <FloatingVideoButton /> */}
     </div>
   );
 }
