@@ -92,7 +92,7 @@ export function ContactForm() {
         <label className="text-sm font-bold uppercase tracking-widest text-gray-500">Part Drawing / Image</label>
         <div 
             onClick={() => fileInputRef.current?.click()}
-            className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer relative"
+            className="border-2 border-dashed border-gray-300 rounded-sm p-8 text-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer relative"
         >
             <input 
                 type="file" 
@@ -164,12 +164,12 @@ export function ContactForm() {
       </Button>
 
       {status === 'success' && (
-        <div className="p-4 bg-green-50 text-green-700 rounded-lg text-center">
+        <div className="p-4 bg-green-50 text-green-700 rounded-sm text-center">
             Request sent successfully! We will get back to you soon.
         </div>
       )}
       {status === 'error' && (
-        <div className="p-4 bg-red-50 text-red-700 rounded-lg text-center">
+        <div className="p-4 bg-red-50 text-red-700 rounded-sm text-center">
             {errorMessage}
         </div>
       )}

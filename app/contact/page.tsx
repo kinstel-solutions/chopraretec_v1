@@ -55,7 +55,7 @@ export default function ContactPage() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
-            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100">
+            <div className="bg-white p-8 md:p-10 rounded-sm shadow-xl border border-gray-100">
             <h2 className="text-3xl font-bold mb-8">Request a Quote (RFQ)</h2>
             <ContactForm />
           </div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
             className="space-y-10"
           >
 
-            <div className="space-y-8 bg-stone-50 p-8 rounded-2xl">
+            <div className="space-y-8 bg-stone-50 p-8 rounded-sm">
               <div className="flex items-start gap-6">
                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm text-primary shrink-0">
                     <MapPin className="w-6 h-6" />

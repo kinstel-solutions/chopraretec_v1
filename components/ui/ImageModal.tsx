@@ -78,7 +78,7 @@ export function ImageModal({ isOpen, onClose, imageUrl, title }: ImageModalProps
                         alt={title}
                         width={1200}
                         height={800}
-                        className="object-contain max-h-[85vh] w-auto h-auto rounded-lg shadow-2xl"
+                        className="object-contain max-h-[85vh] w-auto h-auto rounded-sm shadow-2xl"
                         priority
                         />
                     </div>

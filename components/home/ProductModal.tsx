@@ -79,7 +79,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="w-full h-full max-w-7xl overflow-hidden rounded-2xl bg-zinc-900 text-white shadow-2xl relative flex flex-col"
+            className="w-full h-full max-w-7xl overflow-hidden rounded-sm bg-zinc-900 text-white shadow-2xl relative flex flex-col"
           >
              {/* Main Gallery Area */}
              <div className="flex-1 relative bg-black flex items-center justify-center p-4">
@@ -135,7 +135,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                        <button
                           key={idx}
                           onClick={() => setCurrentImageIndex(idx)}
-                          className={`relative w-20 h-16 rounded-md overflow-hidden flex-shrink-0 transition-all ${currentImageIndex === idx ? 'ring-2 ring-red-500 scale-105' : 'opacity-50 hover:opacity-100'}`}
+                          className={`relative w-20 h-16 rounded-sm overflow-hidden flex-shrink-0 transition-all ${currentImageIndex === idx ? 'ring-2 ring-red-500 scale-105' : 'opacity-50 hover:opacity-100'}`}
                        >
                           <Image
                             src={img}

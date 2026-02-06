@@ -52,7 +52,7 @@ export function CompanyTimeline() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: index * 0.1 }}
           >
-            <div className="bg-black/80 border border-red-900/30 p-6 rounded-lg backdrop-blur-sm hover:border-red-500/50 transition-colors h-full flex flex-col">
+            <div className="bg-black/80 border border-red-900/30 p-6 rounded-sm backdrop-blur-sm hover:border-red-500/50 transition-colors h-full flex flex-col">
               <div className="w-12 h-12 bg-red-900/20 rounded-full flex items-center justify-center mb-4 text-red-500">
                 <milestone.icon className="w-6 h-6" />
               </div>

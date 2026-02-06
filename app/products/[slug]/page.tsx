@@ -62,7 +62,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12 text-left">
              {product.details.features.map((feature: string, idx: number) => (
-                <div key={idx} className="flex items-start gap-3 p-6 bg-zinc-50 rounded-lg border border-zinc-100">
+                <div key={idx} className="flex items-start gap-3 p-6 bg-zinc-50 rounded-sm border border-zinc-100">
                    <div className="w-2 h-2 mt-2 rounded-full bg-red-500 shrink-0" />
                    <p className="font-medium text-zinc-800">{feature}</p>
                 </div>
