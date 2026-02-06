@@ -1,49 +1,72 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Play } from 'lucide-react';
 import { pagesData } from '@/data/pages';
 
 export default function AboutPage() {
   const { about } = pagesData;
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-             src={about.heroImage || ''} // Fallback if undefined, though we just added it
-             alt="About Chopra Retec"
-             fill
-             className="object-cover object-top brightness-[0.4]"
-             priority
-          />
-        </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
-            {about.heading}
-          </motion.h1>
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "6rem" }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="w-24 h-1 bg-primary mx-auto rounded-full"
-          />
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg mt-4 md:text-2xl text-gray-200"
-          >
-             {about.intro[0]}
-          </motion.p>
-        </div>
+      {/* Video Hero Section */}
+      <section className="relative w-full aspect-video max-h-screen bg-black overflow-hidden group">
+        <video
+          ref={videoRef}
+          src={about.videoSource}
+          className="w-full h-full object-cover"
+          poster={about.videoThumbnail || about.heroImage}
+          controls={isPlaying}
+          playsInline
+          onEnded={() => setIsPlaying(false)}
+        >
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Custom Overlay */}
+        <AnimatePresence>
+          {!isPlaying && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-black/50"
+              onClick={handlePlay}
+            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="relative w-20 h-20 md:w-24 md:h-24 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 mx-auto hover:scale-110 transition-transform duration-300 border-2 border-white/50">
+                  <span className="absolute inset-0 rounded-full animate-ping bg-primary/40" />
+                  <Play className="w-10 h-10 md:w-12 md:h-12 text-white fill-none ml-2 relative z-10" />
+                </div>
+                <h2 className="text-3xl md:text-5xl font-bold text-white tracking-wide mb-6">
+                  Our Journey and Our Vision
+                </h2>
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "80px" }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  className="h-1 bg-primary mx-auto rounded-full"
+                />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
 
       <div className="py-20 container mx-auto px-4 md:px-8 space-y-20">
@@ -67,11 +90,20 @@ export default function AboutPage() {
               playsInline
               poster={about.videoThumbnail || about.heroImage} // Fallback to hero image if no specific thumbnail
             >
-              Your browser does not support the video tag.
-            </video>
-          </motion.div>
-        </section>
-        
+              {about.heading}
+            </motion.h1>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-lg md:text-2xl text-muted-foreground leading-relaxed"
+            >
+               {about.intro[0]}
+            </motion.p>
+        </div>
+
         {/* Intro Continuation */}
         <section className="max-w-4xl mx-auto text-center space-y-6">
           <motion.p 
@@ -83,8 +115,6 @@ export default function AboutPage() {
             {about.intro[1]}
           </motion.p>
         </section>
-
-
 
         {/* Separator */}
         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full" />
