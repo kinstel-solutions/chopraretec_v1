@@ -24,7 +24,7 @@ export function FloatingVideoButton() {
       <VideoModal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        videoSrc="/videos/our-journey.mp4"
+        videoSrc="/videos/chopra-retec-film.mp4"
       />
     </>
   );
