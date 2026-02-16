@@ -153,7 +153,7 @@ export const homeData = {
       "In-House Testing & Quality Assurance",
       "Customised Packaging"
     ],
-    video: "/videos/industrial-components.mp4"
+    video: "/videos/chopra-retec-film_Trim-for_bg_mfg-section.mp4"
   },
   awards: {
     heading: "Certified Excellence",

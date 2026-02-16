@@ -15,7 +15,7 @@ export const pagesData = {
     ],
     videoTitle: "Our Journey",
     videoSubtitle: "A glimpse into our world of precision manufacturing.",
-    videoSource: "/videos/our-journey.mp4",
+    videoSource: "/videos/chopra-retec-film.mp4",
     videoThumbnail: "/videos/our-journey-thumb-2.webp",
     factoryImage: "/real-assets/building-our-plant-side-view.webp"
   },
