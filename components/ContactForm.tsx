@@ -4,47 +4,60 @@ import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Upload, X, Loader2 } from 'lucide-react';
 
-export function ContactForm() {
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+//spam and bot protection
+function ContactFormContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    
+    if (!executeRecaptcha) {
+        console.log('Execute recaptcha not yet available');
+        return;
+    }
+
     const form = e.currentTarget;
     setIsLoading(true);
     setStatus('idle');
     setErrorMessage('');
 
-    const formData = new FormData(form);
-    if (selectedFile) {
-        formData.append('file', selectedFile);
-    }
-
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        body: formData,
-      });
+        const token = await executeRecaptcha('contact_form_submit');
 
-      const data = await response.json();
+        const formData = new FormData(form);
+        if (selectedFile) {
+            formData.append('file', selectedFile);
+        }
+        formData.append('g-recaptcha-response', token);
 
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
-      }
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData,
+        });
 
-      setStatus('success');
-      // Reset form
-      form.reset();
-      setSelectedFile(null);
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || 'Something went wrong');
+        }
+
+        setStatus('success');
+        // Reset form
+        form.reset();
+        setSelectedFile(null);
     } catch (error) {
-      console.error(error);
-      setStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to send request');
+        console.error(error);
+        setStatus('error');
+        setErrorMessage(error instanceof Error ? error.message : 'Failed to send request');
     } finally {
-      setIsLoading(false);
+        setIsLoading(false);
     }
   }
 
@@ -192,4 +205,12 @@ export function ContactForm() {
       )}
     </form>
   );
+}
+
+export function ContactForm() {
+    return (
+        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}>
+            <ContactFormContent />
+        </GoogleReCaptchaProvider>
+    );
 }

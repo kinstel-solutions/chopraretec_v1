@@ -21,6 +21,41 @@ export async function POST(req: NextRequest) {
 
     const confirmEmail = formData.get('confirm_email') as string;
     const formStartTime = formData.get('form_start_time') as string;
+    const captchaToken = formData.get('g-recaptcha-response') as string;
+
+    // 0. CAPTCHA Verification (First line of defense)
+    if (!captchaToken) {
+       return NextResponse.json(
+          { error: 'CAPTCHA token missing' },
+          { status: 400 }
+       );
+    }
+
+    try {
+       const captchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+          method: 'POST',
+          headers: {
+             'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
+       });
+       
+       const captchaData = await captchaResponse.json();
+       
+       if (!captchaData.success || captchaData.score < 0.5) {
+           console.log('Spam detected: CAPTCHA score too low', captchaData.score, captchaData['error-codes']);
+           return NextResponse.json(
+               { error: 'System detected potential spam. Please try again later.' },
+               { status: 400 }
+           );
+       }
+    } catch (error) {
+       console.error('CAPTCHA verification error:', error);
+       return NextResponse.json(
+           { error: 'CAPTCHA check failed' },
+           { status: 500 }
+       );
+    }
 
     // 1. Honeypot check
     if (confirmEmail) {
