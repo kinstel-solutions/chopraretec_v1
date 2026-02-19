@@ -19,11 +19,40 @@ export async function POST(req: NextRequest) {
     const details = formData.get('details') as string;
     const file = formData.get('file') as File | null;
 
+    const confirmEmail = formData.get('confirm_email') as string;
+    const formStartTime = formData.get('form_start_time') as string;
+
+    // 1. Honeypot check
+    if (confirmEmail) {
+        console.log('Spam detected: Honeypot field filled');
+        // Return success to fool the bot, but don't send email
+        return NextResponse.json({ success: true });
+    }
+
+    // 2. Time-based check (Minimum 3 seconds)
+    const submissionTime = Date.now();
+    const startTime = parseInt(formStartTime || '0');
+    const duration = submissionTime - startTime;
+
+    if (duration < 3000) { // 3 seconds
+        console.log(`Spam detected: Submission too fast (${duration}ms)`);
+         // Return success to fool the bot
+        return NextResponse.json({ success: true });
+    }
+
+    // 3. Basic Field Validation
     if (!name || !email || !phone || !material || !quantity || !location) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       );
+    }
+    
+    // Name validation: Check for spaces (Full Name usually has spaces) and length
+    if (!name.trim().includes(' ') && name.length > 10) {
+        // Many spam bots send single long strings as names
+        console.log(`Spam detected: Invalid name format "${name}"`);
+        return NextResponse.json({ success: true });
     }
 
     const emailContent = `

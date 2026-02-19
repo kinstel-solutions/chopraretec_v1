@@ -1,130 +1,175 @@
-import { RefreshCw, Ruler, Activity, ShieldCheck, Truck, BookOpen, Factory, Globe, Cpu, Plane } from 'lucide-react';
+import {
+  RefreshCw,
+  Ruler,
+  Activity,
+  ShieldCheck,
+  Truck,
+  BookOpen,
+  Factory,
+  Globe,
+  Cpu,
+  Plane,
+} from "lucide-react";
 
 export const homeData = {
   hero: {
     heading: "Precision Molded Rubber & Rubber-to-Metal Bonded Components",
     subHeading: "Chopra Retec: Trusted for Reliability",
-    industries: ['Automotive', 'Industrial', 'Healthcare', 'Defense', 'Material Handling'],
+    industries: [
+      "Automotive",
+      "Industrial",
+      "Healthcare",
+      "Defense",
+      "Material Handling",
+    ],
     cta: "Request a Quote",
-    description: "Chopra Retec: Trusted for Reliability" // Added as per Hero.tsx
+    description: "Chopra Retec: Trusted for Reliability", // Added as per Hero.tsx
   },
   industries: {
     heading: "Engineered for Multiple Industries & Applications",
     subHeading: "Industries We Serve",
-    description: "Chopra Retec partners with customers across diverse sectors, delivering engineered rubber and rubber-to-metal bonded components designed for extreme conditions.",
+    description:
+      "Chopra Retec partners with customers across diverse sectors, delivering engineered rubber and rubber-to-metal bonded components designed for extreme conditions.",
     items: [
       {
-        title: 'Automotive',
-        slug: 'automotive',
-        description: 'High-performance rubber components for passenger and commercial vehicles.',
-        image: '/images/industries/Automotive-1.webp'
+        title: "Automotive",
+        slug: "automotive",
+        description:
+          "High-performance rubber components for passenger and commercial vehicles.",
+        image: "/images/industries/Automotive-1.webp",
       },
       {
-        title: 'Defense',
-        slug: 'defense',
-        description: 'Mission-critical components meeting global standards.',
-        image: '/images/industries/defense-1.webp'
+        title: "Defense",
+        slug: "defense",
+        description: "Mission-critical components meeting global standards.",
+        image: "/images/industries/defense-1.webp",
       },
       {
-        title: 'Engineering & Industrial',
-        slug: 'engineering-industrial',
-        description: 'Durable solutions for machinery, engineering and industrial applications.',
-        image: '/images/industries/industrial-1.webp'
+        title: "Engineering & Industrial",
+        slug: "engineering-industrial",
+        description:
+          "Durable solutions for machinery, engineering and industrial applications.",
+        image: "/images/industries/industrial-1.webp",
       },
       {
-        title: 'Material Handling',
-        slug: 'material-handling',
-        description: 'Robust components for logistics and material transport equipment.',
-        image: '/Ezzy-img/forklift-3-2.png'
+        title: "Material Handling",
+        slug: "material-handling",
+        description:
+          "Robust components for logistics and material transport equipment.",
+        image: "/Ezzy-img/forklift-3-2.webp",
       },
       {
-        title: 'Healthcare & Medical',
-        slug: 'healthcare-medical',
-        description: 'Hygienic and precision molded parts for medical and healthcare applications.',
-        image: '/Ezzy-img/medical-4.jpeg'
-      }
-    ]
+        title: "Healthcare & Medical",
+        slug: "healthcare-medical",
+        description:
+          "Hygienic and precision molded parts for medical and healthcare applications.",
+        image: "/Ezzy-img/medical-4.webp",
+      },
+    ],
   },
   products: {
     heading: "Components That Perform Under Adverse Conditions",
     subHeading: "Products Snapshot",
-    description: "We manufacture a wide range of molded rubber and rubber-to-metal bonded components, engineered for consistent performance and long service life with focus on Noise, Vibration and Harshness (NVH).",
+    description:
+      "We manufacture a wide range of molded rubber and rubber-to-metal bonded components, engineered for consistent performance and long service life with focus on Noise, Vibration and Harshness (NVH).",
     items: [
       {
-        id: 'exhaust',
-        title: 'Exhaust Suspension Components',
-        description: 'High Performance hangers and mounts.',
-        image: '/new-pics-2/DSC_4066.webp',
+        id: "exhaust",
+        title: "Exhaust Suspension Components",
+        description: "High Performance hangers and mounts.",
+        image: "/new-pics-2/DSC_4066.webp",
         images: [
-          '/new-pics-2/DSC_4066.webp',
-          '/new-pics-2/DSC_4412.webp',
-          '/new-pics-2/DSC_4431.webp',
-          '/new-pics-2/DSC_4421.webp'
+          "/new-pics-2/DSC_4066.webp",
+          "/new-pics-2/DSC_4412.webp",
+          "/new-pics-2/DSC_4431.webp",
+          "/new-pics-2/DSC_4421.webp",
         ],
-        layout: 'gallery',
+        layout: "gallery",
       },
       {
-        id: 'bushes',
-        title: 'Ride Control Parts',
-        description: 'Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.',
-        image: '/new-pics-2/DSC_4446.webp',
+        id: "bushes",
+        title: "Ride Control Parts",
+        description:
+          "Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.",
+        image: "/real-assets/suspension-parts.webp",
         images: [
-          '/new-pics-2/DSC_4446.webp',
-          '/new-pics-2/DSC_4440.webp',
+          "/real-assets/suspension-parts.webp",
+          "/new-pics-2/DSC_4446.webp",
+          "/new-pics-2/DSC_4440.webp",
         ],
-        layout: 'gallery',
+        layout: "gallery",
       },
       {
-        id: 'anti-vibration',
-        title: 'Anti-Vibration Mounts',
-        description: 'Controll Arm Bushing, Trailer Arm Bushings, Silent Block.',
-        image: '/new-pics-2/DSC_4437.webp',
-        images: [
-           '/new-pics-2/DSC_4437.webp'
-        ],
-        layout: 'gallery',
+        id: "anti-vibration",
+        title: "Anti-Vibration Mounts",
+        description:
+          "Controll Arm Bushing, Trailer Arm Bushings, Silent Block.",
+        image: "/new-pics-2/DSC_4437.webp",
+        images: ["/new-pics-2/DSC_4437.webp"],
+        layout: "gallery",
       },
       {
-        id: 'bonded',
-        title: 'Rubber-to-Metal Bonded Components',
-        description: 'Designed for structural integrity.',
-        image: '/new-pics-2/DSC_4066.webp',
-        images: [
-           '/new-pics-2/DSC_4066.webp'
-        ],
-        layout: 'gallery',
+        id: "bonded",
+        title: "Rubber-to-Metal Bonded Components",
+        description: "Designed for structural integrity.",
+        image: "/new-pics-2/DSC_4066.webp",
+        images: ["/new-pics-2/DSC_4066.webp"],
+        layout: "gallery",
       },
       {
-        id: 'custom',
-        title: 'Custom-Designed Components',
-        description: 'End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.',
-        image: '/new-pics-2/Custom-designed-comp.webp',
+        id: "custom",
+        title: "Custom-Designed Components",
+        description:
+          "End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.",
+        image: "/new-pics-2/Custom-comp_withoutBorder.jpg",
         images: [
-          '/new-pics-2/Custom-designed-comp.webp',
-           '/real-assets/Designing.webp'       
+          "/new-pics-2/Custom-comp_withoutBorder.jpg",
+          "/Ezzy-img/ezzy-picks/Big-monitor.webp",
+          "/real-assets/Designing.webp",
         ],
-        layout: 'gallery',
-        slug: 'custom-designed-components',
+        layout: "gallery",
+        slug: "custom-designed-components",
         details: {
           tagline: "Engineering the Future of Rubber Components",
           subHeading: "Bespoke Solutions",
-          description: "Our custom design process is a collaborative journey. We don't just manufacture; we innovate. Using state-of-the-art CAD/CAM software and finite element analysis, we turn complex challenges into tangible, high-performance solutions.",
+          description:
+            "Our custom design process is a collaborative journey. We don't just manufacture; we innovate. Using state-of-the-art CAD/CAM software and finite element analysis, we turn complex challenges into tangible, high-performance solutions.",
           features: [
             "Rapid Prototyping & 3D Modeling",
             "Finite Element Analysis (FEA)",
             "In-house Tool Design & Fabrication",
-            "Material Formulation for Specific Environments"
+            "Material Formulation for Specific Environments",
           ],
           showcase: [
-            { src: '/real-assets/Designing.webp', title: 'CAD Design', description: 'Precision modeling for accurate tooling.' },
-            { src: '/real-assets/moulding-1.webp', title: 'Moulding Process', description: 'Advanced compression and injection moulding.' },
-            { src: '/real-assets/test-lab.webp', title: 'Quality Testing', description: 'Rigorous validation in our certified labs.' },
-            { src: '/real-assets/shop-floor.webp', title: 'Production', description: 'Scalable manufacturing for global demand.' },
-            { src: '/real-assets/exhaust-parts.webp', title: 'Finished Product', description: 'Ready for assembly and deployment.' }
-          ]
-        }
+            {
+              src: "/real-assets/Designing.webp",
+              title: "CAD Design",
+              description: "Precision modeling for accurate tooling.",
+            },
+            {
+              src: "/real-assets/moulding-1.webp",
+              title: "Moulding Process",
+              description: "Advanced compression and injection moulding.",
+            },
+            {
+              src: "/real-assets/test-lab.webp",
+              title: "Quality Testing",
+              description: "Rigorous validation in our certified labs.",
+            },
+            {
+              src: "/real-assets/shop-floor.webp",
+              title: "Production",
+              description: "Scalable manufacturing for global demand.",
+            },
+            {
+              src: "/real-assets/exhaust-parts.webp",
+              title: "Finished Product",
+              description: "Ready for assembly and deployment.",
+            },
+          ],
+        },
       },
-    ]
+    ],
   },
   whyUs: {
     heading: "The Chopra Retec Advantage",
@@ -138,12 +183,13 @@ export const homeData = {
       "Customised Packaging",
       "Competitive Pricing",
     ],
-    image: "/Ezzy-img/crrpl-evening-look.png"
+    image: "/Ezzy-img/crrpl-evening-look.webp",
   },
   capabilities: {
     heading: "End-to-End Manufacturing Solutions",
     subHeading: "Manufacturing Facilities",
-    description: "From compound selection to molding, bonding and validation — we offer end-to-end rubber component manufacturing capabilities.",
+    description:
+      "From compound selection to molding, bonding and validation — we offer end-to-end rubber component manufacturing capabilities.",
     items: [
       "Conceptualizing and R&D",
       "Component Design",
@@ -151,22 +197,22 @@ export const homeData = {
       "Compound Design",
       "Moulding using multiple processes: Compression, Transfer, Vacuum & Injection moulding",
       "In-House Testing & Quality Assurance",
-      "Customised Packaging"
+      "Customised Packaging",
     ],
-    video: "/videos/chopra-retec-film_Trim-for_bg_mfg-section.mp4"
+    video: "/videos/chopra-retec-film_Trim-for_bg_mfg-section.mp4",
   },
   awards: {
     heading: "Certified Excellence",
     subHeading: "Recognitions & Certifications",
     images: [
-      '/images/awards/ecovadis.png',
-      '/images/awards/nqa-logo.png',
-      '/images/awards/ic1.png',
-      '/images/awards/ic2.png',
-      '/images/awards/ic3.png',
-      '/images/awards/ic4.png',
-      '/images/awards/ic5.png',
-    ]
+      "/images/awards/ecovadis.png",
+      "/images/awards/nqa-logo.png",
+      "/images/awards/ic1.png",
+      "/images/awards/ic2.png",
+      "/images/awards/ic3.png",
+      "/images/awards/ic4.png",
+      "/images/awards/ic5.png",
+    ],
   },
   quality: {
     heading: "Quality You Can Depend On",
@@ -174,64 +220,85 @@ export const homeData = {
     features: [
       {
         icon: RefreshCw,
-        title: 'Robust Process Controls',
-        description: 'Our systems are designed for repeatability, ensuring consistent quality output for every batch.',
+        title: "Robust Process Controls",
+        description:
+          "Our systems are designed for repeatability, ensuring consistent quality output for every batch.",
       },
       {
         icon: Ruler,
-        title: 'Inspection & Validation',
-        description: 'Rigorous validation standards and dimensional checks at every stage of production.',
+        title: "Inspection & Validation",
+        description:
+          "Rigorous validation standards and dimensional checks at every stage of production.",
       },
       {
         icon: Activity,
-        title: 'Durability & Performance',
-        description: 'We focus on creating parts that withstand stress, heat, and vibration over long service lives.',
+        title: "Durability & Performance",
+        description:
+          "We focus on creating parts that withstand stress, heat, and vibration over long service lives.",
       },
       {
         icon: ShieldCheck,
-        title: 'Continuous Improvement',
-        description: 'A commitment to refining our processes and adopting best practices for global supply requirements.',
+        title: "Continuous Improvement",
+        description:
+          "A commitment to refining our processes and adopting best practices for global supply requirements.",
       },
-    ]
+    ],
   },
   globalReach: {
     heading: "SILENCING THE NEEDS OF GLOBAL INDUSTRIES",
     subHeading: "Global Presence",
-    description: "From our state-of-the-art facility in Lucknow, India to companies worldwide, Chopra Retec ensures precision goes global.",
+    description:
+      "From our state-of-the-art facility in Lucknow, India to companies worldwide, Chopra Retec ensures precision goes global.",
     stats: [
-      { icon: Truck, value: 98, suffix: '%', label: 'On-Time Delivery', description: 'Reliable logistics' },
-      { icon: BookOpen, value: 5000, suffix: '+', label: 'Parts Developed', description: 'Extensive product portfolio' },
+      {
+        icon: Truck,
+        value: 98,
+        suffix: "%",
+        label: "On-Time Delivery",
+        description: "Reliable logistics",
+      },
+      {
+        icon: BookOpen,
+        value: 5000,
+        suffix: "+",
+        label: "Parts Developed",
+        description: "Extensive product portfolio",
+      },
     ],
     timeline: [
-        {
-          year: '1990s',
-          title: 'Local Roots',
-          description: 'Started as a modest manufacturing unit in Lucknow, focusing on quality basics.',
-          icon: Factory,
-        },
-        {
-          year: '2000s',
-          title: 'Global Expansion',
-          description: 'Broke into international markets, establishing trust in Europe and the Americas.',
-          icon: Globe,
-        },
-        {
-          year: '2010s',
-          title: 'Modernization',
-          description: 'Invested heavily in automation and CNC machining to ensure zero-defect production.',
-          icon: Cpu,
-        },
-        {
-          year: '2020s',
-          title: 'Aerospace Precision',
-          description: 'Achieved certification for aerospace components, marking a new era of precision.',
-          icon: Plane,
-        },
-      ]
+      {
+        year: "1990s",
+        title: "Local Roots",
+        description:
+          "Started as a modest manufacturing unit in Lucknow, focusing on quality basics.",
+        icon: Factory,
+      },
+      {
+        year: "2000s",
+        title: "Global Expansion",
+        description:
+          "Broke into international markets, establishing trust in Europe and the Americas.",
+        icon: Globe,
+      },
+      {
+        year: "2010s",
+        title: "Modernization",
+        description:
+          "Invested heavily in automation and CNC machining to ensure zero-defect production.",
+        icon: Cpu,
+      },
+      {
+        year: "2020s",
+        title: "Aerospace Precision",
+        description:
+          "Achieved certification for aerospace components, marking a new era of precision.",
+        icon: Plane,
+      },
+    ],
   },
   cta: {
     heading: "Looking for a reliable rubber components manufacturing partner?",
     text: "Partner with us for precision engineering, global standards, and consistent quality.",
-    button: "Send Your RFQ / Drawing"
-  }
+    button: "Send Your RFQ / Drawing",
+  },
 };
