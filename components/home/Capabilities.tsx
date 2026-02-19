@@ -23,7 +23,7 @@ export function Capabilities() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-sm bg-stone-100 shadow-2xl">
+            <div className="relative aspect-video overflow-hidden rounded-sm bg-stone-100 shadow-2xl">
                <video
                  autoPlay
                  muted
@@ -32,7 +32,7 @@ export function Capabilities() {
                  preload="none"
                  className="object-cover w-full h-full"
                >
-                 <source src="/videos/industrial-components.mp4" type="video/mp4" />
+                 <source src={capabilities.video} type="video/mp4" />
                </video>
             </div>
             {/* Decorative Frame */}
