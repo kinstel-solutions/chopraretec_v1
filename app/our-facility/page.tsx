@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-
-import { pagesData } from '@/data/pages';
+import { pagesData } from "@/data/pages";
 
 export default function OurFacilityPage() {
   const { facility } = pagesData;
@@ -15,19 +14,18 @@ export default function OurFacilityPage() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-             src={facility.heroImage}
-             alt="Chopra Retec Facility"
-             fill
-             className="object-cover brightness-[0.4]"
-             priority
+            src={facility.heroImage}
+            alt="Chopra Retec Facility"
+            fill
+            className="object-cover brightness-[0.4]"
+            priority
           />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
+            className="text-4xl md:text-6xl font-bold text-white mb-4">
             {facility.heading}
           </motion.h1>
           <motion.div
@@ -36,12 +34,11 @@ export default function OurFacilityPage() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="h-1 bg-primary mx-auto rounded-full"
           />
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg mt-4 md:text-2xl text-gray-200"
-          >
+            className="text-lg mt-4 md:text-2xl text-gray-200">
             {facility.subHeading}
           </motion.p>
         </div>
@@ -56,22 +53,24 @@ export default function OurFacilityPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, margin: "-50px" }}
-            className="space-y-10"
-          >
+            className="space-y-10">
             {/* Section Header */}
-            <div className={`flex flex-col ${stepIndex % 2 === 0 ? 'lg:items-start text-left' : 'lg:items-end text-right'} space-y-4`}>
+            <div
+              className={`flex flex-col ${stepIndex % 2 === 0 ? "lg:items-start text-left" : "lg:items-end text-right"} space-y-4`}>
               <div className="flex items-center gap-4">
                 <span className="text-6xl font-black text-gray-200 dark:text-gray-800 select-none">
                   0{stepIndex + 1}
                 </span>
-                <h2 className="text-3xl md:text-5xl font-bold text-foreground">{step.title}</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+                  {step.title}
+                </h2>
               </div>
               <p className="text-lg text-muted-foreground w-full max-w-2xl leading-relaxed">
                 {step.description}
               </p>
             </div>
 
-            {/* Custom Grid Layouts based on Step Index - NO CROPPING */ }
+            {/* Custom Grid Layouts based on Step Index - NO CROPPING */}
             <div className="w-full">
               {/* Engineering (Index 0): First image full width, others 2x2 grid */}
               {stepIndex === 0 && (
@@ -85,7 +84,7 @@ export default function OurFacilityPage() {
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
+                        style={{ width: "100%", height: "auto" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
                       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -95,14 +94,16 @@ export default function OurFacilityPage() {
                   )}
                   {/* Remaining Images - 2x2 Grid */}
                   {step.images.slice(1).map((img, i) => (
-                    <div key={i} className="relative rounded-sm overflow-hidden shadow-md group border bg-gray-100 dark:bg-gray-800">
+                    <div
+                      key={i}
+                      className="relative rounded-sm overflow-hidden shadow-md group border bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={img.src}
                         alt={img.alt}
                         width={0}
                         height={0}
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        style={{ width: '100%', height: 'auto' }}
+                        style={{ width: "100%", height: "auto" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
                       {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
@@ -126,7 +127,7 @@ export default function OurFacilityPage() {
                           width={0}
                           height={0}
                           sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ width: '100%', height: 'auto' }}
+                          style={{ width: "100%", height: "auto" }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
                         {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -139,14 +140,16 @@ export default function OurFacilityPage() {
                   {/* Column 2: Stack of Image 2 & 3 */}
                   <div className="flex flex-col gap-6">
                     {step.images.slice(1, 3).map((img, i) => (
-                      <div key={i} className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
+                      <div
+                        key={i}
+                        className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={img.src}
                           alt={img.alt}
                           width={0}
                           height={0}
                           sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ width: '100%', height: 'auto' }}
+                          style={{ width: "100%", height: "auto" }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
                         {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -159,14 +162,16 @@ export default function OurFacilityPage() {
                   {/* Column 3: Stack of Image 4 & 5 */}
                   <div className="flex flex-col gap-6">
                     {step.images.slice(3, 5).map((img, i) => (
-                      <div key={i} className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
+                      <div
+                        key={i}
+                        className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={img.src}
                           alt={img.alt}
                           width={0}
                           height={0}
                           sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ width: '100%', height: 'auto' }}
+                          style={{ width: "100%", height: "auto" }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
                         {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -190,7 +195,7 @@ export default function OurFacilityPage() {
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
+                        style={{ width: "100%", height: "auto" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
                       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -207,7 +212,7 @@ export default function OurFacilityPage() {
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
+                        style={{ width: "100%", height: "auto" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
                       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -218,14 +223,16 @@ export default function OurFacilityPage() {
                   {/* Row 3: Split Row (Image 3 & 4) */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {step.images.slice(2).map((img, i) => (
-                      <div key={i} className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
+                      <div
+                        key={i}
+                        className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={img.src}
                           alt={img.alt}
                           width={0}
                           height={0}
                           sizes="(max-width: 768px) 100vw, 50vw"
-                          style={{ width: '100%', height: 'auto' }}
+                          style={{ width: "100%", height: "auto" }}
                           className="transition-transform duration-700 group-hover:scale-105"
                         />
                         {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -241,14 +248,16 @@ export default function OurFacilityPage() {
               {stepIndex === 3 && (
                 <div className="space-y-8 w-full">
                   {step.images.map((img, i) => (
-                    <div key={i} className="relative rounded-sm overflow-hidden shadow-lg group border bg-gray-100 dark:bg-gray-800">
+                    <div
+                      key={i}
+                      className="relative rounded-sm overflow-hidden shadow-lg group border bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={img.src}
                         alt={img.alt}
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
+                        style={{ width: "100%", height: "auto" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
                       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

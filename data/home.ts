@@ -56,14 +56,14 @@ export const homeData = {
         slug: "material-handling",
         description:
           "Robust components for logistics and material transport equipment.",
-        image: "/Ezzy-img/forklift-3-2.png",
+        image: "/Ezzy-img/forklift-3-2.webp",
       },
       {
         title: "Healthcare & Medical",
         slug: "healthcare-medical",
         description:
           "Hygienic and precision molded parts for medical and healthcare applications.",
-        image: "/Ezzy-img/medical-4.jpeg",
+        image: "/Ezzy-img/medical-4.webp",
       },
     ],
   },
@@ -121,9 +121,10 @@ export const homeData = {
         title: "Custom-Designed Components",
         description:
           "End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.",
-        image: "/new-pics-2/Custom-designed-comp.webp",
+        image: "/new-pics-2/Custom-comp_withoutBorder.jpg",
         images: [
-          "/new-pics-2/Custom-designed-comp.jpeg",
+          "/new-pics-2/Custom-comp_withoutBorder.jpg",
+          "/Ezzy-img/ezzy-picks/Big-monitor.webp",
           "/real-assets/Designing.webp",
         ],
         layout: "gallery",
@@ -182,7 +183,7 @@ export const homeData = {
       "Customised Packaging",
       "Competitive Pricing",
     ],
-    image: "/Ezzy-img/crrpl-evening-look.png",
+    image: "/Ezzy-img/crrpl-evening-look.webp",
   },
   capabilities: {
     heading: "End-to-End Manufacturing Solutions",
