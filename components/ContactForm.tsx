@@ -152,6 +152,23 @@ export function ContactForm() {
          <textarea name="details" id="details" rows={4} className="w-full border-b-2 border-gray-200 focus:border-primary outline-none py-3 transition-colors text-lg resize-none" placeholder="Additional details..."></textarea>
       </div>
 
+       {/* Spam Protection Fields */}
+       <div className="hidden" aria-hidden="true">
+           <label htmlFor="confirm_email">Don't fill this out if you're human:</label>
+           <input
+               type="text"
+               name="confirm_email"
+               id="confirm_email"
+               tabIndex={-1}
+               autoComplete="off"
+           />
+           <input
+               type="hidden"
+               name="form_start_time"
+               value={Date.now()}
+           />
+       </div>
+
       <Button disabled={isLoading} size="lg" className="w-full h-14 text-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
          {isLoading ? (
             <>

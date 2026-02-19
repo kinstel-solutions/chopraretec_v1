@@ -1,0 +1,12 @@
+
+--- Sending Valid Request ---
+[Valid] RESULT: SUCCESS (Email Sent)
+
+--- Sending Honeypot Request ---
+[Honeypot] RESULT: BLOCKED (Fake Success)
+
+--- Sending Fast Request ---
+[Fast] RESULT: BLOCKED (Fake Success)
+
+--- Sending Invalid Name Request ---
+[InvalidName] RESULT: BLOCKED (Fake Success)
