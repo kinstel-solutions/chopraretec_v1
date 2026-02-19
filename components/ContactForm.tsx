@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Upload, X, Loader2 } from 'lucide-react';
 
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-
+//spam and bot protection
 function ContactFormContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
