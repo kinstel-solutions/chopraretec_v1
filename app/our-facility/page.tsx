@@ -11,13 +11,13 @@ export default function OurFacilityPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={facility.heroImage}
             alt="Chopra Retec Facility"
             fill
-            className="object-cover brightness-[0.8]"
+            className="object-cover object-center scale-[1.15] md:scale-125 brightness-[0.8]"
             priority
           />
         </div>
