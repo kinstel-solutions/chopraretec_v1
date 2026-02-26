@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { homeData } from "@/data/home";
-import { Check, Send, X, AlertCircle } from "lucide-react";
+import { Check, Send, X, AlertCircle, Maximize2 } from "lucide-react";
 
 interface CuratorClientProps {
   newImages: string[];
@@ -25,6 +25,10 @@ export default function CuratorClient({ newImages }: CuratorClientProps) {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [expandedImage, setExpandedImage] = useState<{
+    imgPath: string;
+    src: string;
+  } | null>(null);
 
   const products = homeData.products.items;
 
@@ -147,7 +151,7 @@ export default function CuratorClient({ newImages }: CuratorClientProps) {
                         <div
                           key={img}
                           className="relative flex-none w-16 h-16 rounded-lg overflow-hidden border-2 border-slate-100">
-                          <img
+                          <Image
                             src={
                               img.startsWith("/new-pics") ||
                               img.startsWith("/real-assets") ||
@@ -156,7 +160,9 @@ export default function CuratorClient({ newImages }: CuratorClientProps) {
                                 : `/new-gen-product-images/${img}`
                             }
                             alt="Selection"
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="64px"
+                            className="object-cover"
                           />
                           <div className="absolute top-0 left-0 bg-blue-600 text-white text-[10px] sm:text-xs font-bold w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-br-lg">
                             {i + 1}
@@ -265,12 +271,26 @@ export default function CuratorClient({ newImages }: CuratorClientProps) {
                         ${usedByOther ? "opacity-40 cursor-not-allowed grayscale-[50%]" : "hover:shadow-md"}
                         ${isSelectedForThis ? "ring-4 ring-blue-500 shadow-lg scale-[0.98]" : "hover:scale-[1.02] bg-slate-200 border border-slate-200"}
                       `}>
-                      <img
+                      <Image
                         src={src}
                         alt="Product Option"
-                        loading="lazy"
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                        className="object-cover"
                       />
+
+                      {/* Expand Button */}
+                      {!usedByOther && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setExpandedImage({ imgPath, src });
+                          }}
+                          className="absolute top-2 left-2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-lg backdrop-blur-sm transition-all z-10 opacity-0 group-hover:opacity-100"
+                          title="View Full Image">
+                          <Maximize2 className="w-4 h-4" />
+                        </button>
+                      )}
 
                       {/* Overlay for Used indicator */}
                       {usedByOther && (
@@ -347,6 +367,48 @@ export default function CuratorClient({ newImages }: CuratorClientProps) {
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-colors shadow-sm">
                 Done with {activeCardData.title}
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Fullscreen Viewer */}
+      {expandedImage && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-900/95 backdrop-blur-md animate-in fade-in duration-200">
+          <button
+            onClick={() => setExpandedImage(null)}
+            className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors z-[70]"
+            title="Close">
+            <X className="w-6 h-6" />
+          </button>
+
+          <div className="relative w-full max-w-6xl max-h-[90vh] flex flex-col items-center">
+            <div className="relative w-full h-[75vh]">
+              <Image
+                src={expandedImage.src}
+                alt="Full View"
+                fill
+                className="object-contain drop-shadow-2xl"
+              />
+            </div>
+
+            <div className="mt-8 flex gap-4">
+              {activeCard && (
+                <button
+                  onClick={() => {
+                    toggleImageForActiveCard(expandedImage.imgPath);
+                  }}
+                  className={`px-8 py-3 rounded-xl font-bold transition-all shadow-lg ${
+                    getSequenceNumber(expandedImage.imgPath, activeCard) !==
+                    null
+                      ? "bg-red-500 hover:bg-red-600 text-white"
+                      : "bg-blue-600 hover:bg-blue-700 text-white"
+                  }`}>
+                  {getSequenceNumber(expandedImage.imgPath, activeCard) !== null
+                    ? "Deselect Image"
+                    : `Select for ${activeCardData?.title || "Card"}`}
+                </button>
+              )}
             </div>
           </div>
         </div>
