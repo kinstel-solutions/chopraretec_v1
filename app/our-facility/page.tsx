@@ -11,13 +11,13 @@ export default function OurFacilityPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={facility.heroImage}
             alt="Chopra Retec Facility"
             fill
-            className="object-cover brightness-[0.4]"
+            className="object-cover object-center scale-[1.15] md:scale-125 brightness-[0.8]"
             priority
           />
         </div>
@@ -84,7 +84,7 @@ export default function OurFacilityPage() {
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
                       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -114,72 +114,24 @@ export default function OurFacilityPage() {
                 </div>
               )}
 
-              {/* Production (Index 1): 3-Column Layout */}
+              {/* Production (Index 1): 2x2 Grid Layout */}
               {stepIndex === 1 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 items-start">
-                  {/* Column 1: Image 1 */}
-                  <div className="flex flex-col gap-6">
-                    {step.images[0] && (
-                      <div className="relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
-                        <Image
-                          src={step.images[0].src}
-                          alt={step.images[0].alt}
-                          width={0}
-                          height={0}
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ width: "100%", height: "auto" }}
-                          className="transition-transform duration-700 group-hover:scale-105"
-                        />
-                        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <p className="text-white text-xl font-bold">{step.images[0].alt}</p>
-                        </div> */}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Column 2: Stack of Image 2 & 3 */}
-                  <div className="flex flex-col gap-6">
-                    {step.images.slice(1, 3).map((img, i) => (
-                      <div
-                        key={i}
-                        className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
-                        <Image
-                          src={img.src}
-                          alt={img.alt}
-                          width={0}
-                          height={0}
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ width: "100%", height: "auto" }}
-                          className="transition-transform duration-700 group-hover:scale-105"
-                        />
-                        {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <p className="text-white font-medium">{img.alt}</p>
-                        </div> */}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Column 3: Stack of Image 4 & 5 */}
-                  <div className="flex flex-col gap-6">
-                    {step.images.slice(3, 5).map((img, i) => (
-                      <div
-                        key={i}
-                        className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
-                        <Image
-                          src={img.src}
-                          alt={img.alt}
-                          width={0}
-                          height={0}
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ width: "100%", height: "auto" }}
-                          className="transition-transform duration-700 group-hover:scale-105"
-                        />
-                        {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <p className="text-white font-medium">{img.alt}</p>
-                        </div> */}
-                      </div>
-                    ))}
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                  {step.images.map((img, i) => (
+                    <div
+                      key={i}
+                      className="relative rounded-sm overflow-hidden shadow-md group bg-gray-100 dark:bg-gray-800">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        width={0}
+                        height={0}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        style={{ width: "100%", height: "auto" }}
+                        className="transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  ))}
                 </div>
               )}
 
@@ -244,19 +196,19 @@ export default function OurFacilityPage() {
                 </div>
               )}
 
-              {/* Packaging (Index 3): Single Column Stack */}
+              {/* Packaging (Index 3): First Image Full Width, Rest Grid Layout */}
               {stepIndex === 3 && (
-                <div className="space-y-8 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                   {step.images.map((img, i) => (
                     <div
                       key={i}
-                      className="relative rounded-sm overflow-hidden shadow-lg group border bg-gray-100 dark:bg-gray-800">
+                      className={`relative rounded-sm overflow-hidden shadow-lg group  bg-white dark:bg-gray-800 ${i === 0 ? "md:col-span-2" : ""}`}>
                       <Image
                         src={img.src}
                         alt={img.alt}
                         width={0}
                         height={0}
-                        sizes="100vw"
+                        sizes={i === 0 ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
                         style={{ width: "100%", height: "auto" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
