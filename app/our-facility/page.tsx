@@ -77,14 +77,18 @@ export default function OurFacilityPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* First Image - Full Width */}
                   {step.images[0] && (
-                    <div className="md:col-span-2 relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
+                    <div className="relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={step.images[0].src}
                         alt={step.images[0].alt}
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />
                       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -137,7 +141,7 @@ export default function OurFacilityPage() {
 
               {/* Quality (Index 2): 2 Full Width Rows + 1 Split Row */}
               {stepIndex === 2 && (
-                <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 space-y-6">
                   {/* Row 1: Image 1 Full Width */}
                   {step.images[0] && (
                     <div className="relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
@@ -208,7 +212,9 @@ export default function OurFacilityPage() {
                         alt={img.alt}
                         width={0}
                         height={0}
-                        sizes={i === 0 ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
+                        sizes={
+                          i === 0 ? "100vw" : "(max-width: 768px) 100vw, 50vw"
+                        }
                         style={{ width: "100%", height: "auto" }}
                         className="transition-transform duration-700 group-hover:scale-105"
                       />

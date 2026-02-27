@@ -1,39 +1,59 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { homeData } from '@/data/home';
+import Image from "next/image";
+import { useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { CheckCircle, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { homeData } from "@/data/home";
 
 export function Capabilities() {
   const { capabilities } = homeData;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const isInView = useInView(videoRef, { once: false, amount: 0.1 });
+
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isInView) {
+        // Only attempt to play if we actually have a source
+        if (capabilities.video) {
+          videoRef.current
+            .play()
+            .catch((e) => console.log("Video play error:", e));
+        }
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [isInView, capabilities.video]);
 
   return (
-    <section id="capabilities" className="py-20 md:py-32 bg-secondary/10 overflow-hidden">
+    <section
+      id="capabilities"
+      className="py-20 md:py-32 bg-secondary/10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="relative"
-          >
+            className="relative">
             <div className="relative aspect-video overflow-hidden rounded-sm bg-stone-100 shadow-2xl">
-               <video
-                 autoPlay
-                 muted
-                 loop
-                 playsInline
-                 preload="none"
-                 className="object-cover w-full h-full"
-               >
-                 <source src={capabilities.video} type="video/mp4" />
-               </video>
+              <video
+                ref={videoRef}
+                muted
+                loop
+                playsInline
+                preload="none"
+                className="object-cover w-full h-full">
+                <source
+                  src={capabilities.video}
+                  type="video/mp4"
+                />
+              </video>
             </div>
             {/* Decorative Frame */}
             <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 w-full h-full border-2 border-primary/20 -z-10 rounded-sm" />
@@ -45,8 +65,7 @@ export function Capabilities() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
+            className="space-y-8">
             <div className="space-y-4">
               <p className="text-lg uppercase tracking-[0.2em] text-primary font-semibold">
                 {capabilities.subHeading}
@@ -57,14 +76,14 @@ export function Capabilities() {
             </div>
 
             <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
-              <p>
-                {capabilities.description}
-              </p>
+              <p>{capabilities.description}</p>
             </div>
 
             <ul className="space-y-4">
               {capabilities.items.map((item, index) => (
-                <li key={index} className="flex items-center gap-3">
+                <li
+                  key={index}
+                  className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0" />
                   <span className="font-medium text-foreground/90">{item}</span>
                 </li>
@@ -72,8 +91,13 @@ export function Capabilities() {
             </ul>
 
             <div className="pt-6">
-              <Button asChild size="lg" className="px-8 font-bold tracking-widest text-sm uppercase">
-                <Link href="/our-facility" className="flex items-center gap-2">
+              <Button
+                asChild
+                size="lg"
+                className="px-8 font-bold tracking-widest text-sm uppercase">
+                <Link
+                  href="/our-facility"
+                  className="flex items-center gap-2">
                   View Our Facility <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </Button>

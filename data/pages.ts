@@ -34,10 +34,10 @@ export const pagesData = {
             src: "/new-pics-2/DSC_3885.webp",
             alt: "Custom Tool Making-Close Up-2",
           },
-          {
-            src: "/new-pics-2/DSC_3897.webp",
-            alt: "Custom Tool Making Machines",
-          },
+          // {
+          //   src: "/new-pics-2/DSC_3897.webp",
+          //   alt: "Custom Tool Making Machines",
+          // },
           {
             src: "/real-assets/tool-making-2.webp",
             alt: "Custom Tool Making-Close Up",
@@ -53,15 +53,15 @@ export const pagesData = {
         images: [
           { src: "/new-pics-2/DSC_3938.webp", alt: "Injection Molding" },
           { src: "/new-pics-2/DSC_3927.webp", alt: "Vaccum Compression" },
-          {
-            src: "/Ezzy-img/ezzy-picks/Vaccum-comp-close_up.webp",
-            alt: "Vaccum-compression-close up",
-          },
+          // {
+          //   src: "/Ezzy-img/ezzy-picks/Vaccum-comp-close_up.webp",
+          //   alt: "Vaccum-compression-close up",
+          // },
           {
             src: "/Ezzy-img/ezzy-picks/In-House_formulation.webp",
             alt: "Automated Compounding",
           },
-
+          { src: "/real-assets/lazer-marking.webp", alt: "Laser Marking" },
           // { src: "/real-assets/moulding-1.webp", alt: "Compression Molding" }
         ],
       },
@@ -71,12 +71,13 @@ export const pagesData = {
           "Zero defect is our standard. Our quality lab validates every batch, while laser marking ensures traceability for critical components.",
         images: [
           { src: "/real-assets/test-lab.webp", alt: "Quality Assurance Lab" },
-          { src: "/real-assets/lazer-marking.webp", alt: "Laser Marking" },
-          {
-            src: "/Ezzy-img/ezzy-picks/laser-marks.webp",
-            alt: "Close Up Laser Marking",
-          },
-          { src: "/new-pics-2/DSC_4000.webp", alt: "Laser Marking" },
+          { src: "/new-pics-2/Capture-qc-crrpl.webp", alt: "Quality Control" },
+
+          // {
+          //   src: "/Ezzy-img/ezzy-picks/laser-marks.webp",
+          //   alt: "Close Up Laser Marking",
+          // },
+          // { src: "/new-pics-2/DSC_4000.webp", alt: "Laser Marking" },
           //   { src: "/real-assets/exhaust-parts.webp", alt: "Final Quality Check" }
         ],
       },
