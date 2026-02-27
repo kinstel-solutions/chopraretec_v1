@@ -71,6 +71,7 @@ export const pagesData = {
           "Zero defect is our standard. Our quality lab validates every batch, while laser marking ensures traceability for critical components.",
         images: [
           { src: "/real-assets/test-lab.webp", alt: "Quality Assurance Lab" },
+          { src: "/new-pics-2/Capture-qc-crrpl.webp", alt: "Quality Control" },
 
           // {
           //   src: "/Ezzy-img/ezzy-picks/laser-marks.webp",

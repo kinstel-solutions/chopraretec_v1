@@ -77,8 +77,9 @@ export const homeData = {
         id: "exhaust",
         title: "Exhaust Suspension Components",
         description: "High Performance hangers and mounts.",
-        image: "/new-pics-2/DSC_4066.webp",
+        image: "/product-card-images-v2/Exhaust Suspension Parts-card1-v1.webp",
         images: [
+          "/product-card-images-v2/Exhaust Suspension Parts-card1-v1.webp",
           "/new-pics-2/DSC_4066.webp",
           "/new-pics-2/DSC_4412.webp",
           "/new-pics-2/DSC_4431.webp",
@@ -91,8 +92,9 @@ export const homeData = {
         title: "Ride Control Parts",
         description:
           "Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.",
-        image: "/real-assets/suspension-parts.webp",
+        image: "/product-card-images-v2/Ride Control Parts-card2-v1.webp",
         images: [
+          "/product-card-images-v2/Ride Control Parts-card2-v1.webp",
           "/real-assets/suspension-parts.webp",
           "/new-pics-2/DSC_4446.webp",
           "/new-pics-2/DSC_4440.webp",
@@ -112,8 +114,12 @@ export const homeData = {
         id: "bonded",
         title: "Rubber-to-Metal Bonded Components",
         description: "Designed for structural integrity.",
-        image: "/new-pics-2/DSC_4066.webp",
-        images: ["/new-pics-2/DSC_4066.webp"],
+        image:
+          "/product-card-images-v2/card4_bonded_8_items_1772128225466.webp",
+        images: [
+          "/product-card-images-v2/card4_bonded_8_items_1772128225466.webp",
+          "/new-pics-2/DSC_4066.webp",
+        ],
         layout: "gallery",
       },
       {
@@ -121,8 +127,10 @@ export const homeData = {
         title: "Custom-Designed Components",
         description:
           "End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.",
-        image: "/new-pics-2/Custom-comp_withoutBorder.jpg",
+        image:
+          "/product-card-images-v2/custom_components_card_1771838150107.webp",
         images: [
+          "/product-card-images-v2/custom_components_card_1771838150107.webp",
           "/new-pics-2/Custom-comp_withoutBorder.jpg",
           "/Ezzy-img/ezzy-picks/Big-monitor.webp",
           "/real-assets/Designing.webp",

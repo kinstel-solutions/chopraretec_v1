@@ -141,7 +141,7 @@ export default function OurFacilityPage() {
 
               {/* Quality (Index 2): 2 Full Width Rows + 1 Split Row */}
               {stepIndex === 2 && (
-                <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 space-y-6">
                   {/* Row 1: Image 1 Full Width */}
                   {step.images[0] && (
                     <div className="relative rounded-sm overflow-hidden shadow-lg group bg-gray-100 dark:bg-gray-800">
