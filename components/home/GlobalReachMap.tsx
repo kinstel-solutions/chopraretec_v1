@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import createGlobe from 'cobe';
+import { useEffect, useRef } from "react";
+import createGlobe from "cobe";
+import { useInView } from "framer-motion";
 
-
-import { origin, destinationCountries } from '../../data/country-data';
+import { origin, destinationCountries } from "../../data/country-data";
 
 export function GlobalReachMap() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const isHovering = useRef(false);
+  const isInView = useInView(canvasRef, { once: false, amount: 0.1 });
 
   useEffect(() => {
     let phi = 0;
@@ -38,8 +39,14 @@ export function GlobalReachMap() {
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.8, 0.1, 0.1], // Red glow
       glowColor: [0.5, 0, 0], // Dark red glow
-      markers: markers.map(m => ({ location: m.location as [number, number], size: m.size })),
+      markers: markers.map((m) => ({
+        location: m.location as [number, number],
+        size: m.size,
+      })),
       onRender: (state) => {
+        // Only update if in view
+        if (!isInView) return;
+
         // Called on every animation frame.
         // `state` will be an empty object, return updated params.
         state.phi = phi;
@@ -52,18 +59,18 @@ export function GlobalReachMap() {
     return () => {
       globe.destroy();
     };
-  }, []);
+  }, [isInView]);
 
   return (
     <div className="w-full h-full flex items-center justify-center relative overflow-hidden">
-        <canvas
-            ref={canvasRef}
-            style={{ width: 600, height: 600, maxWidth: '100%', aspectRatio: '1' }}
-            className="opacity-80 hover:opacity-100 transition-opacity duration-500 cursor-grab active:cursor-grabbing"
-            onPointerEnter={() => (isHovering.current = true)}
-            onPointerLeave={() => (isHovering.current = false)}
-        />
-        {/* <div className="absolute bottom-4 left-4 md:left-8 pointer-events-none">
+      <canvas
+        ref={canvasRef}
+        style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: "1" }}
+        className="opacity-80 hover:opacity-100 transition-opacity duration-500 cursor-grab active:cursor-grabbing"
+        onPointerEnter={() => (isHovering.current = true)}
+        onPointerLeave={() => (isHovering.current = false)}
+      />
+      {/* <div className="absolute bottom-4 left-4 md:left-8 pointer-events-none">
             <div className="flex items-center gap-2 mb-2">
                 <div className="w-3 h-3 rounded-full bg-red-600 animate-pulse" />
                 <span className="text-white text-sm font-bold tracking-wider">LUCKNOW HQ</span>
