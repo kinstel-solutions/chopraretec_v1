@@ -19,5 +19,6 @@ export const companyData = {
     facebook: "https://www.facebook.com/Chopraretec/",
     x: "https://x.com/FancyFootloose",
     youtube: "http://www.youtube.com/@ChopraRetecRubberProductsLtd",
+    whatsapp: "https://wa.me/919115226555",
   },
 };

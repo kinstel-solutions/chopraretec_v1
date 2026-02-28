@@ -1,16 +1,19 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Trophy, Award, ZoomIn } from 'lucide-react';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { ImageModal } from '@/components/ui/ImageModal';
-import { pagesData } from '@/data/pages';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Trophy, Award, ZoomIn } from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ImageModal } from "@/components/ui/ImageModal";
+import { pagesData } from "@/data/pages";
 
 export default function AwardsMediaPage() {
-  const { awards } = pagesData;
-  const [selectedAward, setSelectedAward] = useState<{ url: string; title: string } | null>(null);
+  const { awards, mediaCoverage } = pagesData;
+  const [selectedAward, setSelectedAward] = useState<{
+    url: string;
+    title: string;
+  } | null>(null);
 
   return (
     <>
@@ -19,52 +22,106 @@ export default function AwardsMediaPage() {
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-               src={awards.heroImage || ''}
-               alt="Awards & Recognition"
-               fill
-               className="object-cover brightness-[0.4]"
-               priority
+              src={awards.heroImage || ""}
+              alt="Awards & Recognition"
+              fill
+              className="object-cover brightness-[0.4]"
+              priority
             />
           </div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
-            {awards.heading}
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-4xl md:text-6xl font-bold text-white mb-4">
+              {awards.heading}
+            </motion.h1>
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "80px" }}
               transition={{ delay: 0.2, duration: 0.5 }}
               className="h-1 bg-primary mx-auto rounded-full"
             />
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg mt-4 md:text-2xl text-gray-200"
-            >
-               {awards.description}
+              className="text-lg mt-4 md:text-2xl text-gray-200">
+              {awards.description}
             </motion.p>
           </div>
         </section>
 
         <div className="py-20 container mx-auto px-4 md:px-8 space-y-20">
-          
+          {/* Media Coverage Section */}
+          <div className="space-y-8">
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold border-l-4 border-primary pl-4">
+              {mediaCoverage.heading}
+            </motion.h2>
+            <p className="text-muted-foreground max-w-2xl">
+              {mediaCoverage.description}
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {mediaCoverage.items.map((item, index) => (
+                <motion.div
+                  key={`media-${index}`}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="bg-card w-full border rounded-sm overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between group h-full">
+                  <div
+                    className="relative w-full aspect-[3/4] bg-gray-100 cursor-pointer overflow-hidden"
+                    onClick={() =>
+                      setSelectedAward({
+                        url: item.thumbnail || "",
+                        title: item.title,
+                      })
+                    }>
+                    {item.thumbnail ? (
+                      <>
+                        <Image
+                          src={item.thumbnail}
+                          alt={item.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                          <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                            <ZoomIn className="w-5 h-5 text-primary" />
+                          </div>
+                        </div>
+                      </>
+                    ) : null}
+                  </div>
+                  <div className="p-4 border-t">
+                    <h3 className="font-semibold text-center group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
           <div className="space-y-16">
             {awards.categories.map((section, sIndex) => (
-              <div key={sIndex} className="space-y-8">
-                <motion.h2 
+              <div
+                key={sIndex}
+                className="space-y-8">
+                <motion.h2
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="text-3xl font-bold border-l-4 border-primary pl-4"
-                >
+                  className="text-3xl font-bold border-l-4 border-primary pl-4">
                   {section.category}
                 </motion.h2>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {section.items.map((item, index) => (
                     <motion.div
@@ -73,32 +130,35 @@ export default function AwardsMediaPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.05 }}
                       viewport={{ once: true }}
-                      className="bg-card border rounded-sm overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between group h-full"
-                    >
+                      className="bg-card border rounded-sm overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between group h-full">
                       {/* Thumbnail Section */}
-                      <div 
-                        className="relative h-56 w-full bg-gray-100 cursor-pointer overflow-hidden" 
-                        onClick={() => setSelectedAward({ url: item.thumbnail || '', title: item.title })}
-                      >
-                         {item.thumbnail ? (
-                           <>
-                             <Image 
-                               src={item.thumbnail} 
-                               alt={item.title} 
-                               fill 
-                               className="object-cover transition-transform duration-500 group-hover:scale-110" 
-                             />
-                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-                                  <ZoomIn className="w-5 h-5 text-primary" />
-                                </div>
-                             </div>
-                           </>
-                         ) : (
-                           <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                              <Trophy className="w-12 h-12 text-gray-300" />
-                           </div>
-                         )}
+                      <div
+                        className="relative h-56 w-full bg-gray-100 cursor-pointer overflow-hidden"
+                        onClick={() =>
+                          setSelectedAward({
+                            url: item.thumbnail || "",
+                            title: item.title,
+                          })
+                        }>
+                        {item.thumbnail ? (
+                          <>
+                            <Image
+                              src={item.thumbnail}
+                              alt={item.title}
+                              fill
+                              className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                              <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                                <ZoomIn className="w-5 h-5 text-primary" />
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                            <Trophy className="w-12 h-12 text-gray-300" />
+                          </div>
+                        )}
                       </div>
 
                       <div className="p-6 flex flex-col flex-1">
@@ -109,21 +169,29 @@ export default function AwardsMediaPage() {
                             </div>
                           </div>
                           <div>
-                            <h3 className="text-lg font-bold leading-tight mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                            <p className="text-sm text-muted-foreground">{item.description}</p>
+                            <h3 className="text-lg font-bold leading-tight mb-2 group-hover:text-primary transition-colors">
+                              {item.title}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                              {item.description}
+                            </p>
                           </div>
                         </div>
-                        
+
                         <div className="mt-auto pt-4 border-t border-gray-100 dark:border-zinc-800">
-                            <Button 
-                              variant="ghost" 
-                              size="sm" 
-                              className="w-full justify-between hover:bg-secondary/20 group/btn"
-                              onClick={() => setSelectedAward({ url: item.thumbnail || '', title: item.title })}
-                            >
-                               <span>View Award</span>
-                               <Award className="w-4 h-4 group-hover/btn:text-primary transition-colors" />
-                            </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="w-full justify-between hover:bg-secondary/20 group/btn"
+                            onClick={() =>
+                              setSelectedAward({
+                                url: item.thumbnail || "",
+                                title: item.title,
+                              })
+                            }>
+                            <span>View Award</span>
+                            <Award className="w-4 h-4 group-hover/btn:text-primary transition-colors" />
+                          </Button>
                         </div>
                       </div>
                     </motion.div>
@@ -132,15 +200,14 @@ export default function AwardsMediaPage() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
 
-      <ImageModal 
+      <ImageModal
         isOpen={!!selectedAward}
         onClose={() => setSelectedAward(null)}
-        imageUrl={selectedAward?.url || ''}
-        title={selectedAward?.title || ''}
+        imageUrl={selectedAward?.url || ""}
+        title={selectedAward?.title || ""}
       />
     </>
   );
