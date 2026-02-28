@@ -58,7 +58,7 @@ export const pagesData = {
           //   alt: "Vaccum-compression-close up",
           // },
           {
-            src: "/Ezzy-img/ezzy-picks/In-House_formulation.webp",
+            src: "/real-assets/automated-batch-weighing.webp",
             alt: "Automated Compounding",
           },
           { src: "/real-assets/lazer-marking.webp", alt: "Laser Marking" },
@@ -71,7 +71,11 @@ export const pagesData = {
           "Zero defect is our standard. Our quality lab validates every batch, while laser marking ensures traceability for critical components.",
         images: [
           { src: "/real-assets/test-lab.webp", alt: "Quality Assurance Lab" },
-          { src: "/new-pics-2/Capture-qc-crrpl.webp", alt: "Quality Control" },
+          // { src: "/new-pics-2/Capture-qc-crrpl.webp", alt: "Quality Control" },
+          {
+            src: "/cam-kinstel/QC-machine-ODR_resize.webp",
+            alt: "Automated QC Machine",
+          },
 
           // {
           //   src: "/Ezzy-img/ezzy-picks/laser-marks.webp",
@@ -111,7 +115,7 @@ export const pagesData = {
           "/real-assets/certs/thumbnails/iso-9001-2015-cerficate-(nqa).jpg",
       },
       {
-        title: "One Star Export House",
+        title: "Star Export House",
         description: "Government of India Recognition (2021-2026).",
         file: "/real-assets/certs/one-star-export-house-certificate-(2021-2026).pdf",
         thumbnail:
@@ -135,6 +139,43 @@ export const pagesData = {
         description: "Dun & Bradstreet Global Database Registration.",
         file: "/real-assets/certs/d&b-certificate.pdf",
         thumbnail: "/real-assets/certs/thumbnails/d&b-certificate.jpg",
+      },
+    ],
+  },
+  mediaCoverage: {
+    heading: "Media Coverage",
+    description: "CRRPL in the news and industry publications.",
+    items: [
+      { title: "AM-I", thumbnail: "/media-coverage/AM-I.webp" },
+      { title: "AM-II", thumbnail: "/media-coverage/AM-II.webp" },
+      {
+        title: "AM-II (Contd)",
+        thumbnail: "/media-coverage/AM-II (Contd).webp",
+      },
+      { title: "AM-III", thumbnail: "/media-coverage/AM-III.webp" },
+      {
+        title: "AM-III (Contd)",
+        thumbnail: "/media-coverage/AM-III (Contd).webp",
+      },
+      { title: "AM-IV", thumbnail: "/media-coverage/AM-IV.webp" },
+      { title: "AM-V", thumbnail: "/media-coverage/AM-V.webp" },
+      { title: "AM-VI", thumbnail: "/media-coverage/AM-VI.webp" },
+      {
+        title: "AM-VI (Contd)",
+        thumbnail: "/media-coverage/AM-VI (Contd).webp",
+      },
+      { title: "AM-VII", thumbnail: "/media-coverage/AM-VII.webp" },
+      {
+        title: "HT Lucknow (2018-09-08)",
+        thumbnail: "/media-coverage/ht-lucknow.webp",
+      },
+      {
+        title: "India Today",
+        thumbnail: "/media-coverage/india-today-part-2.webp",
+      },
+      {
+        title: "Industry Outlook (CRRPL)",
+        thumbnail: "/media-coverage/industry-outlook.webp",
       },
     ],
   },

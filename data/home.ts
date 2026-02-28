@@ -128,9 +128,9 @@ export const homeData = {
         description:
           "End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.",
         image:
-          "/product-card-images-v2/custom_components_card_1771838150107.webp",
+          "/product-card-images-v2/custom_components_card_1771838150107_white.webp",
         images: [
-          "/product-card-images-v2/custom_components_card_1771838150107.webp",
+          "/product-card-images-v2/custom_components_card_1771838150107_white.webp",
           "/new-pics-2/Custom-comp_withoutBorder.jpg",
           "/Ezzy-img/ezzy-picks/Big-monitor.webp",
           "/real-assets/Designing.webp",
