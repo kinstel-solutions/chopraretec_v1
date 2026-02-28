@@ -111,7 +111,7 @@ export const pagesData = {
           "/real-assets/certs/thumbnails/iso-9001-2015-cerficate-(nqa).jpg",
       },
       {
-        title: "One Star Export House",
+        title: "Star Export House",
         description: "Government of India Recognition (2021-2026).",
         file: "/real-assets/certs/one-star-export-house-certificate-(2021-2026).pdf",
         thumbnail:

@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Mail, Phone, MapPin, Linkedin, Facebook } from 'lucide-react';
-import { companyData } from '@/data/company';
-import { navigationData } from '@/data/navigation';
+import Link from "next/link";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Linkedin, Facebook, Youtube } from "lucide-react";
+import { companyData } from "@/data/company";
+import { navigationData } from "@/data/navigation";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,60 +11,80 @@ export function Footer() {
     <footer className="bg-black text-white pt-16 pb-8 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          
           {/* Brand */}
           <div className="space-y-6">
             <div className="space-y-4">
               <div className="relative h-28 w-48">
-                <Image 
+                <Image
                   src="/logos/_2291947363488dark-mode-noBG.svg"
                   alt={companyData.shortName}
                   fill
                   className="object-contain object-left"
                 />
               </div>
-              <p className="text-xs text-white/50 uppercase tracking-widest pl-1">{companyData.tagline}</p>
+              <p className="text-xs text-white/50 uppercase tracking-widest pl-1">
+                {companyData.tagline}
+              </p>
             </div>
             <p className="text-gray-300 text-sm font-light leading-relaxed">
               {companyData.description}
             </p>
-
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Company</h3>
+            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">
+              Company
+            </h3>
             <ul className="space-y-3 text-sm text-gray-300">
               {navigationData.footer.company.map((link) => (
-                <li key={link.href}><Link href={link.href} className="hover:text-white transition-colors">{link.label}</Link></li>
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
 
           {/* Solutions */}
           <div>
-            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Solutions</h3>
+            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">
+              Solutions
+            </h3>
             <ul className="space-y-3 text-sm text-gray-300">
               {navigationData.footer.solutions.map((link) => (
-                <li key={link.label}><Link href={link.href} className="hover:text-white transition-colors">{link.label}</Link></li>
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">Get In Touch</h3>
+            <h3 className="uppercase tracking-widest text-xs font-bold mb-6 text-primary">
+              Get In Touch
+            </h3>
             <ul className="space-y-4 text-sm text-gray-300">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
                 <span>
-                  Corporate & Registered Office:<br /> {companyData.contact.address.registered}
+                  Corporate & Registered Office:
+                  <br /> {companyData.contact.address.registered}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>               
-                   Manufacturing Plant:<br /> {companyData.contact.address.plant}
+                <span>
+                  Manufacturing Plant:
+                  <br /> {companyData.contact.address.plant}
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -72,33 +92,69 @@ export function Footer() {
                 <span>{companyData.contact.phone[0]}</span>
               </li>
               <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <span>{companyData.contact.phone[1]}</span>
+              </li>
+              <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a href={`mailto:${companyData.contact.email[0]}`} className="hover:text-white transition-colors">
-                   {companyData.contact.email[0]}
+                <a
+                  href={`mailto:${companyData.contact.email[0]}`}
+                  className="hover:text-white transition-colors">
+                  {companyData.contact.email[0]}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary/90 shrink-0" />
-                <a href={`mailto:${companyData.contact.email[1]}`} className="hover:text-white transition-colors">
-                   {companyData.contact.email[1]}
+                <a
+                  href={`mailto:${companyData.contact.email[1]}`}
+                  className="hover:text-white transition-colors">
+                  {companyData.contact.email[1]}
                 </a>
               </li>
-              
+
               {/* Social Media */}
               <li className="pt-4 flex gap-4 flex-wrap">
                 {companyData.social.linkedin && (
-                  <Link href={companyData.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
+                  <Link
+                    href={companyData.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                    aria-label="LinkedIn">
                     <Linkedin className="w-4 h-4" />
                   </Link>
                 )}
                 {companyData.social.facebook && (
-                  <Link href={companyData.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
+                  <Link
+                    href={companyData.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                    aria-label="Facebook">
                     <Facebook className="w-4 h-4" />
                   </Link>
                 )}
+                {companyData.social.youtube && (
+                  <Link
+                    href={companyData.social.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                    aria-label="YouTube">
+                    <Youtube className="w-4 h-4" />
+                  </Link>
+                )}
                 {companyData.social.x && (
-                  <Link href={companyData.social.x} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="X (Twitter)">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" className="w-4 h-4 fill-current">
+                  <Link
+                    href={companyData.social.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                    aria-label="X (Twitter)">
+                    <svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      className="w-4 h-4 fill-current">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                     </svg>
                   </Link>
@@ -114,14 +170,13 @@ export function Footer() {
             © {currentYear} {companyData.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
-
-            <a 
-              href="https://kinstel.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-white transition-colors"
-            >
-              Designed & Developed by <span className="text-[#daa520]">K</span>instel Solutions
+            <a
+              href="https://kinstel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors">
+              Designed & Developed by <span className="text-[#daa520]">K</span>
+              instel Solutions
             </a>
           </div>
         </div>
@@ -130,7 +185,8 @@ export function Footer() {
   );
 }
 
-{/* <motion.div
+{
+  /* <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -166,4 +222,5 @@ export function Footer() {
           >
             <span className="w-8 h-[1px] bg-red-500 inline-block" /> 
             Chopra Retec: Trusted for Reliability
-          </motion.p> */}
+          </motion.p> */
+}
