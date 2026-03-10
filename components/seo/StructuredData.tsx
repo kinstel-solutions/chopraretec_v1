@@ -16,7 +16,8 @@ export function StructuredData() {
     },
     sameAs: [
       companyData.social.linkedin,
-      companyData.social.facebook
+      companyData.social.facebook,
+      companyData.social.instagram
     ],
     address: {
       '@type': 'PostalAddress',
