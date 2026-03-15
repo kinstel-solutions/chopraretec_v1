@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { companyData } from "@/data/company";
 import { navigationData } from "@/data/navigation";
+import { AgencyCredit } from "@/components/ui/AgencyCredit";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -193,14 +194,7 @@ export function Footer() {
             © {currentYear} {companyData.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a
-              href="https://kinstel.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors">
-              Designed & Developed by <span className="text-[#daa520]">K</span>
-              instel Solutions
-            </a>
+            <AgencyCredit />
           </div>
         </div>
       </div>
