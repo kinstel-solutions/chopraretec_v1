@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, useInView } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
-import { BookOpen, Truck, ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { GlobalReachMap } from './GlobalReachMap';
-import { CompanyTimeline } from './CompanyTimeline';
-import { homeData } from '@/data/home';
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { BookOpen, Truck, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { CompanyTimeline } from "./CompanyTimeline";
+import { homeData } from "@/data/home";
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -18,25 +18,28 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
     if (isInView) {
       const duration = 2000;
       const startTime = Date.now();
-      
+
       const updateCounter = () => {
         const now = Date.now();
         const progress = Math.min((now - startTime) / duration, 1);
         const easeOutQuart = 1 - Math.pow(1 - progress, 4);
         setDisplayValue(Math.floor(easeOutQuart * value));
-        
+
         if (progress < 1) {
           requestAnimationFrame(updateCounter);
         }
       };
-      
+
       requestAnimationFrame(updateCounter);
     }
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="font-serif text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-white">
-      {displayValue}{suffix}
+    <span
+      ref={ref}
+      className="font-serif text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-white">
+      {displayValue}
+      {suffix}
     </span>
   );
 }
@@ -45,13 +48,19 @@ export function GlobalReach() {
   const { globalReach } = homeData;
 
   return (
-    <section className="py-20 md:py-0 bg-black text-white relative overflow-hidden" id="global">
+    <section
+      className="py-20 md:py-0 bg-black text-white relative overflow-hidden"
+      id="global">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute inset-0" style={{ 
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #8B0000 1px, transparent 0)',
-          backgroundSize: '40px 40px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, #8B0000 1px, transparent 0)",
+            backgroundSize: "40px 40px",
+          }}
+        />
       </div>
 
       <div className="flex flex-col lg:flex-row min-h-screen">
@@ -61,34 +70,59 @@ export function GlobalReach() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="mb-12"
-          >
-            <p className="text-lg uppercase tracking-[0.2em] text-red-500 font-semibold mb-4">{globalReach.subHeading}</p>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">{globalReach.heading}</h2>
+            className="mb-12">
+            <p className="text-lg uppercase tracking-[0.2em] text-red-500 font-semibold mb-4">
+              {globalReach.subHeading}
+            </p>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">
+              {globalReach.heading}
+            </h2>
             <p className="text-gray-300 text-lg max-w-xl leading-relaxed mb-8">
               {globalReach.description}
             </p>
-            
+
             <div className="grid grid-cols-2 gap-8 mb-10">
-               {globalReach.stats.map((stat, index) => (
+              {globalReach.stats.map((stat, index) => (
                 <div key={stat.label}>
-                    <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                    <p className="text-sm font-bold mt-2 text-white">{stat.label}</p>
+                  <AnimatedCounter
+                    value={stat.value}
+                    suffix={stat.suffix}
+                  />
+                  <p className="text-sm font-bold mt-2 text-white">
+                    {stat.label}
+                  </p>
                 </div>
-               ))}
+              ))}
             </div>
 
-            <Button asChild size="lg" className="px-8 border-2 border-red-800 bg-transparent text-white font-bold tracking-widest text-sm uppercase hover:bg-red-800 hover:text-white">
-                <Link href="/contact" className="flex items-center gap-2">
-                    Start Your Project <ArrowUpRight className="w-4 h-4" />
-                </Link>
+            <Button
+              asChild
+              size="lg"
+              className="px-8 border-2 border-red-800 bg-transparent text-white font-bold tracking-widest text-sm uppercase hover:bg-red-800 hover:text-white">
+              <Link
+                href="/contact"
+                className="flex items-center gap-2">
+                Start Your Project <ArrowUpRight className="w-4 h-4" />
+              </Link>
             </Button>
           </motion.div>
         </div>
 
         {/* Right/Bottom Map Section */}
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-auto relative order-1 lg:order-2 bg-gradient-to-b from-black/0 via-red-950/10 to-black/0">
-            <GlobalReachMap />
+        <div className="w-full h-[500px] lg:w-1/2 h-[500px] lg:h-auto min-h-[500px] relative order-1 lg:order-2 flex items-center justify-center bg-gradient-to-b from-black via-red-950/5 to-black">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="relative w-full h-full md:p-16">
+            <Image
+              src="/Ezzy-img/Globe.png"
+              alt="Global Reach"
+              fill
+              className="object-cover "
+              priority
+            />
+          </motion.div>
         </div>
       </div>
 
@@ -105,7 +139,6 @@ export function GlobalReach() {
         </motion.div>
         <CompanyTimeline />
       </div> */}
-
     </section>
   );
 }

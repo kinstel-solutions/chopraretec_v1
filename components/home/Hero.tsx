@@ -38,8 +38,8 @@ export function Hero() {
           preload="none"
           className="object-cover object-center w-full h-full">
           <source
-            src="/videos/seal-release.mp4"
-            type="video/mp4"
+            src="/videos/seal-release.webm"
+            type="video/webm"
           />
         </video>
         <div className="absolute inset-0 bg-black/70" />

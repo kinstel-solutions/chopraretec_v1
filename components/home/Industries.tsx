@@ -140,8 +140,8 @@ export function Industries() {
                   className="object-cover scale-100 -translate-y-16 transition-transform duration-700 group-hover:scale-110 group-hover:-translate-y-16"
                 />
 
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white bg-black/65 backdrop-blur-sm">
-                  <h3 className="text-xl font-serif font-bold mb-2 group-hover:text-primary transition-colors">
+                <div className="absolute inset-x-0 bottom-0 py-4 px-4 text-white bg-black/45 backdrop-blur-sm">
+                  <h3 className="text-2xl font-serif font-bold mb-2 group-hover:text-primary transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-4 line-clamp-3">
