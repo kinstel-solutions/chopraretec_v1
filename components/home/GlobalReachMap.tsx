@@ -9,12 +9,24 @@ import { origin, destinationCountries } from "../../data/country-data";
 export function GlobalReachMap() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const isHovering = useRef(false);
+  const isInViewRef = useRef(false);
+  
+  // High performance visibility tracking
   const isInView = useInView(canvasRef, { once: false, amount: 0.1 });
+  
+  useEffect(() => {
+    isInViewRef.current = isInView;
+  }, [isInView]);
 
   useEffect(() => {
     let phi = 0;
 
     if (!canvasRef.current) return;
+
+    // Mobile optimization: Adjust size and sampling
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const size = isMobile ? 400 : 600;
+    const samples = isMobile ? 8000 : 12000;
 
     const markers = [
       // Origin
@@ -27,14 +39,14 @@ export function GlobalReachMap() {
     ];
 
     const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio: 2,
-      width: 600 * 2,
-      height: 600 * 2,
+      devicePixelRatio: Math.min(window.devicePixelRatio, 2),
+      width: size * Math.min(window.devicePixelRatio, 2),
+      height: size * Math.min(window.devicePixelRatio, 2),
       phi: 0,
       theta: 0,
       dark: 1,
       diffuse: 1.2,
-      mapSamples: 16000,
+      mapSamples: samples,
       mapBrightness: 6,
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.8, 0.1, 0.1], // Red glow
@@ -44,39 +56,40 @@ export function GlobalReachMap() {
         size: m.size,
       })),
       onRender: (state) => {
-        // Only update if in view
-        if (!isInView) return;
+        // Optimization: Skip all math and GL updates if not in view
+        if (!isInViewRef.current) return;
 
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
         state.phi = phi;
-        // Default slow speed: 0.003
-        // Hover even slower: 0.001
         phi += isHovering.current ? 0.001 : 0.005;
       },
     });
 
+    // Fade in after initialization for premium feel
+    setTimeout(() => {
+      if (canvasRef.current) canvasRef.current.style.opacity = "0.8";
+    }, 100);
+
     return () => {
       globe.destroy();
     };
-  }, [isInView]);
+  }, []); // Initialize only ONCE on mount
 
   return (
     <div className="w-full h-full flex items-center justify-center relative overflow-hidden">
       <canvas
         ref={canvasRef}
-        style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: "1" }}
-        className="opacity-80 hover:opacity-100 transition-opacity duration-500 cursor-grab active:cursor-grabbing"
+        style={{ 
+          width: 600, 
+          height: 600, 
+          maxWidth: "100%", 
+          aspectRatio: "1",
+          opacity: 0,
+          transition: 'opacity 1s ease'
+        }}
+        className="hover:opacity-100 transition-opacity duration-500 cursor-grab active:cursor-grabbing"
         onPointerEnter={() => (isHovering.current = true)}
         onPointerLeave={() => (isHovering.current = false)}
       />
-      {/* <div className="absolute bottom-4 left-4 md:left-8 pointer-events-none">
-            <div className="flex items-center gap-2 mb-2">
-                <div className="w-3 h-3 rounded-full bg-red-600 animate-pulse" />
-                <span className="text-white text-sm font-bold tracking-wider">LUCKNOW HQ</span>
-            </div>
-            <p className="text-xs text-gray-300">Connecting strictly controlled aerospace supply chains.</p>
-        </div> */}
     </div>
   );
 }
