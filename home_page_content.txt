@@ -1,0 +1,110 @@
+# HOME PAGE CONTENT - CHOPRA RETEC
+
+## HERO SECTION
+Heading: Precision Molded Rubber & Rubber-to-Metal Bonded Components
+Subheading: Chopra Retec: Trusted for Reliability
+Industries Served: Automotive, Industrial, Healthcare, Defense, Material Handling
+Description: Chopra Retec : 30 Years of Manufacturing Excellence
+Call to Action: Request a Quote
+
+## INDUSTRIES WE SERVE
+Heading: Engineered for Multiple Industries & Applications
+Subheading: Industries We Serve
+Description: Chopra Retec partners with customers across diverse sectors, delivering engineered rubber and rubber-to-metal bonded components designed for extreme conditions.
+
+Industries:
+- Automotive: High-performance rubber components for passenger and commercial vehicles.
+- Defense: Mission-critical components meeting global standards.
+- Engineering & Industrial: Durable solutions for machinery, engineering and industrial applications.
+- Material Handling: Robust components for logistics and material transport equipment.
+- Healthcare & Medical: Hygienic and precision molded parts for medical and healthcare applications.
+
+## PRODUCTS SNAPSHOT
+Heading: Built to Perform Under Adverse Conditions
+Subheading: Products Snapshot
+Description: We manufacture a wide range of molded rubber and rubber-to-metal bonded components, engineered to eliminate Noise, Vibration and Harshness.
+
+Products:
+- Exhaust Suspension Components: High Performance hangers and mounts.
+- Ride Control Parts: Suspension & steering parts including stabiliser bar bushes, trailer arm bushes, control arm bushings, End links, bellows, strut mount kits & chassis parts.
+- Anti-Vibration Mounts: Controll Arm Bushing, Trailer Arm Bushings, Silent Block.
+- Rubber-to-Metal Bonded Components: Designed for structural integrity.
+- Custom-Designed Components: End-to-End Bespoke solutions. From conceptualising to design, mould making, moulding and processing to meet customer needs.
+
+Custom-Designed Components (Detailed):
+- Tagline: Engineering the Future of Rubber Components
+- Subheading: Bespoke Solutions
+- Full Description: Our custom design process is a collaborative journey. We don't just manufacture; we innovate. Using state-of-the-art CAD/CAM software and finite element analysis, we turn complex challenges into tangible, high-performance solutions.
+- Process Features:
+  - Rapid Prototyping & 3D Modeling
+  - Finite Element Analysis (FEA)
+  - In-house Tool Design & Fabrication
+  - Material Formulation for Specific Environments
+- Process Steps:
+  - CAD Design: Precision modeling for accurate tooling.
+  - Moulding Process: Advanced compression and injection moulding.
+  - Quality Testing: Rigorous validation in our certified labs.
+  - Production: Scalable manufacturing for global demand.
+  - Finished Product: Ready for assembly and deployment.
+
+## THE CHOPRA RETEC ADVANTAGE (WHY CHOOSE US)
+Heading: The Chopra Retec Advantage
+Subheading: Why Choose Us
+Key Capabilities:
+- 30 years of industry experience
+- Fully Automated compound weighing machine, ensures consistent quality
+- Customised tool making process, enables us to manufacture customised components, tailored to your specific requirements
+- Real-Time, Top Notch Communication
+- Dedicated Quality Assurance Team
+- On-Time Deliveries, Always
+- In-House Capability of Research, Design & Development - sets us apart from others
+- Customised skin packaging & bagging
+- Competitive Pricing
+
+## MANUFACTURING CAPABILITIES
+Heading: End-to-End Manufacturing Solutions
+Subheading: Manufacturing Capabilities
+Description: From compound selection to molding, bonding and validation — we offer end-to-end rubber component manufacturing capabilities.
+
+Capabilities:
+- Conceptualizing and R&D
+- Component Design
+- Mould Design & Making
+- Compound Design
+- Moulding using multiple processes: Compression, Transfer, Vacuum & Injection moulding
+- In-House Testing & Quality Assurance
+- Customised Packaging
+
+## RECOGNITIONS & CERTIFICATIONS
+Heading: Certified Excellence
+Subheading: Recognitions & Certifications
+
+## QUALITY & RELIABILITY
+Heading: Noise. Vibration. Harshness. Engineered Out
+Subheading: Quality & Reliability
+
+Features:
+- Robust Process Controls: Our systems are designed for repeatability, ensuring consistent quality output for every batch.
+- Inspection & Validation: Rigorous validation standards and dimensional checks at every stage of production.
+- Durability & Performance: We focus on creating parts that withstand stress, heat, and vibration over long service lives.
+- Continuous Improvement: A commitment to refining our processes and adopting best practices for global supply requirements.
+
+## GLOBAL PRESENCE
+Heading: SILENCING THE NEEDS OF GLOBAL INDUSTRIES
+Subheading: Global Presence
+Description: From our state-of-the-art facility in Lucknow, India to companies worldwide, Chopra Retec ensures precision goes global.
+
+Statistics:
+- 98% On-Time Delivery (Reliable logistics)
+- 5000+ Parts Developed (Extensive product portfolio)
+
+Company Evolution:
+- 1990s - Local Roots: Started as a modest manufacturing unit in Lucknow, focusing on quality basics.
+- 2000s - Global Expansion: Broke into international markets, establishing trust in Europe and the Americas.
+- 2010s - Modernization: Invested heavily in automation and CNC machining to ensure zero-defect production.
+- 2020s - Aerospace Precision: Achieved certification for aerospace components, marking a new era of precision.
+
+## FINAL CTA
+Heading: Looking for a reliable rubber components manufacturing partner?
+Description: Partner with us for precision engineering, global standards, and consistent quality.
+Button: Send Your RFQ / Drawing
