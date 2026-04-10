@@ -20,5 +20,6 @@ export const companyData = {
     x: "https://x.com/FancyFootloose",
     youtube: "http://www.youtube.com/@ChopraRetecRubberProductsLtd",
     whatsapp: "https://wa.me/919115226555",
+    instagram: "https://www.instagram.com/chopraretecrubber/",
   },
 };

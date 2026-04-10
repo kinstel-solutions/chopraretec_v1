@@ -8,6 +8,7 @@ import {
   Facebook,
   Youtube,
   MessageCircle,
+  Instagram,
 } from "lucide-react";
 import { companyData } from "@/data/company";
 import { navigationData } from "@/data/navigation";
@@ -166,6 +167,16 @@ export function Footer() {
                       className="w-4 h-4 fill-current">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                     </svg>
+                  </Link>
+                )}
+                {companyData.social.instagram && (
+                  <Link
+                    href={companyData.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-red-500 hover:to-purple-500 hover:text-white transition-all"
+                    aria-label="Instagram">
+                    <Instagram className="w-4 h-4" />
                   </Link>
                 )}
                 {companyData.social.whatsapp && (
